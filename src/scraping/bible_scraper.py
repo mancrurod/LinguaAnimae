@@ -1,77 +1,128 @@
 import requests
-from bs4 import BeautifulSoup
 import pandas as pd
-from time import sleep
-from random import uniform
+from bs4 import BeautifulSoup
 from pathlib import Path
+from typing import Optional, List, Dict, Any
 from datetime import datetime
 import logging
+from time import sleep
+from random import uniform
 
-# Constants
+# ==========================
+# === CONSTANTS ============
+# ==========================
+
+# URL to fetch the HTML page containing the list of books
 BASE_FORM_URL = "https://www.biblia.es/biblia-buscar-libros.php"
+
+# URL template used to scrape the content of specific chapters by formatting book ID and chapter number
 BASE_SCRAPE_URL = "https://www.biblia.es/biblia-buscar-libros-1.php?libro={}&capitulo={}&version=rv60"
+
+# Directory where the scraped CSV files will be saved
 OUTPUT_DIR = Path("data/raw/bible_rv60")
+
+# Directory where error logs will be stored
 LOG_DIR = Path("logs")
 
+# ==========================
+# === LOGGER SETUP =========
+# ==========================
+
 def setup_logger() -> logging.Logger:
+    """Set up a logger to capture error logs into logs/errors_<date>.log.
+
+    Returns:
+        logging.Logger: Configured logger instance.
     """
-    Configure the logger to write error logs into logs/errors_<date>.log.
-    """
+    # Ensure that the log directory exists (create it if necessary)
     LOG_DIR.mkdir(parents=True, exist_ok=True)
+
+    # Define the path for today's log file based on current date
     log_filename = LOG_DIR / f"errors_{datetime.now().strftime('%Y-%m-%d')}.log"
 
+    # Create and configure the logger
     logger = logging.getLogger("BibleScraper")
-    logger.setLevel(logging.ERROR)
+    logger.setLevel(logging.ERROR)  # Only capture error-level messages
 
+    # Create a file handler to write logs to the defined file
     file_handler = logging.FileHandler(log_filename, encoding="utf-8")
+
+    # Define the format for log messages (timestamp, level, message)
     formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
     file_handler.setFormatter(formatter)
 
+    # Attach the file handler to the logger if not already attached
     if not logger.handlers:
         logger.addHandler(file_handler)
 
     return logger
 
-def get_all_books() -> dict[int, tuple[str, str]]:
+# ==========================
+# === SCRAPING UTILITIES ===
+# ==========================
+
+def get_all_books() -> Dict[int, tuple[str, str]]:
+    """Extract all book values from the HTML <select name='libro'> element.
+
+    Returns:
+        Dict[int, tuple[str, str]]: Dictionary mapping index to (identifier, display name).
     """
-    Extracts the ordered list of books from the <select name="libro"> element.
-    Returns a dictionary like {1: ("genesis", "Génesis"), 2: ("exodo", "Éxodo"), ...}
-    """
+    # Send a GET request to fetch the HTML content of the main page
     response = requests.get(BASE_FORM_URL)
     response.raise_for_status()
+
+    # Parse the HTML response to find the <select> element that contains the list of books
     soup = BeautifulSoup(response.text, "html.parser")
     select = soup.find("select", {"name": "libro"})
 
-    book_options = select.find_all("option")
+    # Build a dictionary mapping the index to (book identifier, display name)
+    # Skip the first invalid option (value="0") which is just a placeholder
     books = {
         idx: (option["value"], option.text.strip())
-        for idx, option in enumerate(book_options, start=0)
+        for idx, option in enumerate(select.find_all("option"), start=0)
         if option["value"] != "0"
     }
+
+    # Return the structured dictionary with all available books
     return books
 
-def scrape_chapter(book_id: str, chapter_number: int) -> list[dict]:
+
+def scrape_chapter(book_id: str, chapter_number: int) -> List[Dict[str, Any]]:
+    """Scrape a specific chapter from a given book.
+
+    Args:
+        book_id (str): Book identifier used in URL parameters.
+        chapter_number (int): Chapter number to scrape.
+
+    Returns:
+        List[Dict[str, Any]]: List of dictionaries containing verses and metadata.
     """
-    Scrapes a single chapter of a given book.
-    Returns a list of dictionaries with verse data.
-    """
+    # Build the chapter URL dynamically using the book ID and chapter number
     url = BASE_SCRAPE_URL.format(book_id, chapter_number)
+
+    # Send a GET request to fetch the chapter page
     response = requests.get(url)
     response.raise_for_status()
 
+    # Parse the HTML content of the chapter page
     soup = BeautifulSoup(response.text, "html.parser")
+
+    # Locate the main content block containing the verses
     content_div = soup.find("div", class_="col_i_1_1_inf")
     if not content_div:
         raise ValueError(f"No content found for {book_id} chapter {chapter_number}")
 
     verses = []
-    current_subtitle = ""
-    current_verse = None
+    current_subtitle = ""  # Track the active subtitle (if any)
+    current_verse = None   # Track the verse currently being built
 
+    # Traverse through HTML elements to reconstruct verses
     for element in content_div.find_all(["h2", "span", "br"], recursive=True):
         if element.name == "h2" and "estudio" in element.get("class", []):
+            # Found a subtitle (section heading)
             current_subtitle = element.get_text(strip=True)
         elif element.name == "span" and "versiculo" in element.get("class", []):
+            # Found a new verse number
             current_verse = {
                 "book": book_id,
                 "chapter": chapter_number,
@@ -81,51 +132,75 @@ def scrape_chapter(book_id: str, chapter_number: int) -> list[dict]:
                 "source_url": url
             }
         elif element.name == "span" and "texto" in element.get("class", []) and current_verse is not None:
+            # Found verse text; append it to the current verse
             current_verse["text"] += element.get_text(strip=True) + " "
         elif element.name == "br" and current_verse:
+            # Line break indicates end of the current verse
             verses.append(current_verse)
             current_verse = None
 
     return verses
 
-def scrape_entire_bible():
+# ==========================
+# === MAIN PROCESS =========
+# ==========================
+
+def scrape_entire_bible() -> None:
+    """Scrape all books and chapters of the Bible.
+
+    Saves each book into a CSV named <index>_<identifier>.csv.
+    Errors are logged to the logs/ directory.
     """
-    Scrapes all books and their chapters. Each book is saved to a file named <index>_<book>.csv.
-    Logs errors during the process.
-    """
+    # Ensure that the output directory exists (create it if necessary)
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+
+    # Initialize the logger to capture errors
     logger = setup_logger()
 
     try:
+        # Fetch the full list of books available for scraping
         books = get_all_books()
     except Exception as e:
+        # Log the error if the book list could not be retrieved
         logger.error(f"Failed to retrieve book list: {e}")
+        print("❌ Failed to load book list. Exiting process.")
         return
 
+    # Iterate over each book by its index and identifier
     for idx, (book_id, book_name) in books.items():
-        print(f"\nScraping book: {book_name} ({book_id})")
+        print(f"\n📖 Scraping book {idx}: {book_name} ({book_id})")
         all_verses = []
         chapter = 1
 
         while True:
             try:
-                print(f"  Chapter {chapter}")
+                print(f"   🔎 Chapter {chapter}")
+                # Scrape the current chapter's verses
                 verses = scrape_chapter(book_id, chapter)
+                
+                # Stop if no verses are found (end of available chapters)
                 if not verses:
                     break
+
+                # Accumulate the scraped verses
                 all_verses.extend(verses)
                 chapter += 1
+
+                # Sleep randomly to mimic human behavior and avoid bans
                 sleep(uniform(1.5, 3.0))
             except Exception as e:
+                # Log the error and proceed to the next book
                 logger.error(f"{book_id} chapter {chapter}: {e}")
-                print(f"  ✖ Error in {book_id} chapter {chapter}. Moving to next book.")
+                print(f"   ❌ Error at {book_id} chapter {chapter}. Moving to next book.")
                 break
 
         if all_verses:
-            filename = OUTPUT_DIR / f"{idx}_{book_id}.csv"
+            # Save the collected verses into a CSV file named by index and book ID
             df = pd.DataFrame(all_verses)
-            df.to_csv(filename, index=False, encoding="utf-8")
-            print(f"  ✔ Saved {filename.name} with {len(df)} verses")
+            file_path = OUTPUT_DIR / f"{idx}_{book_id}.csv"
+            df.to_csv(file_path, index=False, encoding="utf-8")
+            print(f"   ✅ Saved {file_path.name} with {len(df)} verses")
+
 
 if __name__ == "__main__":
     scrape_entire_bible()
