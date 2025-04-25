@@ -17,6 +17,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ---
 
+
+## [0.2.0] - 2025-04-25
+### Changed
+- `bible_scraper.py` now automatically extracts all books and chapters from the Reina-Valera 1960 Bible.
+- Outputs structured CSV files named `<index>_<book>.csv`.
+- Implemented error logging system into `logs/` with timestamped error logs.
+- Improved scraping logic for robustness against missing or broken chapters.
+
+
 ## [Unreleased]
 ### Planned
 - `02_preprocessing_pipeline.ipynb` for cleaning and normalization.

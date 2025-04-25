@@ -82,7 +82,7 @@ source venv/bin/activate  # or .\venv\Scripts\activate on Windows
 pip install -r requirements.txt
 ```
 
-4. Run the scraper (optional first step)
+4. Run the Bible scraper to download all books
 ```bash
 python src/scraping/bible_scraper.py
 ```
@@ -105,7 +105,7 @@ source venv/bin/activate  # or .\venv\Scripts\activate on Windows
 pip install -r requirements.txt
 ```
 
-### 4. Run the scraper (optional first step)
+### 4. Run the Bible scraper to download all books
 ```bash
 python src/scraping/bible_scraper.py
 ```
@@ -114,8 +114,8 @@ python src/scraping/bible_scraper.py
 
 ## 📊 Example Output
 
-- 📘 `john_gospel_rv60.csv`: 879 verses, structured with chapter, verse, subtitle, text and source URL.
-- 📈 Visualizations: verse count per chapter, average verse length, subtitle distribution.
+- 📘 `<index>_<book>.csv`: All books from the Bible (RV60 version), structured with book, chapter, verse, subtitle, text, and source URL.
+- 📈 Visualizations: verse and chapter distribution, subtitle analysis (to be expanded).
 - 🧾 Planned outputs: semantic embeddings, predicted categories, recommendations.
 
 ---
