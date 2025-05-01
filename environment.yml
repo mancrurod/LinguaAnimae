@@ -106,10 +106,13 @@ dependencies:
       - threadpoolctl==3.6.0
       - tokenizers==0.21.1
       - toml==0.10.2
-      - torch==2.6.0
+      - torch==2.5.1+cu121
+      - torchaudio==2.5.1+cu121
+      - torchvision==0.20.1+cu121
       - tqdm==4.67.1
       - transformers==4.51.3
       - tzdata==2025.2
+      - ucimlrepo==0.0.7
       - urllib3==2.4.0
       - watchdog==6.0.0
 prefix: C:\Users\manue\miniconda3\envs\LinguaAnimae

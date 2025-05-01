@@ -7,22 +7,18 @@ book, chapter, verse, subtitle (empty), text, source_url
 Output path: data/raw/bible_kjv/
 """
 
-# ========================
-# === IMPORTS & CONFIG ===
-# ========================
+import xml.etree.ElementTree as ET  # For parsing XML files
+import pandas as pd  # For handling data and saving to CSV
+from pathlib import Path  # For handling file paths
+from typing import Dict, List, Optional  # For type annotations
+import argparse  # For command-line argument parsing
 
-import xml.etree.ElementTree as ET
-import pandas as pd
-from pathlib import Path
-from typing import Dict, List
+# === CONFIG ===
+SOURCE_URL = "https://github.com/seven1m/open-bibles"  # Source URL for the data
 
-# ========================
-# === CONSTANTS ==========
-# ========================
-
-OSIS_FILE = Path("data/raw/bible_kjv/eng-kjv.osis.xml")
-OUTPUT_DIR = Path("data/raw/bible_kjv")
-SOURCE_URL = "https://github.com/seven1m/open-bibles"
+# === PATHS ===
+DEFAULT_OSIS_PATH = Path("data/raw/bible_kjv/eng-kjv.osis.xml")  # Default input OSIS XML file path
+DEFAULT_OUTPUT_DIR = Path("data/raw/bible_kjv")  # Default output directory for CSV files
 
 # Map OSIS codes to full book names in canonical order
 BOOK_ORDER = [
@@ -36,6 +32,7 @@ BOOK_ORDER = [
     "hebrews", "james", "1_peter", "2_peter", "1_john", "2_john", "3_john", "jude", "revelation"
 ]
 
+# Map OSIS book codes to human-readable book names
 OSIS_TO_NAME = {
     "Gen": "genesis", "Exod": "exodus", "Lev": "leviticus", "Num": "numbers", "Deut": "deuteronomy",
     "Josh": "joshua", "Judg": "judges", "Ruth": "ruth", "1Sam": "1_samuel", "2Sam": "2_samuel",
@@ -53,82 +50,98 @@ OSIS_TO_NAME = {
     "1John": "1_john", "2John": "2_john", "3John": "3_john", "Jude": "jude", "Rev": "revelation"
 }
 
-# ========================
-# === MAIN FUNCTION ======
-# ========================
+# === HELPERS ===
 
-def extract_verses() -> None:
-    """Parse the OSIS XML and save one CSV per book with full verse content."""
-    print("📖 Parsing OSIS XML (split verse mode)...")
-    tree = ET.parse(OSIS_FILE)
-    root = tree.getroot()
+# Clean and normalize text by removing extra whitespace
+def clean_text(text: Optional[str]) -> str:
+    return " ".join((text or "").split())
 
-    verses_by_book: Dict[str, List[Dict[str, str]]] = {}
+# Parse OSIS XML file and extract verses grouped by book
+def parse_osis_verses(osis_path: Path) -> Dict[str, List[Dict[str, str]]]:
+    print(f"📖 Parsing: {osis_path}")
+    tree = ET.parse(osis_path)  # Parse the XML file
+    root = tree.getroot()  # Get the root element of the XML
 
-    current_verse_id = None
-    current_text = ""
-    capturing = False
-    book = chapter = verse = ""
+    verses_by_book: Dict[str, List[Dict[str, str]]] = {}  # Dictionary to store verses by book
+    current_text, current_verse_id = "", None  # Initialize variables for verse text and ID
+    book = chapter = verse = ""  # Initialize book, chapter, and verse
+    capturing = False  # Flag to indicate if we are capturing verse text
+    unknown_books = set()  # Set to track unknown OSIS book codes
 
-    # Traverse all nodes in order
+    # Iterate through all elements in the XML tree
     for elem in root.iter():
-        tag = elem.tag.split("}")[-1]  # Remove namespace
+        tag = elem.tag.split("}")[-1]  # Extract the tag name without namespace
 
+        # Start of a verse with osisID
         if tag == "verse" and "osisID" in elem.attrib:
-            # Start capturing a new verse
-            current_verse_id = elem.attrib["osisID"]
-            parts = current_verse_id.split(".")
-            if len(parts) != 3:
+            current_verse_id = elem.attrib["osisID"]  # Get the osisID attribute
+            parts = current_verse_id.split(".")  # Split osisID into parts
+            if len(parts) != 3:  # Skip if the osisID format is invalid
                 continue
-            osis_book, chapter, verse = parts
-            book = OSIS_TO_NAME.get(osis_book)
-            if not book:
+            osis_book, chapter, verse = parts  # Extract book, chapter, and verse
+            book = OSIS_TO_NAME.get(osis_book)  # Map OSIS book code to book name
+            if not book:  # Skip if the book is unknown
+                unknown_books.add(osis_book)
                 continue
-            capturing = True
-            current_text = (elem.tail or "").strip()
+            capturing = True  # Start capturing verse text
+            current_text = clean_text(elem.tail)  # Initialize verse text
 
+        # End of a verse with eID
         elif tag == "verse" and "eID" in elem.attrib:
-            # End of current verse
-            if capturing and current_verse_id:
+            if capturing and book:  # If capturing and book is valid
                 row = {
                     "book": book,
                     "chapter": chapter,
                     "verse": verse,
                     "subtitle": "",
-                    "text": " ".join(current_text.split()),
+                    "text": current_text.strip(),
                     "source_url": SOURCE_URL
                 }
-                if book not in verses_by_book:
-                    verses_by_book[book] = []
-                verses_by_book[book].append(row)
-            capturing = False
-            current_verse_id = None
-            current_text = ""
+                verses_by_book.setdefault(book, []).append(row)  # Add verse to the book
+            capturing = False  # Stop capturing
+            current_text = ""  # Reset verse text
 
+        # Capture text within a verse
         elif capturing:
-            # Accumulate text and tail while inside a verse
-            if elem.text:
-                current_text += " " + elem.text
-            if elem.tail:
-                current_text += " " + elem.tail
+            current_text += " " + clean_text(elem.text)  # Add element text
+            current_text += " " + clean_text(elem.tail)  # Add element tail text
 
-    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-    print(f"📁 Saving CSVs to: {OUTPUT_DIR}")
+    # Warn about unknown OSIS book codes
+    if unknown_books:
+        print(f"⚠️ Unknown OSIS book codes encountered: {', '.join(sorted(unknown_books))}")
 
+    return verses_by_book
+
+# Save verses grouped by book to individual CSV files
+def save_verses_to_csvs(verses_by_book: Dict[str, List[Dict[str, str]]], output_dir: Path) -> None:
+    output_dir.mkdir(parents=True, exist_ok=True)  # Create output directory if it doesn't exist
+    print(f"📁 Saving to: {output_dir}")
+
+    # Iterate through books in canonical order
     for i, book in enumerate(BOOK_ORDER, start=1):
-        verses = verses_by_book.get(book)
-        if not verses:
+        verses = verses_by_book.get(book)  # Get verses for the current book
+        if not verses:  # Skip if no verses for the book
             continue
-        df = pd.DataFrame(verses)
-        filename = f"{i}_{book}.csv"
-        df.to_csv(OUTPUT_DIR / filename, index=False)
-        print(f"✅ Saved {filename} with {len(df)} verses")
+        df = pd.DataFrame(verses)  # Convert verses to a DataFrame
+        filename = f"{i}_{book}.csv"  # Generate filename
+        df.to_csv(output_dir / filename, index=False)  # Save DataFrame to CSV
+        print(f"✅ {filename}: {len(df)} verses")  # Print success message
 
-    print("🚀 Extraction complete.")
+# === MAIN ===
 
-# ========================
-# === ENTRY POINT ========
-# ========================
+# Main function to parse OSIS file and save verses to CSVs
+def main(osis_path: Path, output_dir: Path):
+    verses_by_book = parse_osis_verses(osis_path)  # Parse OSIS file
+    save_verses_to_csvs(verses_by_book, output_dir)  # Save verses to CSVs
+    print("🚀 Done.")  # Print completion message
 
+# === CLI ===
+
+# Command-line interface for the script
 if __name__ == "__main__":
-    extract_verses()
+    parser = argparse.ArgumentParser(description="📘 OSIS KJV Parser to CSV")  # CLI description
+    parser.add_argument("--input", type=Path, default=DEFAULT_OSIS_PATH, help="Path to OSIS XML file")  # Input file argument
+    parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT_DIR, help="Directory to save CSVs")  # Output directory argument
+    args = parser.parse_args()  # Parse command-line arguments
+
+    main(args.input, args.output)  # Run the main function with parsed arguments
