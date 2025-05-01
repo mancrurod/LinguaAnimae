@@ -1,0 +1,109 @@
+id,book,chapter,verse,subtitle,text,verse_id,source_url,theme,emotion
+1,james,1,1,,"James, a servant of God and of the Lord Jesus Christ, to the twelve tribes which are scattered abroad, greeting.",james_1_1,https://github.com/seven1m/open-bibles,,neutral
+2,james,1,2,,"My brethren, count it all joy when ye fall into divers temptations;",james_1_2,https://github.com/seven1m/open-bibles,,joy
+3,james,1,3,,"Knowing this, that the trying of your faith worketh patience.",james_1_3,https://github.com/seven1m/open-bibles,,neutral
+4,james,1,4,,"But let patience have her perfect work, that ye may be perfect and entire, wanting nothing.",james_1_4,https://github.com/seven1m/open-bibles,,neutral
+5,james,1,5,,"If any of you lack wisdom, let him ask of God, that giveth to all men liberally, and upbraideth not; and it shall be given him.",james_1_5,https://github.com/seven1m/open-bibles,,neutral
+6,james,1,6,,"But let him ask in faith, nothing wavering. For he that wavereth is like a wave of the sea driven with the wind and tossed.",james_1_6,https://github.com/seven1m/open-bibles,,neutral
+7,james,1,7,,For let not that man think that he shall receive any thing of the Lord.,james_1_7,https://github.com/seven1m/open-bibles,,neutral
+8,james,1,8,,A double minded man is unstable in all his ways.,james_1_8,https://github.com/seven1m/open-bibles,,disgust
+9,james,1,9,,Let the brother of low degree rejoice in that he is exalted:,james_1_9,https://github.com/seven1m/open-bibles,,joy
+10,james,1,10,,"But the rich, in that he is made low: because as the flower of the grass he shall pass away.",james_1_10,https://github.com/seven1m/open-bibles,,disgust
+11,james,1,11,,"For the sun is no sooner risen with a burning heat, but it withereth the grass, and the flower thereof falleth, and the grace of the fashion of it perisheth: so also shall the rich man fade away in his ways.",james_1_11,https://github.com/seven1m/open-bibles,,anger
+12,james,1,12,,"Blessed is the man that endureth temptation: for when he is tried, he shall receive the crown of life, which the Lord hath promised to them that love him.",james_1_12,https://github.com/seven1m/open-bibles,,neutral
+13,james,1,13,,"Let no man say when he is tempted, I am tempted of God: for God cannot be tempted with evil, neither tempteth he any man:",james_1_13,https://github.com/seven1m/open-bibles,,fear
+14,james,1,14,,"But every man is tempted, when he is drawn away of his own lust, and enticed.",james_1_14,https://github.com/seven1m/open-bibles,,disgust
+15,james,1,15,,"Then when lust hath conceived, it bringeth forth sin: and sin, when it is finished, bringeth forth death.",james_1_15,https://github.com/seven1m/open-bibles,,disgust
+16,james,1,16,,"Do not err, my beloved brethren.",james_1_16,https://github.com/seven1m/open-bibles,,anger
+17,james,1,17,,"Every good gift and every perfect gift is from above, and cometh down from the Father of lights, with whom is no variableness, neither shadow of turning.",james_1_17,https://github.com/seven1m/open-bibles,,joy
+18,james,1,18,,"Of his own will begat he us with the word of truth, that we should be a kind of firstfruits of his creatures.",james_1_18,https://github.com/seven1m/open-bibles,,neutral
+19,james,1,19,,"Wherefore, my beloved brethren, let every man be swift to hear, slow to speak, slow to wrath:",james_1_19,https://github.com/seven1m/open-bibles,,anger
+20,james,1,20,,For the wrath of man worketh not the righteousness of God.,james_1_20,https://github.com/seven1m/open-bibles,,anger
+21,james,1,21,,"Wherefore lay apart all filthiness and superfluity of naughtiness, and receive with meekness the engrafted word, which is able to save your souls.",james_1_21,https://github.com/seven1m/open-bibles,,disgust
+22,james,1,22,,"But be ye doers of the word, and not hearers only, deceiving your own selves.",james_1_22,https://github.com/seven1m/open-bibles,,disgust
+23,james,1,23,,"For if any be a hearer of the word, and not a doer, he is like unto a man beholding his natural face in a glass:",james_1_23,https://github.com/seven1m/open-bibles,,disgust
+24,james,1,24,,"For he beholdeth himself, and goeth his way, and straightway forgetteth what manner of man he was.",james_1_24,https://github.com/seven1m/open-bibles,,neutral
+25,james,1,25,,"But whoso looketh into the perfect law of liberty, and continueth therein, he being not a forgetful hearer, but a doer of the work, this man shall be blessed in his deed.",james_1_25,https://github.com/seven1m/open-bibles,,neutral
+26,james,1,26,,"If any man among you seem to be religious, and bridleth not his tongue, but deceiveth his own heart, this man's religion is vain.",james_1_26,https://github.com/seven1m/open-bibles,,disgust
+27,james,1,27,,"Pure religion and undefiled before God and the Father is this, To visit the fatherless and widows in their affliction, and to keep himself unspotted from the world.",james_1_27,https://github.com/seven1m/open-bibles,,disgust
+28,james,2,1,,"My brethren, have not the faith of our Lord Jesus Christ, the Lord of glory, with respect of persons.",james_2_1,https://github.com/seven1m/open-bibles,,disgust
+29,james,2,2,,"For if there come unto your assembly a man with a gold ring, in goodly apparel, and there come in also a poor man in vile raiment;",james_2_2,https://github.com/seven1m/open-bibles,,disgust
+30,james,2,3,,"And ye have respect to him that weareth the gay clothing, and say unto him, Sit thou here in a good place; and say to the poor, Stand thou there, or sit here under my footstool:",james_2_3,https://github.com/seven1m/open-bibles,,anger
+31,james,2,4,,"Are ye not then partial in yourselves, and are become judges of evil thoughts?",james_2_4,https://github.com/seven1m/open-bibles,,anger
+32,james,2,5,,"Hearken, my beloved brethren, Hath not God chosen the poor of this world rich in faith, and heirs of the kingdom which he hath promised to them that love him?",james_2_5,https://github.com/seven1m/open-bibles,,neutral
+33,james,2,6,,"But ye have despised the poor. Do not rich men oppress you, and draw you before the judgment seats?",james_2_6,https://github.com/seven1m/open-bibles,,anger
+34,james,2,7,,Do not they blaspheme that worthy name by the which ye are called?,james_2_7,https://github.com/seven1m/open-bibles,,anger
+35,james,2,8,,"If ye fulfil the royal law according to the scripture, Thou shalt love thy neighbour as thyself, ye do well:",james_2_8,https://github.com/seven1m/open-bibles,,joy
+36,james,2,9,,"But if ye have respect to persons, ye commit sin, and are convinced of the law as transgressors.",james_2_9,https://github.com/seven1m/open-bibles,,disgust
+37,james,2,10,,"For whosoever shall keep the whole law, and yet offend in one point, he is guilty of all.",james_2_10,https://github.com/seven1m/open-bibles,,anger
+38,james,2,11,,"For he that said, Do not commit adultery, said also, Do not kill. Now if thou commit no adultery, yet if thou kill, thou art become a transgressor of the law.",james_2_11,https://github.com/seven1m/open-bibles,,anger
+39,james,2,12,,"So speak ye, and so do, as they that shall be judged by the law of liberty.",james_2_12,https://github.com/seven1m/open-bibles,,neutral
+40,james,2,13,,"For he shall have judgment without mercy, that hath shewed no mercy; and mercy rejoiceth against judgment.",james_2_13,https://github.com/seven1m/open-bibles,,anger
+41,james,2,14,,"What doth it profit, my brethren, though a man say he hath faith, and have not works? can faith save him?",james_2_14,https://github.com/seven1m/open-bibles,,neutral
+42,james,2,15,,"If a brother or sister be naked, and destitute of daily food,",james_2_15,https://github.com/seven1m/open-bibles,,disgust
+43,james,2,16,,"And one of you say unto them, Depart in peace, be ye warmed and filled; notwithstanding ye give them not those things which are needful to the body; what doth it profit?",james_2_16,https://github.com/seven1m/open-bibles,,neutral
+44,james,2,17,,"Even so faith, if it hath not works, is dead, being alone.",james_2_17,https://github.com/seven1m/open-bibles,,sadness
+45,james,2,18,,"Yea, a man may say, Thou hast faith, and I have works: shew me thy faith without thy works, and I will shew thee my faith by my works.",james_2_18,https://github.com/seven1m/open-bibles,,neutral
+46,james,2,19,,"Thou believest that there is one God; thou doest well: the devils also believe, and tremble.",james_2_19,https://github.com/seven1m/open-bibles,,fear
+47,james,2,20,,"But wilt thou know, O vain man, that faith without works is dead?",james_2_20,https://github.com/seven1m/open-bibles,,sadness
+48,james,2,21,,"Was not Abraham our father justified by works, when he had offered Isaac his son upon the altar?",james_2_21,https://github.com/seven1m/open-bibles,,anger
+49,james,2,22,,"Seest thou how faith wrought with his works, and by works was faith made perfect?",james_2_22,https://github.com/seven1m/open-bibles,,neutral
+50,james,2,23,,"And the scripture was fulfilled which saith, Abraham believed God, and it was imputed unto him for righteousness: and he was called the Friend of God.",james_2_23,https://github.com/seven1m/open-bibles,,neutral
+51,james,2,24,,"Ye see then how that by works a man is justified, and not by faith only.",james_2_24,https://github.com/seven1m/open-bibles,,neutral
+52,james,2,25,,"Likewise also was not Rahab the harlot justified by works, when she had received the messengers, and had sent them out another way?",james_2_25,https://github.com/seven1m/open-bibles,,neutral
+53,james,2,26,,"For as the body without the spirit is dead, so faith without works is dead also.",james_2_26,https://github.com/seven1m/open-bibles,,sadness
+54,james,3,1,,"My brethren, be not many masters, knowing that we shall receive the greater condemnation.",james_3_1,https://github.com/seven1m/open-bibles,,disgust
+55,james,3,2,,"For in many things we offend all. If any man offend not in word, the same is a perfect man, and able also to bridle the whole body.",james_3_2,https://github.com/seven1m/open-bibles,,anger
+56,james,3,3,,"Behold, we put bits in the horses' mouths, that they may obey us; and we turn about their whole body.",james_3_3,https://github.com/seven1m/open-bibles,,disgust
+57,james,3,4,,"Behold also the ships, which though they be so great, and are driven of fierce winds, yet are they turned about with a very small helm, whithersoever the governor listeth.",james_3_4,https://github.com/seven1m/open-bibles,,anger
+58,james,3,5,,"Even so the tongue is a little member, and boasteth great things. Behold, how great a matter a little fire kindleth!",james_3_5,https://github.com/seven1m/open-bibles,,neutral
+59,james,3,6,,"And the tongue is a fire, a world of iniquity: so is the tongue among our members, that it defileth the whole body, and setteth on fire the course of nature; and it is set on fire of hell.",james_3_6,https://github.com/seven1m/open-bibles,,disgust
+60,james,3,7,,"For every kind of beasts, and of birds, and of serpents, and of things in the sea, is tamed, and hath been tamed of mankind:",james_3_7,https://github.com/seven1m/open-bibles,,disgust
+61,james,3,8,,"But the tongue can no man tame; it is an unruly evil, full of deadly poison.",james_3_8,https://github.com/seven1m/open-bibles,,disgust
+62,james,3,9,,"Therewith bless we God, even the Father; and therewith curse we men, which are made after the similitude of God.",james_3_9,https://github.com/seven1m/open-bibles,,anger
+63,james,3,10,,"Out of the same mouth proceedeth blessing and cursing. My brethren, these things ought not so to be.",james_3_10,https://github.com/seven1m/open-bibles,,disgust
+64,james,3,11,,Doth a fountain send forth at the same place sweet water and bitter?,james_3_11,https://github.com/seven1m/open-bibles,,disgust
+65,james,3,12,,"Can the fig tree, my brethren, bear olive berries? either a vine, figs? so can no fountain both yield salt water and fresh.",james_3_12,https://github.com/seven1m/open-bibles,,neutral
+66,james,3,13,,Who is a wise man and endued with knowledge among you? let him shew out of a good conversation his works with meekness of wisdom.,james_3_13,https://github.com/seven1m/open-bibles,,neutral
+67,james,3,14,,"But if ye have bitter envying and strife in your hearts, glory not, and lie not against the truth.",james_3_14,https://github.com/seven1m/open-bibles,,anger
+68,james,3,15,,"This wisdom descendeth not from above, but is earthly, sensual, devilish.",james_3_15,https://github.com/seven1m/open-bibles,,disgust
+69,james,3,16,,"For where envying and strife is, there is confusion and every evil work.",james_3_16,https://github.com/seven1m/open-bibles,,disgust
+70,james,3,17,,"But the wisdom that is from above is first pure, then peaceable, gentle, and easy to be intreated, full of mercy and good fruits, without partiality, and without hypocrisy.",james_3_17,https://github.com/seven1m/open-bibles,,neutral
+71,james,3,18,,And the fruit of righteousness is sown in peace of them that make peace.,james_3_18,https://github.com/seven1m/open-bibles,,joy
+72,james,4,1,,"From whence come wars and fightings among you? come they not hence, even of your lusts that war in your members?",james_4_1,https://github.com/seven1m/open-bibles,,neutral
+73,james,4,2,,"Ye lust, and have not: ye kill, and desire to have, and cannot obtain: ye fight and war, yet ye have not, because ye ask not.",james_4_2,https://github.com/seven1m/open-bibles,,anger
+74,james,4,3,,"Ye ask, and receive not, because ye ask amiss, that ye may consume it upon your lusts.",james_4_3,https://github.com/seven1m/open-bibles,,disgust
+75,james,4,4,,"Ye adulterers and adulteresses, know ye not that the friendship of the world is enmity with God? whosoever therefore will be a friend of the world is the enemy of God.",james_4_4,https://github.com/seven1m/open-bibles,,anger
+76,james,4,5,,"Do ye think that the scripture saith in vain, The spirit that dwelleth in us lusteth to envy?",james_4_5,https://github.com/seven1m/open-bibles,,disgust
+77,james,4,6,,"But he giveth more grace. Wherefore he saith, God resisteth the proud, but giveth grace unto the humble.",james_4_6,https://github.com/seven1m/open-bibles,,neutral
+78,james,4,7,,"Submit yourselves therefore to God. Resist the devil, and he will flee from you.",james_4_7,https://github.com/seven1m/open-bibles,,fear
+79,james,4,8,,"Draw nigh to God, and he will draw nigh to you. Cleanse your hands, ye sinners; and purify your hearts, ye double minded.",james_4_8,https://github.com/seven1m/open-bibles,,disgust
+80,james,4,9,,"Be afflicted, and mourn, and weep: let your laughter be turned to mourning, and your joy to heaviness.",james_4_9,https://github.com/seven1m/open-bibles,,sadness
+81,james,4,10,,"Humble yourselves in the sight of the Lord, and he shall lift you up.",james_4_10,https://github.com/seven1m/open-bibles,,neutral
+82,james,4,11,,"Speak not evil one of another, brethren. He that speaketh evil of his brother, and judgeth his brother, speaketh evil of the law, and judgeth the law: but if thou judge the law, thou art not a doer of the law, but a judge.",james_4_11,https://github.com/seven1m/open-bibles,,disgust
+83,james,4,12,,"There is one lawgiver, who is able to save and to destroy: who art thou that judgest another?",james_4_12,https://github.com/seven1m/open-bibles,,neutral
+84,james,4,13,,"Go to now, ye that say, To day or to morrow we will go into such a city, and continue there a year, and buy and sell, and get gain:",james_4_13,https://github.com/seven1m/open-bibles,,neutral
+85,james,4,14,,"Whereas ye know not what shall be on the morrow. For what is your life? It is even a vapour, that appeareth for a little time, and then vanisheth away.",james_4_14,https://github.com/seven1m/open-bibles,,disgust
+86,james,4,15,,"For that ye ought to say, If the Lord will, we shall live, and do this, or that.",james_4_15,https://github.com/seven1m/open-bibles,,neutral
+87,james,4,16,,But now ye rejoice in your boastings: all such rejoicing is evil.,james_4_16,https://github.com/seven1m/open-bibles,,joy
+88,james,4,17,,"Therefore to him that knoweth to do good, and doeth it not, to him it is sin.",james_4_17,https://github.com/seven1m/open-bibles,,disgust
+89,james,5,1,,"Go to now, ye rich men, weep and howl for your miseries that shall come upon you.",james_5_1,https://github.com/seven1m/open-bibles,,sadness
+90,james,5,2,,"Your riches are corrupted, and your garments are motheaten.",james_5_2,https://github.com/seven1m/open-bibles,,disgust
+91,james,5,3,,"Your gold and silver is cankered; and the rust of them shall be a witness against you, and shall eat your flesh as it were fire. Ye have heaped treasure together for the last days.",james_5_3,https://github.com/seven1m/open-bibles,,anger
+92,james,5,4,,"Behold, the hire of the labourers who have reaped down your fields, which is of you kept back by fraud, crieth: and the cries of them which have reaped are entered into the ears of the Lord of sabaoth.",james_5_4,https://github.com/seven1m/open-bibles,,anger
+93,james,5,5,,"Ye have lived in pleasure on the earth, and been wanton; ye have nourished your hearts, as in a day of slaughter.",james_5_5,https://github.com/seven1m/open-bibles,,disgust
+94,james,5,6,,Ye have condemned and killed the just; and he doth not resist you.,james_5_6,https://github.com/seven1m/open-bibles,,anger
+95,james,5,7,,"Be patient therefore, brethren, unto the coming of the Lord. Behold, the husbandman waiteth for the precious fruit of the earth, and hath long patience for it, until he receive the early and latter rain.",james_5_7,https://github.com/seven1m/open-bibles,,neutral
+96,james,5,8,,Be ye also patient; stablish your hearts: for the coming of the Lord draweth nigh.,james_5_8,https://github.com/seven1m/open-bibles,,fear
+97,james,5,9,,"Grudge not one against another, brethren, lest ye be condemned: behold, the judge standeth before the door.",james_5_9,https://github.com/seven1m/open-bibles,,anger
+98,james,5,10,,"Take, my brethren, the prophets, who have spoken in the name of the Lord, for an example of suffering affliction, and of patience.",james_5_10,https://github.com/seven1m/open-bibles,,neutral
+99,james,5,11,,"Behold, we count them happy which endure. Ye have heard of the patience of Job, and have seen the end of the Lord; that the Lord is very pitiful, and of tender mercy.",james_5_11,https://github.com/seven1m/open-bibles,,sadness
+100,james,5,12,,"But above all things, my brethren, swear not, neither by heaven, neither by the earth, neither by any other oath: but let your yea be yea; and your nay, nay; lest ye fall into condemnation.",james_5_12,https://github.com/seven1m/open-bibles,,anger
+101,james,5,13,,Is any among you afflicted? let him pray. Is any merry? let him sing psalms.,james_5_13,https://github.com/seven1m/open-bibles,,neutral
+102,james,5,14,,"Is any sick among you? let him call for the elders of the church; and let them pray over him, anointing him with oil in the name of the Lord:",james_5_14,https://github.com/seven1m/open-bibles,,neutral
+103,james,5,15,,"And the prayer of faith shall save the sick, and the Lord shall raise him up; and if he have committed sins, they shall be forgiven him.",james_5_15,https://github.com/seven1m/open-bibles,,neutral
+104,james,5,16,,"Confess your faults one to another, and pray one for another, that ye may be healed. The effectual fervent prayer of a righteous man availeth much.",james_5_16,https://github.com/seven1m/open-bibles,,neutral
+105,james,5,17,,"Elias was a man subject to like passions as we are, and he prayed earnestly that it might not rain: and it rained not on the earth by the space of three years and six months.",james_5_17,https://github.com/seven1m/open-bibles,,neutral
+106,james,5,18,,"And he prayed again, and the heaven gave rain, and the earth brought forth her fruit.",james_5_18,https://github.com/seven1m/open-bibles,,neutral
+107,james,5,19,,"Brethren, if any of you do err from the truth, and one convert him;",james_5_19,https://github.com/seven1m/open-bibles,,anger
+108,james,5,20,,"Let him know, that he which converteth the sinner from the error of his way shall save a soul from death, and shall hide a multitude of sins.",james_5_20,https://github.com/seven1m/open-bibles,,neutral
