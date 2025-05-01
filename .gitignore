@@ -5,3 +5,4 @@ benchmark_models.py
 logs/
 __init__.py
 test_thematic_models.py
+test.ipynb
