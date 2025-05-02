@@ -36,18 +36,20 @@ LinguaAnimae/
 │       └── <bible_name>/
 │           ├── emotion/
 │           └── emotion_theme/
-├── logs/                       # Labeling summaries and timers
+├── logs/                       
 │   └── labeling_logs/
+│   └── cleaning_logs/
 ├── notebooks/
 │   ├── 01_scraping_exploration.ipynb
+│   ├── 02_cleaning.ipynb
 │   ├── 03_label_emotions_and_themes.ipynb
 │   ├── 04_translate_labels.ipynb
 │   └── 05_evaluation.ipynb
 ├── src/
-│   ├── scraping/               # HTML + OSIS parsing
-│   ├── preprocessing/          # Cleaning, translation
-│   ├── interface/              # Labeling pipeline CLI
-│   └── modeling/               # (future) classifier training
+│   ├── scraping/               
+│   ├── preprocessing/          
+│   ├── interface/              
+│   └── modeling/               
 ├── tests/
 ├── requirements.txt
 ├── environment.yml
