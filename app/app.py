@@ -92,6 +92,36 @@ def load_emotion_model():
         top_k=None
     )
 
+# === Load the HuggingFace theme classification model ===
+@st.cache_resource
+def load_theme_model():
+    return pipeline(
+        "zero-shot-classification",
+        model="MoritzLaurer/DeBERTa-v3-base-mnli-fever-anli"
+    )
+
+# === Detect thematic label based on input text and language ===
+def get_top_theme(text: str, lang: str) -> dict:
+    classifier = load_theme_model()
+
+    # Candidate labels based on UI language
+    themes_en = ["Love", "Faith", "Hope", "Forgiveness", "Fear"]
+    themes_es = ["Amor", "Fe", "Esperanza", "Perdón", "Miedo"]
+
+    # Always classify in English (text is already translated)
+    result = classifier(text, candidate_labels=themes_en)
+
+    top_label_en = result["labels"][0]
+    score = result["scores"][0]
+
+    if lang == "es":
+        label_map = dict(zip(themes_en, themes_es))
+        top_label = label_map.get(top_label_en, top_label_en)
+    else:
+        top_label = top_label_en
+
+    return {"label": top_label, "score": score}
+
 # === Main app logic ===
 def main():
     # Set background
@@ -162,36 +192,42 @@ def main():
         if user_input:
             with st.spinner("Analizando..." if language == "es" else "Analyzing..."):
                 translated = translate_to_english(user_input)
-                result = load_emotion_model()(translated)
-                top = max(result[0], key=lambda x: x["score"])
+                emotion_result = load_emotion_model()(translated)
+                top_emotion = max(emotion_result[0], key=lambda x: x["score"])
 
-            # Separador visual decorativo
-                st.markdown(
-                    """
-                    <div style='text-align: center; margin-top: 2.5rem; margin-bottom: 0.5rem;'>
-                        <span style='font-size: 1.5rem;'>✶</span>
-                    </div>
-                    <hr style='border: none; border-top: 1.2px solid #5d4037; margin: 0 auto 1.5rem auto; width: 60%;'>
-                    """,
-                    unsafe_allow_html=True
-                )
+                # === Thematic classification ===
+                theme_result = get_top_theme(translated, lang=language)
 
-                # Título de la sección con sombra
-                st.markdown(
-                    f"<h3 style='text-shadow: 0.5px 0.5px 1px rgba(0,0,0,0.2); color: #4e342e;'>"
-                    f"{T['detected'].replace('### ', '')}</h3>",
-                    unsafe_allow_html=True
-                )
+            # Ornamental separator
+            st.markdown(
+                """
+                <div style='text-align: center; margin-top: 2.5rem; margin-bottom: 0.5rem;'>
+                    <span style='font-size: 1.5rem;'>✶</span>
+                </div>
+                <hr style='border: none; border-top: 1.2px solid #5d4037; margin: 0 auto 1.5rem auto; width: 60%;'>
+                """,
+                unsafe_allow_html=True
+            )
 
+            # Show emotion
+            st.markdown(f"<h3 style='color: #4e342e;'>🧠 {T['detected'].replace('### ', '')}</h3>", unsafe_allow_html=True)
+            render_emotion_block(st, top_emotion["label"], top_emotion["score"], lang=language)
 
-            render_emotion_block(st, top["label"], top["score"], lang=language)
-        
-        st.markdown(
-            f"<p style='font-size: 0.95rem; font-style: italic; color: #4e342e; "
-            f"text-shadow: 0.5px 0.5px 1px rgba(0,0,0,0.2); margin-top: 1rem;'>"
-            f"{T['translated_as']} <i>{translated}</i></p>",
-            unsafe_allow_html=True
-        )
+            # Show theme
+            st.markdown(
+                f"<h3 style='color: #4e342e;'>🏷️ {'Tema detectado' if language == 'es' else 'Detected theme'}: "
+                f"{theme_result['label']} — {theme_result['score']*100:.2f}%</h3>",
+                unsafe_allow_html=True
+            )
+
+            # Translated text
+            st.markdown(
+                f"<p style='font-size: 0.95rem; font-style: italic; color: #4e342e; "
+                f"text-shadow: 0.5px 0.5px 1px rgba(0,0,0,0.2); margin-top: 1rem;'>"
+                f"{T['translated_as']} <i>{translated}</i></p>",
+                unsafe_allow_html=True
+            )
+
 
 if __name__ == "__main__":
     main()
