@@ -1,50 +1,41 @@
 input_text,expected_emotion,expected_theme
 I feel anger rising in me.,anger,Fear
-My heart trembles in the dark.,fear,Hope
+My heart trembles in the dark.,fear,Fear
 I know You are with me always.,trust,Faith
-This is a day of blessings and happiness.,joy,Forgiveness
-My spirit is weary and sad.,sadness,Hope
-My spirit is weary and sad.,sadness,Forgiveness
+This is a day of blessings and happiness.,joy,Hope
+My spirit is weary and sad.,sadness,Fear
 "Thank you, Lord, for this beautiful moment.",joy,Love
-I feel alone and abandoned.,sadness,Forgiveness
-"Thank you, Lord, for this beautiful moment.",joy,Forgiveness
+I feel alone and abandoned.,sadness,Fear
 I feel overwhelmed by fear.,fear,Fear
-"Thank you, Lord, for this beautiful moment.",joy,Love
-There is anxiety within me.,fear,Faith
+There is anxiety within me.,fear,Fear
 I’m scared about what the future holds.,fear,Fear
 I feel overwhelmed by fear.,fear,Fear
 My soul feels heavy and burdened.,sadness,Hope
 I am upset and can’t understand this pain.,anger,Fear
-I know You are with me always.,trust,Love
+I know You are with me always.,trust,Faith
 Tears come as I reflect on my pain.,sadness,Hope
 My heart trembles in the dark.,fear,Faith
-This is a day of blessings and happiness.,joy,Love
 There is sorrow in my heart.,sadness,Forgiveness
-I place my life in Your hands.,trust,Love
+I place my life in Your hands.,trust,Faith
 This situation fills me with rage.,anger,Fear
 My faith gives me strength.,trust,Faith
-There is anxiety within me.,fear,Hope
 I trust in Your divine plan.,trust,Faith
-My heart rejoices in Your presence.,joy,Forgiveness
+My heart rejoices in Your presence.,joy,Faith
 My soul feels heavy and burdened.,sadness,Forgiveness
 "Even in darkness, I rely on You.",trust,Faith
 I am filled with joy and gratitude today.,joy,Love
-My heart rejoices in Your presence.,joy,Love
-My heart trembles in the dark.,fear,Hope
+My heart rejoices in Your presence.,joy,Faith
+My heart trembles in the dark.,fear,Fear
 It frustrates me deeply to see such wrong.,anger,Fear
-"Thank you, Lord, for this beautiful moment.",joy,Forgiveness
+"Thank you, Lord, for this beautiful moment.",joy,Faith
 I feel overwhelmed by fear.,fear,Fear
-This is a day of blessings and happiness.,joy,Forgiveness
-There is anxiety within me.,fear,Hope
-There is sorrow in my heart.,sadness,Hope
-There is anxiety within me.,fear,Faith
-Tears come as I reflect on my pain.,sadness,Hope
-This is a day of blessings and happiness.,joy,Forgiveness
+This is a day of blessings and happiness.,joy,Love
+There is anxiety within me.,fear,Fear
+There is sorrow in my heart.,sadness,Fear
+Tears come as I reflect on my pain.,sadness,Forgiveness
 I am filled with joy and gratitude today.,joy,Love
 I place my life in Your hands.,trust,Faith
 I feel alone and abandoned.,sadness,Forgiveness
-My soul feels heavy and burdened.,sadness,Hope
-"Even in darkness, I rely on You.",trust,Love
 "Even in darkness, I rely on You.",trust,Faith
 I need courage to face what lies ahead.,fear,Faith
 I know You are with me always.,trust,Faith
