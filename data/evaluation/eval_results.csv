@@ -1,0 +1,42 @@
+input_text,expected_emotion,expected_theme,pred_emotion,emotion_score,pred_theme,theme_score,emotion_match,theme_match
+I feel anger rising in me.,anger,Fear,anger,0.9938940405845642,Faith,0.2613375186920166,True,False
+My heart trembles in the dark.,fear,Fear,fear,0.9901871681213379,Fear,0.880271315574646,True,True
+I know You are with me always.,trust,Faith,neutral,0.6272860765457153,Love,0.35413721203804016,False,False
+This is a day of blessings and happiness.,joy,Hope,joy,0.9323975443840027,Hope,0.40101733803749084,True,True
+My spirit is weary and sad.,sadness,Fear,sadness,0.9833410382270813,Fear,0.7209318280220032,True,True
+"Thank you, Lord, for this beautiful moment.",joy,Love,joy,0.9081227779388428,Faith,0.336150586605072,True,False
+I feel alone and abandoned.,sadness,Fear,sadness,0.9805318713188171,Fear,0.6806251406669617,True,True
+I feel overwhelmed by fear.,fear,Fear,fear,0.6533271074295044,Fear,0.9875797629356384,True,True
+There is anxiety within me.,fear,Fear,fear,0.963022768497467,Fear,0.9477126002311707,True,True
+I’m scared about what the future holds.,fear,Fear,fear,0.9883252382278442,Fear,0.9817107915878296,True,True
+I feel overwhelmed by fear.,fear,Fear,fear,0.6533271074295044,Fear,0.9875797629356384,True,True
+My soul feels heavy and burdened.,sadness,Hope,sadness,0.9850271940231323,Faith,0.43201255798339844,True,False
+I am upset and can’t understand this pain.,anger,Fear,anger,0.6348958611488342,Fear,0.5326476693153381,True,True
+I know You are with me always.,trust,Faith,neutral,0.6272860765457153,Love,0.35413721203804016,False,False
+Tears come as I reflect on my pain.,sadness,Hope,sadness,0.9462495446205139,Fear,0.3552396595478058,True,False
+My heart trembles in the dark.,fear,Faith,fear,0.9901871681213379,Fear,0.880271315574646,True,False
+There is sorrow in my heart.,sadness,Forgiveness,sadness,0.9806766510009766,Fear,0.4107072651386261,True,False
+I place my life in Your hands.,trust,Faith,anger,0.5485637187957764,Faith,0.40553197264671326,False,True
+This situation fills me with rage.,anger,Fear,anger,0.9859193563461304,Fear,0.24922531843185425,True,True
+My faith gives me strength.,trust,Faith,joy,0.9203910827636719,Faith,0.5654992461204529,False,True
+I trust in Your divine plan.,trust,Faith,neutral,0.5548786520957947,Faith,0.6838167309761047,False,True
+My heart rejoices in Your presence.,joy,Faith,joy,0.9777305126190186,Love,0.5094347596168518,True,False
+My soul feels heavy and burdened.,sadness,Forgiveness,sadness,0.9850271940231323,Faith,0.43201255798339844,True,False
+"Even in darkness, I rely on You.",trust,Faith,neutral,0.2978678047657013,Faith,0.709762454032898,False,True
+I am filled with joy and gratitude today.,joy,Love,joy,0.9925456643104553,Love,0.31624963879585266,True,True
+My heart rejoices in Your presence.,joy,Faith,joy,0.9777305126190186,Love,0.5094347596168518,True,False
+My heart trembles in the dark.,fear,Fear,fear,0.9901871681213379,Fear,0.880271315574646,True,True
+It frustrates me deeply to see such wrong.,anger,Fear,anger,0.5810065269470215,Fear,0.4472465217113495,True,True
+"Thank you, Lord, for this beautiful moment.",joy,Faith,joy,0.9081227779388428,Faith,0.336150586605072,True,True
+I feel overwhelmed by fear.,fear,Fear,fear,0.6533271074295044,Fear,0.9875797629356384,True,True
+This is a day of blessings and happiness.,joy,Love,joy,0.9323975443840027,Hope,0.40101733803749084,True,False
+There is anxiety within me.,fear,Fear,fear,0.963022768497467,Fear,0.9477126002311707,True,True
+There is sorrow in my heart.,sadness,Fear,sadness,0.9806766510009766,Fear,0.4107072651386261,True,True
+Tears come as I reflect on my pain.,sadness,Forgiveness,sadness,0.9462495446205139,Fear,0.3552396595478058,True,False
+I am filled with joy and gratitude today.,joy,Love,joy,0.9925456643104553,Love,0.31624963879585266,True,True
+I place my life in Your hands.,trust,Faith,anger,0.5485637187957764,Faith,0.40553197264671326,False,True
+I feel alone and abandoned.,sadness,Forgiveness,sadness,0.9805318713188171,Fear,0.6806251406669617,True,False
+"Even in darkness, I rely on You.",trust,Faith,neutral,0.2978678047657013,Faith,0.709762454032898,False,True
+I need courage to face what lies ahead.,fear,Faith,fear,0.9448295831680298,Hope,0.4203065037727356,True,False
+I know You are with me always.,trust,Faith,neutral,0.6272860765457153,Love,0.35413721203804016,False,False
+My soul feels heavy and burdened.,sadness,Forgiveness,sadness,0.9850271940231323,Faith,0.43201255798339844,True,False
