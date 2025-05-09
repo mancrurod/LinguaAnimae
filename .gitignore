@@ -1,10 +1,21 @@
+# Documentation files
 indicaciones.docx
 seguimiento_mvp_versiculos.md
-annotation_scheme_docs.zip
+semana_3.docx
+
+# Notebooks
+test.ipynb
+lista_emociones_temas.ipynb
+
+# Python files
 benchmark_models.py
-logs/
 __init__.py
 test_thematic_models.py
-test.ipynb
-semana_3.docx
-lista_emociones_temas.ipynb
+
+# Archives
+annotation_scheme_docs.zip
+
+# Logs and cache
+logs/
+__pycache__/
+app/__pycache__/texts.cpython-310.pyc

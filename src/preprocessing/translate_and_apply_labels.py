@@ -1,4 +1,8 @@
-# src/preprocessing/translate_and_apply_labels.py
+"""
+This script transfers emotion and theme labels generated from the English text
+to the Spanish corpus by matching verses by (chapter, verse) and translating labels.
+No inference is performed on the Spanish text.
+"""
 
 import pandas as pd
 from pathlib import Path

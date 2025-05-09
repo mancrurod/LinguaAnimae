@@ -1,3 +1,9 @@
+"""
+This script performs emotion and theme classification using English Bible text
+via Hugging Face models. The resulting labels are later transferred to the Spanish corpus.
+"""
+
+
 import pandas as pd
 from transformers import pipeline
 from pathlib import Path
