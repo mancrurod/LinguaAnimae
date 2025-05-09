@@ -18,4 +18,4 @@ annotation_scheme_docs.zip
 # Logs and cache
 logs/
 __pycache__/
-app/__pycache__/texts.cpython-310.pyc
+*.pyc

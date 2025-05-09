@@ -20,7 +20,7 @@
 - `transformers`, `torch`, `sentence-transformers`
 - `pandas`, `scikit-learn`, `numpy`, `regex`
 - `beautifulsoup4`, `requests`
-- `streamlit` – interactive frontend (planned)
+- `streamlit` – multilingual app for emotion/theme-based verse recommendation
 - `sqlite` or `duckdb` – fast local verse retrieval
 
 ---
@@ -136,21 +136,28 @@ data/labeled/bible_rv60/emotion_theme/
 
 ---
 
-## 💬 Coming Soon: Streamlit Chatbot
+## 💬 Streamlit Interface
 
-### Example Interaction
+The interactive app is now live!
 
-> Type something like:  
+You can enter a short prompt like:
+
 > *"I'm feeling anxious about the future..."*  
->  
-> And receive:  
-> 📖 **Jeremías 29:11** — *"Porque yo sé los planes que tengo para ti…"*
+> or  
+> *"Tengo miedo y necesito consuelo..."*
 
-The chatbot will:
-- Analyze user prompts
-- Match them to verses based on emotion, theme, and embeddings
-- Return the most semantically aligned results
-- Support both English and Spanish lookups
+And receive:
+
+📖 **Genesis 40:7** — *"Wherefore look ye so sadly today?"*  
+
+📖 **Génesis 40:7** — *"¿Por qué parecen hoy mal vuestros semblantes?"*
+
+The system:
+- Translates input if needed
+- Detects main emotion and theme using Hugging Face models
+- Loads the appropriate corpus (`bible_kjv` or `bible_rv60`)
+- Matches verses labeled with those same emotion + theme
+- Returns the most relevant matches as stylized cards
 
 ---
 
@@ -166,14 +173,31 @@ Labeled files are saved to:
 
 ## 📌 Roadmap
 
-Planned features include:
+### ✅ Completed (Weeks 1–3)
+- Full Bible scraping (KJV + RV60)
+- Corpus cleaning and normalization
+- Emotion and theme labeling using pretrained HuggingFace models
+- Cross-lingual label transfer and alignment
+- Manual evaluation with accuracy and F1 metrics
+- Streamlit interface: emotion + theme detection, stylized results
+- Multilingual support: automatic input translation and corpus selection
+- Recommendation system based on emotion + theme match
 
-- ✅ Streamlit chatbot interface
-- ✅ Cross-lingual label alignment
-- 🔍 Embedding-based verse retrieval
-- 💽 DuckDB or SQLite integration for fast local querying
-- 📊 Annotation statistics and disagreement visualization
-- 📦 Export format: JSONL / Parquet for training or downstream use
+### 🔄 Week 4: Model + Interface Integration and User Testing
+- [ ] Connect model inference to real-time recommendations in the interface
+- [ ] Run test sessions with 5–10 users
+- [ ] Deploy and collect feedback via form (Google Forms or equivalent)
+
+### 🔄 Week 5: Iteration Based on Feedback
+- [ ] Refine model behavior and recommendation logic
+- [ ] Improve clarity of explanations and label rendering
+- [ ] Implement user-suggested improvements
+
+### 🏁 Week 6: Final Demo and Documentation
+- [ ] Consolidate the MVP into a cohesive narrative
+- [ ] Write technical and functional report
+- [ ] Prepare public demo with real examples
+- [ ] (Optional) Add export features (PDF), voice synthesis, or word cloud summaries
 
 [See CHANGELOG.md](CHANGELOG.md) for complete history.
 
@@ -181,12 +205,10 @@ Planned features include:
 
 ## 📖 License
 
-For academic and research use only. Sources are derived from public domain Bibles (e.g., RV60, KJV) and open ML models. License will be finalized before v1.0.
+For academic and research use only. Sources are derived from public domain Bibles (e.g., RV60, KJV) and open ML models from HugginFace. License will be finalized before v1.0.
 
 ---
 
 ## ✨ Acknowledgements
 
 Developed by [Manuel Cruz Rodríguez](https://github.com/mancrurod) as part of an NLP and Data Science learning journey.
-
-

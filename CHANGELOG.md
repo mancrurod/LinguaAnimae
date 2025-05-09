@@ -6,6 +6,27 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ---
 
+## [0.4.0] - 2025-05-09
+
+### Added
+- `render_theme.py`: Visual component matching the emotion renderer, with color, icon and multilingual support.
+- Theme and emotion block rendering fully integrated into `app.py` with consistent style and accessibility.
+- `recommender.py`: Support for corpus selection based on interface language (`bible_kjv` or `bible_rv60`).
+- Label translation logic in recommendation filtering via `EMOTION_MAP` and `THEME_MAP` to ensure Spanish corpus compatibility.
+
+### Changed
+- Streamlit accessibility warnings resolved by setting `label_visibility="collapsed"` on empty labels.
+- Improved `load_corpus()` to load from the appropriate directory depending on the current language.
+- `recommend_verses()` now supports dynamic filtering by language and auto-translation of query labels.
+- Updated `05_evaluation.ipynb` with a final summary and refined conclusions based on model performance and cross-lingual alignment.
+
+### Fixed
+- Prevented `KeyError` in `render_theme_block()` when receiving already-translated labels.
+- Ensured consistent theme rendering regardless of input language.
+- Fixed mismatch between label language and corpus filtering logic that prevented Spanish recommendations from working.
+
+---
+
 ## [0.3.0] - 2025-05-01
 
 ### Added
