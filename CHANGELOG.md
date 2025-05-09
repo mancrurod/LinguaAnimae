@@ -6,6 +6,23 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ---
 
+## [0.5.0] - 2025-05-09
+
+### Added
+- `save_feedback_to_gsheet.py`: Sends user feedback (like/dislike) to a Google Sheet using a service account.
+- Feedback buttons with emoji now animate on hover and are centered for improved UX.
+- Confirmation message after sending a message via text input (`✅ Message sent successfully!`), localized.
+- Font styling applied to emotion and theme blocks for typographic consistency (`Merriweather`).
+- Tooltip-ready button structure using inline HTML and accessible styles.
+
+### Changed
+- Feedback block redesigned with custom HTML/CSS: more compact, centered, and responsive.
+- Translated text ("Texto traducido automáticamente") and subtitle now centered via inline styles.
+- Switched to Enter-to-Submit flow for text input instead of a separate submit button, aligning with standard UX expectations.
+- Updated `.gitignore` and `requirements.txt` to include dependencies for Google Sheets integration and local development.
+
+---
+
 ## [0.4.0] - 2025-05-09
 
 ### Added
