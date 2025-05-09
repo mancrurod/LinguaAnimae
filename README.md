@@ -18,10 +18,9 @@
 
 - **Python 3.10+**
 - `transformers`, `torch`, `sentence-transformers`
-- `pandas`, `scikit-learn`, `numpy`, `regex`
+- `pandas`, `scikit-learn`, `regex`
 - `beautifulsoup4`, `requests`
 - `streamlit` – multilingual app for emotion/theme-based verse recommendation
-- `sqlite` or `duckdb` – fast local verse retrieval
 
 ---
 
@@ -138,26 +137,50 @@ data/labeled/bible_rv60/emotion_theme/
 
 ## 💬 Streamlit Interface
 
-The interactive app is now live!
+The interactive Streamlit app allows users to input a free-form emotional message and receive recommended Bible verses matching its **emotion** and **theme**.
 
-You can enter a short prompt like:
+### Features
 
-> *"I'm feeling anxious about the future..."*  
-> or  
-> *"Tengo miedo y necesito consuelo..."*
+- 🔄 **Automatic translation** of input (EN/ES)
+- 🧠 **Emotion detection** (6 Plutchik categories)
+- 🏷️ **Theme classification** (5 canonical themes)
+- 📖 **Context-aware verse matching** from KJV or RV60
+- 🎨 **Stylized cards** with emotion/theme color, emoji, and verse metadata
+- ✅ **User feedback collection** via like/dislike buttons (stored in Google Sheets)
 
-And receive:
+### Example
 
-📖 **Genesis 40:7** — *"Wherefore look ye so sadly today?"*  
+Input:
 
-📖 **Génesis 40:7** — *"¿Por qué parecen hoy mal vuestros semblantes?"*
+> *Tengo miedo y necesito consuelo...*
 
-The system:
-- Translates input if needed
-- Detects main emotion and theme using Hugging Face models
-- Loads the appropriate corpus (`bible_kjv` or `bible_rv60`)
-- Matches verses labeled with those same emotion + theme
-- Returns the most relevant matches as stylized cards
+Returns:
+
+📖 *Génesis 40:7* — *"¿Por qué parecen hoy mal vuestros semblantes?"*
+
+---
+
+## 📤 Feedback System
+
+Users can now rate the relevance of the emotion/theme detection with a 👍 / 👎 system.  
+Feedback is saved to a **Google Sheet** along with:
+
+- Original input
+- Detected emotion and score
+- Detected theme and score
+- User name (optional)
+- Feedback value (`like` / `dislike`)
+
+This enables future model refinement and analytics.
+
+---
+
+## ✨ UI Enhancements
+
+- Feedback buttons styled with semantic colors and **hover animation**
+- Subtitles, emotion/theme blocks, and translation notices are now **centered and consistently styled**
+- Merriweather font applied to all key UI blocks for elegance and readability
+
 
 ---
 
