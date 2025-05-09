@@ -28,31 +28,56 @@
 
 ```
 LinguaAnimae/
+├── .streamlit/                        # Streamlit secrets and config
+│   └── secrets.toml
+├── app/                               # Streamlit app frontend
+│   ├── assets/                        # Visual assets (background image)
+│   │   └── old-wrinkled-paper.jpg
+│   ├── components/                    # UI rendering components
+│   │   ├── render_emotion.py
+│   │   └── render_theme.py
+│   ├── app.py                         # Main Streamlit entry point
+│   └── texts.py                       # Multilingual UI dictionary
 ├── data/
-│   ├── raw/                    # Unprocessed texts
-│   ├── processed/              # Cleaned verse-by-verse CSVs
-│   └── labeled/                # Emotion & theme-labeled output
+│   ├── raw/                           # Original scraped texts
+│   ├── processed/                     # Cleaned and merged verse data
+│   └── labeled/                       # Emotion and theme-labeled corpora
 │       └── <bible_name>/
 │           ├── emotion/
 │           └── emotion_theme/
-├── logs/                       
-│   └── labeling_logs/
-│   └── cleaning_logs/
-├── notebooks/
+├── logs/
+│   ├── labeling_logs/                 # Logs from the labeling pipeline
+│   └── cleaning_logs/                 # Logs from cleaning steps
+├── notebooks/                         # Data exploration and validation
 │   ├── 01_scraping_exploration.ipynb
 │   ├── 02_cleaning.ipynb
 │   ├── 03_label_emotions_and_themes.ipynb
 │   ├── 04_translate_labels.ipynb
 │   └── 05_evaluation.ipynb
 ├── src/
-│   ├── scraping/               
-│   ├── preprocessing/          
-│   ├── interface/              
-│   └── modeling/               
-├── tests/
+│   ├── interface/
+│   │   ├── recommender.py
+│   │   └── labeling_pipeline.py
+│   ├── modeling/
+│   │   ├── emotion_theme_labeling.py
+│   │   ├── theme_labeling.py
+│   │   └── labeling_pipeline.py
+│   ├── preprocessing/
+│   │   ├── cleaning.py
+│   │   ├── merge.py
+│   │   └── translate_and_apply_labels.py
+│   ├── scraping/
+│   │   ├── bible_scraper.py
+│   │   └── parse_osis_kjv.py
+│   └── utils/
+│       ├── save_feedback_to_gsheet.py
+│       └── translation_maps.py
+├── tests/                             # Future test coverage
+├── .gitignore
 ├── requirements.txt
 ├── environment.yml
-└── README.md
+├── README.md
+├── CHANGELOG.md
 ```
 
 ---
