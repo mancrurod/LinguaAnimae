@@ -46,3 +46,5 @@ packaging==23.2
 psutil==5.9.8
 pyarrow==19.0.1
 PyYAML==6.0.2
+gspread
+oauth2client

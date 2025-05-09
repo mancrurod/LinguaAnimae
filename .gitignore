@@ -2,6 +2,7 @@
 indicaciones.docx
 seguimiento_mvp_versiculos.md
 semana_3.docx
+iteraciones.txt
 
 # Notebooks
 test.ipynb
@@ -19,3 +20,6 @@ annotation_scheme_docs.zip
 logs/
 __pycache__/
 *.pyc
+
+# Secret files
+.streamlit/secrets.toml

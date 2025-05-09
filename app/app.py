@@ -6,12 +6,16 @@ sys.path.append(str(Path(__file__).resolve().parent.parent))
 
 import streamlit as st
 import base64
+import pandas as pd
+from pathlib import Path
 from deep_translator import GoogleTranslator
 from transformers import pipeline
 from texts import TEXTS
 from components.render_emotion import render_emotion_block
 from components.render_theme import render_theme_block
 from src.interface.recommender import load_corpus, recommend_verses
+from src.utils.save_feedback_to_gsheet import save_feedback_to_gsheet
+
 
 # === Streamlit config ===
 st.set_page_config(page_title="Lingua Animae", page_icon="📖")
@@ -73,6 +77,29 @@ def set_background(image_path: str):
                     box-shadow: 0 4px 8px rgba(0,0,0,0.05);
                 }}
 
+                /* === Feedback buttons === */
+                div[data-testid="column"] div:nth-child(1) button {{
+                    background-color: rgba(76, 175, 80, 0.2); /* verde translúcido */
+                    border: 1px solid #4CAF50;
+                    color: #2e7d32;
+                    font-weight: 600;
+                    border-radius: 10px;
+                }}
+
+                div[data-testid="column"] div:nth-child(1) + div button {{
+                    background-color: rgba(244, 67, 54, 0.2); /* rojo translúcido */
+                    border: 1px solid #f44336;
+                    color: #c62828;
+                    font-weight: 600;
+                    border-radius: 10px;
+                }}
+
+                button:hover {{
+                    opacity: 0.85;
+                }}
+                div[class*="emotion-block"], div[class*="theme-block"], .emotion-card, .theme-card {{
+                font-family: 'Merriweather', serif !important;
+                }}
             </style>
             """,
             unsafe_allow_html=True
@@ -139,21 +166,33 @@ def main():
     T = TEXTS[language]
 
     with st.container():
+        # Título principal
         st.markdown("""
             <h1 style='font-family: Cormorant Garamond, serif; font-size: 2.5rem; font-weight: 600;
             color: #5d4037; text-align: center; margin-top: 0.5rem; text-shadow: 1px 1px 2px rgba(0,0,0,0.2);'>
             📖 Lingua Animae 📖</h1>
         """, unsafe_allow_html=True)
 
+        # Subtítulo
         st.markdown(
-            f"<p style='font-family: Merriweather, serif; font-size: 1.15rem; line-height: 1.6; font-weight: 300; text-shadow: 0.5px 0.5px 1px rgba(0,0,0,0.15);'>"
+            f"<p style='font-family: Merriweather, serif; font-size: 1.15rem; line-height: 1.6; font-weight: 300; text-shadow: 0.5px 0.5px 1px rgba(0,0,0,0.15); text-align: center; margin-top: 0.5rem;'>"
             f"{T['subtitle']}</p>", unsafe_allow_html=True)
 
-        st.markdown(
-            f"<p style='font-size: 1.3rem; font-weight: 500; margin-bottom: 0.2rem; text-shadow: 0.5px 0.5px 1px rgba(0,0,0,0.2);'>"
-            f"{T['input_label']}</p>", unsafe_allow_html=True)
 
-        user_input = st.text_input("User input", label_visibility="collapsed")
+        # Tag: name
+        st.markdown(
+            f"<p style='font-size: 1.1rem; font-weight: 500; margin-top: 1rem;'>🧑‍💬 {T['name_label']}</p>",
+            unsafe_allow_html=True
+        )
+        usuario = st.text_input("Nombre", key="nombre_usuario", label_visibility="collapsed")
+
+        # Tag: input text
+        st.markdown(
+            f"<p style='font-size: 1.1rem; font-weight: 500; margin-top: 1rem;'>{T['input_label']}</p>",
+            unsafe_allow_html=True
+        )
+        user_input = st.text_input("Texto", key="user_input", label_visibility="collapsed")
+
 
         if user_input:
             with st.spinner("Analizando..." if language == "es" else "Analyzing..."):
@@ -176,8 +215,43 @@ def main():
             render_theme_block(st, theme_result["label"], theme_result["score"], lang=language)
 
             st.markdown(
-                f"<p style='font-size: 0.95rem; font-style: italic; color: #4e342e; text-shadow: 0.5px 0.5px 1px rgba(0,0,0,0.2); margin-top: 1rem;'>"
+                f"<p style='font-size: 0.95rem; color: #4e342e; text-shadow: 0.5px 0.5px 1px rgba(0,0,0,0.2); margin-top: 1rem; text-align: center;'>"
                 f"{T['translated_as']} <i>{translated}</i></p>", unsafe_allow_html=True)
+
+            
+            # === Feedback buttons ===
+            st.markdown("""
+            <style>
+            .feedback-btn {
+                transition: transform 0.2s ease, opacity 0.2s ease;
+            }
+
+            .feedback-btn:hover {
+                transform: scale(1.1);
+                opacity: 0.9;
+            }
+            </style>
+
+            <div style='text-align: center; margin-top: 1.5rem; margin-bottom: 1rem;'>
+                <form style="display: inline-block; margin-right: 20px;">
+                    <button name="feedback" type="submit" formaction="?like" class="feedback-btn"
+                        style="background-color: rgba(76, 175, 80, 0.2);
+                            border: 1px solid #4CAF50; color: #2e7d32; font-weight: 600;
+                            padding: 0.5rem 1rem; border-radius: 10px; font-size: 1.2rem;">
+                        👍
+                    </button>
+                </form>
+                <form style="display: inline-block;">
+                    <button name="feedback" type="submit" formaction="?dislike" class="feedback-btn"
+                        style="background-color: rgba(244, 67, 54, 0.2);
+                            border: 1px solid #f44336; color: #c62828; font-weight: 600;
+                            padding: 0.5rem 1rem; border-radius: 10px; font-size: 1.2rem;">
+                        👎
+                    </button>
+                </form>
+            </div>
+            """, unsafe_allow_html=True)
+
 
             book = "1_genesis"
             df_verses = load_corpus(book, lang=language)
@@ -187,6 +261,20 @@ def main():
                 theme_result["label"],
                 lang=language
             )
+
+            if "feedback" in locals() and usuario:
+                feedback_data = {
+                    "usuario": usuario,
+                    "texto": user_input,
+                    "emocion": top_emotion["label"],
+                    "emocion_pct": round(top_emotion["score"] * 100, 2),
+                    "tema": theme_result["label"],
+                    "tema_pct": round(theme_result["score"] * 100, 2),
+                    "feedback": feedback
+                }
+
+                save_feedback_to_gsheet(feedback_data)
+                st.success(T["feedback_thanks"])
 
             if not recommendations.empty:
                 st.markdown(
