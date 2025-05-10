@@ -94,10 +94,8 @@ def scrape_chapter(book_id: str, chapter_number: int) -> List[Dict[str, Any]]:
     # Iterate through the elements in the content division
     for el in content_div.find_all(["h2", "span", "br"], recursive=True):
         if el.name == "h2" and "estudio" in el.get("class", []):
-            # Capture subtitles
             subtitle = el.get_text(strip=True)
         elif el.name == "span" and "versiculo" in el.get("class", []):
-            # Start a new verse
             current_verse = {
                 "book": book_id,
                 "chapter": chapter_number,
@@ -107,12 +105,19 @@ def scrape_chapter(book_id: str, chapter_number: int) -> List[Dict[str, Any]]:
                 "source_url": url
             }
         elif el.name == "span" and "texto" in el.get("class", []) and current_verse:
-            # Append text to the current verse
-            current_verse["text"] += el.get_text(strip=True) + " "
+            text_part = el.get_text().strip()
+            if text_part:
+                current_verse["text"] += text_part + "\n"
         elif el.name == "br" and current_verse:
-            # End the current verse
+            current_verse["text"] = current_verse["text"].strip()
             verses.append(current_verse)
             current_verse = None
+
+    # If the last verse wasn't closed with <br>, make sure we still include it
+    if current_verse:
+        current_verse["text"] = current_verse["text"].strip()
+        verses.append(current_verse)
+
     return verses
 
 # ==========================
@@ -164,6 +169,7 @@ def scrape_book(idx: int, book_id: str, book_name: str, logger: logging.Logger, 
     if all_verses:
         # Save the scraped verses to a CSV file
         df = pd.DataFrame(all_verses)
+        df.sort_values(by=["chapter", "verse"], inplace=True)
         df.to_csv(filepath, index=False, encoding="utf-8")
         print(f"✅ Saved {filepath.name} with {len(df)} verses")
 

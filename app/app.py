@@ -13,7 +13,7 @@ from transformers import pipeline
 from texts import TEXTS
 from components.render_emotion import render_emotion_block
 from components.render_theme import render_theme_block
-from src.interface.recommender import load_corpus, recommend_verses
+from src.interface.recommender import load_entire_corpus, recommend_verses
 from src.utils.save_feedback_to_gsheet import save_feedback_to_gsheet
 
 
@@ -166,14 +166,14 @@ def main():
     T = TEXTS[language]
 
     with st.container():
-        # Título principal
+        # Main title
         st.markdown("""
             <h1 style='font-family: Cormorant Garamond, serif; font-size: 2.5rem; font-weight: 600;
             color: #5d4037; text-align: center; margin-top: 0.5rem; text-shadow: 1px 1px 2px rgba(0,0,0,0.2);'>
             📖 Lingua Animae 📖</h1>
         """, unsafe_allow_html=True)
 
-        # Subtítulo
+        # Subtitle
         st.markdown(
             f"<p style='font-family: Merriweather, serif; font-size: 1.15rem; line-height: 1.6; font-weight: 300; text-shadow: 0.5px 0.5px 1px rgba(0,0,0,0.15); text-align: center; margin-top: 0.5rem;'>"
             f"{T['subtitle']}</p>", unsafe_allow_html=True)
@@ -253,8 +253,7 @@ def main():
             """, unsafe_allow_html=True)
 
 
-            book = "1_genesis"
-            df_verses = load_corpus(book, lang=language)
+            df_verses = load_entire_corpus(lang=language)
             recommendations = recommend_verses(
                 df_verses,
                 top_emotion["label"],

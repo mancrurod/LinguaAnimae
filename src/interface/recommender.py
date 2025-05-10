@@ -16,25 +16,34 @@ MAX_RESULTS = 5
 # === RECOMMENDATION LOGIC ==== 
 # ==============================
 
-def load_corpus(book: str, lang: str = "en") -> pd.DataFrame:
+def load_entire_corpus(lang: str = "en") -> pd.DataFrame:
     """
-    Load a verse dataset for the given book and language.
+    Load the entire labeled corpus for the selected language.
 
     Args:
-        book (str): File prefix (e.g., "1_genesis")
         lang (str): Language code ("en" or "es")
 
     Returns:
-        pd.DataFrame: Loaded verse dataset with emotion and theme labels
+        pd.DataFrame: Combined dataframe with all labeled verses
     """
     base_path = Path("data/labeled")
     corpus_dir = base_path / ("bible_kjv" if lang == "en" else "bible_rv60") / "emotion_theme"
-    file_path = corpus_dir / f"{book}_emotion_theme.csv"
 
-    if not file_path.exists():
+    all_files = list(corpus_dir.glob("*_emotion_theme.csv"))
+    if not all_files:
         return pd.DataFrame()
 
-    return pd.read_csv(file_path)
+    dfs = []
+    for file in all_files:
+        try:
+            df = pd.read_csv(file)
+            df["source_file"] = file.stem  # Optional: to keep track of origin
+            dfs.append(df)
+        except Exception as e:
+            print(f"❌ Error loading {file.name}: {e}")
+
+    return pd.concat(dfs, ignore_index=True) if dfs else pd.DataFrame()
+
 
 
 def recommend_verses(
@@ -45,17 +54,17 @@ def recommend_verses(
     max_results: int = MAX_RESULTS
 ) -> pd.DataFrame:
     """
-    Filter a dataframe of verses by emotion and theme, considering the UI language.
+    Recommend random verses from the entire corpus based on emotion and theme.
 
     Args:
-        df (pd.DataFrame): Dataframe with annotated verses.
+        df (pd.DataFrame): Dataframe with all annotated verses.
         emotion (str): Detected emotion in English.
         theme (str): Detected theme in English.
         lang (str): Language of the verse corpus ("en" or "es").
         max_results (int): Max number of verses to return.
 
     Returns:
-        pd.DataFrame: Filtered and sampled dataframe with matching verses.
+        pd.DataFrame: Random sample of matching verses.
     """
     if lang == "es":
         emotion = EMOTION_MAP.get(emotion.lower(), emotion)
@@ -66,17 +75,7 @@ def recommend_verses(
         (df["theme"].str.lower().str.contains(theme.lower()))
     ]
 
-    return df_filtered.sample(n=min(max_results, len(df_filtered)), random_state=42) if not df_filtered.empty else pd.DataFrame()
-
-# ==============================
-# === OPTIONAL: BOOK LISTING ===
-# ==============================
-
-def list_available_books() -> List[str]:
-    """
-    List all book prefixes available in the emotion_theme folder.
-
-    Returns:
-        List[str]: List of book name prefixes (e.g., ["1_genesis", "2_exodus"])
-    """
-    return [p.stem.replace("_emotion_theme", "") for p in CORPUS_PATH.glob("*_emotion_theme.csv")]
+    return (
+        df_filtered.sample(n=min(max_results, len(df_filtered)), random_state=42)
+        if not df_filtered.empty else pd.DataFrame()
+    )

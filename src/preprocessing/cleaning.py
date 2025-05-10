@@ -37,17 +37,22 @@ LOG_DIR = Path("logs/cleaning_logs")
 
 def clean_text(text: str) -> str:
     """
-    Clean verse text by trimming and collapsing internal whitespace.
+    Clean verse text by trimming each line and collapsing internal whitespace,
+    but preserving poetic line breaks (\n) for formatted verses.
 
     Args:
         text (str): Raw verse text.
 
     Returns:
-        str: Cleaned text with single spacing and no leading/trailing spaces.
+        str: Cleaned text with preserved line breaks.
     """
-    if pd.isna(text):  # Check if the text is NaN
+    if pd.isna(text):
         return text
-    return re.sub(r'\s+', ' ', text.strip())  # Replace multiple spaces with a single space
+
+    # Normalize each line individually
+    lines = text.splitlines()
+    cleaned_lines = [re.sub(r'\s+', ' ', line.strip()) for line in lines]
+    return "\n".join(cleaned_lines).strip()
 
 
 def normalize_unicode(text: str) -> str:
@@ -183,7 +188,13 @@ def clean_and_prepare_csvs() -> None:
                 output_path.parent.mkdir(parents=True, exist_ok=True)  # Ensure the output directory exists
 
                 # Save the cleaned DataFrame to a new CSV file
-                df.to_csv(output_path, index=False)
+                df.to_csv(
+                    output_path,
+                    index=False,
+                    encoding="utf-8",
+                    lineterminator="\n",
+                    quoting=1  # csv.QUOTE_ALL — forces quoting of all fields
+                )
 
                 # Log the results of the cleaning process
                 log.write(f"Original rows: {original_rows}\n")
