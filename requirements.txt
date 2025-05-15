@@ -48,3 +48,4 @@ pyarrow==19.0.1
 PyYAML==6.0.2
 gspread
 oauth2client
+deep-translator==1.11.4
