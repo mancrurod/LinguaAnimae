@@ -33,3 +33,5 @@ dependencies:
       - streamlit
       - deep-translator
       - qdrant-client
+      - oauth2client  
+      - gspread
