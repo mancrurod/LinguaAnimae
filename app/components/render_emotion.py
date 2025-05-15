@@ -4,8 +4,8 @@ def render_emotion_block(st, label: str, score: float, lang: str = "en"):
     EMOTION_COLORS = {
         "joy": "#d4af37",
         "sadness": "#90caf9",
-        "anger": "#e57373",
-        "fear": "#ffcc80",
+        "anger": "#ef5350",
+        "fear": "#e57373",
         "trust": "#a5d6a7",
         "surprise": "#ce93d8",
         "neutral": "#e0e0e0",
@@ -67,6 +67,7 @@ def render_emotion_block(st, label: str, score: float, lang: str = "en"):
             border: 1px solid #5d4037;
             box-shadow: 0 2px 5px rgba(0,0,0,0.2);
             margin-top: 1rem;
+            text-align: center;
         '>
             <h3 style='margin: 0; color: #4e342e; font-weight: 600;'>
                 {icon} {label_translated} — {score*100:.2f}%

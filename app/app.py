@@ -43,10 +43,10 @@ def set_background(image_path: str):
 
                 html, body, .stApp, [class^="css"], [class*="st-"] {{
                     font-family: 'Cormorant Garamond', serif !important;
-                    font-size: 20px;
+                    font-size: 22px;
                     color: #4e342e;
                     background-color: transparent;
-                    text-shadow: 0.4px 0.4px 0.6px rgba(0,0,0,0.08);
+                    text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
                 }}
 
                 .stApp {{
@@ -130,23 +130,30 @@ def set_background(image_path: str):
         # Show a warning if the background image is not found
         st.warning("⚠️ Background image not found. Please check the path.")
 
-# === Custom CSS for typing effect ===
+# CSS
 st.markdown("""
 <style>
-@keyframes typing {
-  from { width: 0; }
-  to { width: 100%; }
+.feedback-button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #fbe9e7;
+    border: 1px solid #a1887f;
+    border-radius: 12px;
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: #4e342e;
+    text-decoration: none;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.12);
+    transition: all 0.25s ease-in-out;
 }
-.verse-typing {
-  overflow: hidden;
-  white-space: nowrap;
-  border-right: 2px solid #4e342e;
-  width: 0;
-  animation: typing 1.6s steps(80, end) forwards;
+
+.feedback-button:hover {
+    background-color: #f8d9ce;
+    transform: scale(1.03);
+    box-shadow: 3px 3px 8px rgba(0,0,0,0.2);
 }
 </style>
 """, unsafe_allow_html=True)
-
 
 def translate_to_english(text: str) -> str:
     """
@@ -238,7 +245,7 @@ def main():
 
         # Input: User name
         st.markdown(
-            f"<p style='font-size: 1.1rem; font-weight: 500; margin-top: 1rem;'>🧑‍💬 {T['name_label']}</p>",
+            f"<p style='font-size: 1.1rem; font-weight: 500; margin-top: 1rem;'>💬 {T['name_label']}</p>",
             unsafe_allow_html=True
         )
         usuario = st.text_input("Nombre", key="nombre_usuario", label_visibility="collapsed")
@@ -334,49 +341,23 @@ def main():
                 )
 
                 for _, row in recommendations.iterrows():
-                    texto = row["text"]
-                    num_chars = len(texto)
-                    duration = max(1.5, num_chars * 0.035)
-
                     st.markdown(
                         f"""
-                        <style>
-                        @keyframes typing-{num_chars} {{
-                            0%   {{ clip-path: inset(0 100% 0 0); }}
-                            100% {{ clip-path: inset(0 0 0 0); }}
-                        }}
-                        .typing-{num_chars} {{
-                            display: block;
-                            animation: typing-{num_chars} {duration:.2f}s steps({num_chars}) forwards;
-                        }}
-                        </style>
-
                         <div style='margin-bottom: 1.2rem; padding: 1rem; border-left: 4px solid #5d4037;
                                     background-color: #fefefeaa; border-radius: 8px;
                                     box-shadow: 0 1px 3px rgba(0,0,0,0.08);'>
-                            <div class='typing-{num_chars}' style='
-                                font-size: 1.05rem;
-                                line-height: 1.6;
-                                margin-bottom: 0.5rem;
-                                color: #4e342e;
-                                clip-path: inset(0 100% 0 0);
-                                display: inline-block;
-                            '>{texto}</div>
+                            <p style='font-size: 1.05rem; line-height: 1.6; margin-bottom: 0.5rem;'>{row['text']}</p>
                             <p style='font-size: 0.9rem; color: #6d4c41; font-style: italic;'>({row['book'].capitalize()} {row['chapter']}:{row['verse']})</p>
                         </div>
                         """,
                         unsafe_allow_html=True
                     )
-
-
-
             else:
                 st.markdown(
                     f"<p style='color: #6d4c41; font-style: italic;'>"
                     f"{'No se encontraron coincidencias.' if language == 'es' else 'No matches found.'}</p>",
                     unsafe_allow_html=True
                 )
-
             # === Render feedback section ===
             render_feedback_section(
                 usuario,
@@ -387,11 +368,21 @@ def main():
                 language
             )
 
+            # === Optional: Google Forms link for detailed feedback ===
+            form_url = "https://forms.gle/y61oV5xXLqew22K4A" 
 
+            label = "📋 Sería de gran ayuda conocer tu opinión:" if language == "es" else "📋 Would you like to give us more detailed feedback?"
+            button_text = "Ir al formulario del feedback" if language == "es" else "Open feedback form"
 
-
-
-
+            st.markdown(
+                f"""
+                <div style='text-align: center; margin-top: 2.5rem;'>
+                    <p style='font-size: 1.15rem;'>{label}</p>
+                    <a href="{form_url}" target="_blank" class="feedback-button">{button_text}</a>
+                </div>
+                """,
+                unsafe_allow_html=True
+            )
 
 if __name__ == "__main__":
     main()

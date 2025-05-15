@@ -62,6 +62,7 @@ def render_theme_block(st, label: str, score: float, lang: str = "en"):
             border: 1px solid #5d4037;
             box-shadow: 0 2px 5px rgba(0,0,0,0.2);
             margin-top: 1rem;
+            text-align: center;
         '>
             <h3 style='margin: 0; color: #4e342e; font-weight: 600;'>
                 {icon} {label_translated} — {score*100:.2f}%
