@@ -15,9 +15,9 @@ python-dateutil==2.9.0.post0
 pytz==2025.2
 
 # === GPU + Transformers ===
-torch==2.5.1
-torchvision==0.18.1
-torchaudio==2.5.1
+torch==2.5.1+cu121 --index-url https://download.pytorch.org/whl/cu121
+torchvision==0.18.1+cu121 --index-url https://download.pytorch.org/whl/cu121
+torchaudio==2.5.1+cu121 --index-url https://download.pytorch.org/whl/cu121
 transformers==4.51.3
 tokenizers==0.21.1
 sentence-transformers==4.1.0
