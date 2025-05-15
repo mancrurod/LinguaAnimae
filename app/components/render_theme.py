@@ -39,7 +39,23 @@ def render_theme_block(st, label: str, score: float, lang: str = "en"):
 
     st.markdown(
         f"""
-        <div style='
+        <style>
+            @keyframes fadeInUp {{
+                from {{
+                    opacity: 0;
+                    transform: translateY(20px);
+                }}
+                to {{
+                    opacity: 1;
+                    transform: translateY(0);
+                }}
+            }}
+            .theme-block {{
+                animation: fadeInUp 0.8s ease-out;
+            }}
+        </style>
+
+        <div class='theme-block' style='
             background-color: {color};
             padding: 1rem;
             border-radius: 12px;
@@ -54,3 +70,4 @@ def render_theme_block(st, label: str, score: float, lang: str = "en"):
         """,
         unsafe_allow_html=True
     )
+

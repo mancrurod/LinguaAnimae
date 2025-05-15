@@ -4,6 +4,17 @@ from oauth2client.service_account import ServiceAccountCredentials
 import streamlit as st
 
 def save_feedback_to_gsheet(feedback_data: dict):
+    """
+    Saves user feedback data to a Google Sheet.
+
+    Args:
+        feedback_data (dict): Dictionary containing feedback fields.
+            Must include:
+                - usuario, texto, emocion, emocion_pct, tema, tema_pct, feedback
+            Optionally:
+                - versiculo_1, versiculo_2, ..., versiculo_n
+    """
+    # === Google Sheets setup ===
     scope = [
         "https://spreadsheets.google.com/feeds",
         "https://www.googleapis.com/auth/drive"
@@ -21,28 +32,25 @@ def save_feedback_to_gsheet(feedback_data: dict):
 
     credentials = ServiceAccountCredentials.from_json_keyfile_dict(creds_dict, scope)
     client = gspread.authorize(credentials)
-
     sheet = client.open_by_url(st.secrets["spreadsheet"]["url"])
     worksheet = sheet.get_worksheet(0)
 
-    # Cabecera esperada
-    header = ["timestamp", "usuario", "texto", "emoción", "emoción_pct", "tema", "tema_pct", "feedback"]
+    # === Define base fields and dynamic versiculo_* fields ===
+    fixed_fields = ["usuario", "texto", "emocion", "emocion_pct", "tema", "tema_pct", "feedback"]
+    dynamic_fields = sorted([k for k in feedback_data if k.startswith("versiculo_")], key=lambda x: int(x.split("_")[1]))
+    all_fields = fixed_fields + dynamic_fields
 
-    # Obtener la primera fila (si existe)
+    # === Prepare header ===
+    full_header = ["timestamp"] + all_fields
     existing_values = worksheet.get_all_values()
-    if not existing_values or existing_values[0] != header:
-        worksheet.insert_row(header, index=1)
 
-    # Nueva fila de datos
-    row = [
-        datetime.now().isoformat(timespec="seconds"),
-        feedback_data["usuario"],
-        feedback_data["texto"],
-        feedback_data["emocion"],
-        feedback_data["emocion_pct"],
-        feedback_data["tema"],
-        feedback_data["tema_pct"],
-        feedback_data["feedback"]
-    ]
+    if not existing_values or existing_values[0] != full_header:
+        worksheet.resize(rows=1)  # Clear existing header if needed
+        worksheet.update("A1", [full_header])  # Set new header
 
+    # === Create the row to insert ===
+    timestamp = datetime.now().isoformat(timespec="seconds")
+    row = [timestamp] + [feedback_data.get(field, "") for field in all_fields]
+
+    # === Append to sheet ===
     worksheet.append_row(row, value_input_option="USER_ENTERED")
