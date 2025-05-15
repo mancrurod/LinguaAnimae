@@ -66,10 +66,11 @@ def render_feedback_section(usuario, user_input, recommendations, top_emotion, t
     st.markdown(f"<h4 style='text-align: center;'>{T['feedback_question']}</h4>", unsafe_allow_html=True)
     col1, col2, col3, col4 = st.columns([2, 1, 1, 2])
     with col2:
-        # Button for positive feedback
         if st.button("👍"):
             st.session_state.feedback_value = "like"
+            st.rerun()
     with col3:
-        # Button for negative feedback
         if st.button("👎"):
             st.session_state.feedback_value = "dislike"
+            st.rerun()
+
