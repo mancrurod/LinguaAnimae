@@ -148,10 +148,6 @@ def inject_custom_styles() -> None:
             transform: scale(1.03);
             box-shadow: 3px 3px 8px rgba(0,0,0,0.2);
         }
-                
-        span[data-testid="stTextInputInstructions"] {
-            display: none !important;
-        }
     </style>
     """, unsafe_allow_html=True)
 
