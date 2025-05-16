@@ -260,7 +260,7 @@ def render_user_inputs(T: dict) -> tuple[str, str]:
 
         # Mental health note
         st.markdown(
-            f"<p style='font-family: Merriweather, serif; font-size: 0.65rem; opacity: 0.6; text-align: center; margin-top: -0.5rem;'>"
+            f"<p style='font-family: Merriweather, serif; font-size: 0.65rem; opacity: 0.7; text-align: center; margin-top: -0.5rem;'>"
             f"{T['mental_health_note']}</p>", unsafe_allow_html=True
         )
 
