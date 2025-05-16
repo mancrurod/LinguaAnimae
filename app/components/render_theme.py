@@ -37,6 +37,12 @@ def render_theme_block(st, label: str, score: float, lang: str = "en"):
     icon = THEME_ICONS.get(label_en, "")
     label_translated = THEME_TRANSLATIONS[label_en] if lang == "es" else label_en.capitalize()
 
+    porcentaje = score * 100
+    if lang == "es":
+        porcentaje_str = f"{porcentaje:,.2f}".replace(",", "X").replace(".", ",").replace("X", ".")
+    else:
+        porcentaje_str = f"{porcentaje:.2f}"
+
     st.markdown(
         f"""
         <style>
@@ -65,7 +71,7 @@ def render_theme_block(st, label: str, score: float, lang: str = "en"):
             text-align: center;
         '>
             <h3 style='margin: 0; color: #4e342e; font-weight: 600;'>
-                {icon} {label_translated} — {score*100:.2f}%
+                {icon} {label_translated}: {porcentaje_str}%
             </h3>
         </div>
         """,
