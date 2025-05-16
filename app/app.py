@@ -79,16 +79,9 @@ def set_background(image_path: str) -> None:
 
             footer {{ visibility: hidden; }}
 
-            /* Oculta sticky de Streamlit Cloud */
-            header.st-emotion-cache-18ni7ap {{
-                position: relative !important;
-            }}
-
-            /* También puede estar bajo esta clase, según la versión */
             header[data-testid="stHeader"] {{
-                position: relative !important;
+                display: none;
             }}
-        </style>
         """, unsafe_allow_html=True)
     except FileNotFoundError:
         st.warning("⚠️ Background image not found. Please check the path.")
