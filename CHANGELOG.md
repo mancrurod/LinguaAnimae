@@ -6,6 +6,16 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ---
 
+## [0.5.1] - 2025-05-16
+
+### Changed
+- Refactored `app.py` into modular functions (e.g. `render_language_selector`, `render_user_inputs`, `analyze_user_input`, `render_analysis_results`, etc.) for improved readability and maintainability.
+- Moved all global styles and background logic to `set_background()` and `inject_custom_styles()`.
+- Normalized Spanish book names in verse references via `BOOK_NAME_MAP_ES`, ensuring accents and numbers are properly rendered (e.g. `1 Pedro`, `Isaías`, `Jeremías`).
+- Updated `render_analysis_results()` to dynamically map book identifiers using `BOOK_NAME_MAP_ES` (Spanish) or title-cased formatting (English).
+
+---
+
 ## [0.5.0] - 2025-05-09
 
 ### Added

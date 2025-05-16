@@ -205,7 +205,8 @@ This enables future model refinement and analytics.
 - Feedback buttons styled with semantic colors and **hover animation**
 - Subtitles, emotion/theme blocks, and translation notices are now **centered and consistently styled**
 - Merriweather font applied to all key UI blocks for elegance and readability
-
+- Book names in verse references are now normalized: numbers are preserved (e.g. `1 Pedro`, `2 Timoteo`) and accents are applied where appropriate (e.g. `Isaías`, `Jeremías`) for Spanish; English names are capitalized and spaced (`1 John`, `2 Timothy`)
+- Fully refactored `app.py` into reusable components
 
 ---
 
