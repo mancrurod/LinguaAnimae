@@ -51,7 +51,7 @@ def set_background(image_path: str) -> None:
             html, body, .stApp, [class^="css"], [class*="st-"] {{
                 font-family: 'Cormorant Garamond', serif !important;
                 font-size: 22px;
-                color: #4e342e;
+                color: #5d4037;
                 background-color: transparent;
                 text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
             }}
@@ -258,6 +258,12 @@ def render_user_inputs(T: dict) -> tuple[str, str]:
             f"{T['subtitle']}</p>", unsafe_allow_html=True
         )
 
+        # Mental health note
+        st.markdown(
+            f"<p style='font-family: Merriweather, serif; font-size: 0.65rem; opacity: 0.; text-align: center; margin-top: -0.5rem;'>"
+            f"{T['mental_health_note']}</p>", unsafe_allow_html=True
+        )
+
         # Input: user name
         st.markdown(
             f"<p style='font-size: 1.1rem; font-weight: 500; margin-top: 1rem;'>💬 {T['name_label']}</p>",
@@ -291,46 +297,6 @@ def validate_user_input(text: str, lang: str) -> bool:
         st.warning(warning_msg)
         return False
     return True
-
-def render_user_inputs(T: dict) -> tuple[str, str]:
-    """
-    Render the main title, subtitle, and input fields for user name and user text.
-
-    Args:
-        T (dict): Translation dictionary for the selected language.
-
-    Returns:
-        tuple[str, str]: User name and user input text.
-    """
-    with st.container():
-        # Title
-        st.markdown("""
-            <h1 style='font-family: Cormorant Garamond, serif; font-size: 2.5rem; font-weight: 600;
-            color: #5d4037; text-align: center; margin-top: 0.5rem; text-shadow: 1px 1px 2px rgba(0,0,0,0.2);'>
-            📖 Lingua Animae 📖</h1>
-        """, unsafe_allow_html=True)
-
-        # Subtitle
-        st.markdown(
-            f"<p style='font-family: Merriweather, serif; font-size: 1.15rem; line-height: 1.6; font-weight: 300; text-shadow: 0.5px 0.5px 1px rgba(0,0,0,0.15); text-align: center; margin-top: 0.5rem;'>"
-            f"{T['subtitle']}</p>", unsafe_allow_html=True
-        )
-
-        # Input: user name
-        st.markdown(
-            f"<p style='font-size: 1.1rem; font-weight: 500; margin-top: 1rem;'>💬 {T['name_label']}</p>",
-            unsafe_allow_html=True
-        )
-        usuario = st.text_input("Nombre", key="nombre_usuario", label_visibility="collapsed")
-
-        # Input: user text
-        st.markdown(
-            f"<p style='font-size: 1.1rem; font-weight: 500; margin-top: 1rem;'>{T['input_label']}</p>",
-            unsafe_allow_html=True
-        )
-        user_input = st.text_input("Texto", key="user_input", label_visibility="collapsed")
-
-    return usuario, user_input
 
 def analyze_user_input(text: str, lang: str) -> tuple[dict, dict, str, pd.DataFrame]:
     """
