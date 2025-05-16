@@ -14,7 +14,7 @@ TEXTS = {
         "feedback_thanks": "¡Gracias por tu feedback! 😊",
         "nombre_ok": "¡Hola,",
         "name_label": "Dime tu nombre",
-        "input_label": "✍️ Cuéntame cómo te sientes",    
+        "input_label": "✍️ ¿Qué tal estás?",    
         },
     "en": {
         "subtitle": "How do you feel? Tell me and I will show you verses that will try to help you feel understood.",
@@ -25,7 +25,7 @@ TEXTS = {
         "feedback_thanks": "Thank you for your feedback! 😊",
         "nombre_ok": "Hello,",
         "name_label": "What's your name?",
-        "input_label": "✍️ Tell me how you feel",
+        "input_label": "✍️ How are you feeling today?",
     }
 }
 
