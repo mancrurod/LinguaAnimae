@@ -19,6 +19,7 @@ from components.render_feedback import render_feedback_section
 from src.interface.recommender import load_entire_corpus, recommend_verses
 from src.utils.save_feedback_to_gsheet import save_feedback_to_gsheet
 from src.utils.translation_maps import BOOK_NAME_MAP_ES
+from src.utils.translation_maps import GO_EMOTIONS_TO_EKMAN
 
 load_dotenv()
 
@@ -307,16 +308,34 @@ def translate_to_english(text: str) -> str:
 @st.cache_resource
 def load_emotion_model():
     """
-    Load the emotion classifier pipeline from HuggingFace.
+    Load the emotion classifier pipeline from HuggingFace (SamLowe GoEmotions).
 
     Returns:
         Pipeline: Text classification pipeline.
     """
     return pipeline(
         "text-classification",
-        model="j-hartmann/emotion-english-distilroberta-base",
+        model="SamLowe/roberta-base-go_emotions",
         top_k=None
     )
+
+def classify_ekman_emotion(text, emotion_model):
+    """
+    Classify the Ekman emotion using the SamLowe GoEmotions model and the mapping.
+
+    Args:
+        text (str): Input text in English.
+        emotion_model (Pipeline): HuggingFace pipeline for GoEmotions.
+
+    Returns:
+        dict: Dict with 'ekman_label', 'go_label', and 'score'.
+    """
+    preds = emotion_model(text)[0]
+    top_pred = max(preds, key=lambda x: x["score"])
+    go_label = top_pred["label"]
+    ekman_label = GO_EMOTIONS_TO_EKMAN.get(go_label, "neutral")
+    return {"ekman_label": ekman_label, "go_label": go_label, "score": top_pred["score"]}
+
 
 @st.cache_resource
 def load_theme_model():
@@ -330,6 +349,7 @@ def load_theme_model():
         "zero-shot-classification",
         model="MoritzLaurer/DeBERTa-v3-base-mnli-fever-anli"
     )
+
 
 def get_top_theme(text: str, lang: str) -> dict:
     """
@@ -478,8 +498,13 @@ def analyze_user_input(text: str, lang: str) -> tuple[dict, dict, str, pd.DataFr
 
             # Emotion classification
             try:
-                emotion_result = load_emotion_model()(translated)
-                top_emotion = max(emotion_result[0], key=lambda x: x["score"])
+                emotion_model = load_emotion_model()
+                emotion_result = classify_ekman_emotion(translated, emotion_model)
+                top_emotion = {
+                    "label": emotion_result["ekman_label"],   # Esta es la emoción Ekman mapeada
+                    "go_label": emotion_result["go_label"],   # (Opcional, por si quieres mostrar la etiqueta original)
+                    "score": emotion_result["score"]
+                }
             except Exception:
                 st.error("❌ No se pudo analizar la emoción del texto." if lang == "es"
                          else "❌ Failed to analyze emotion from text.")

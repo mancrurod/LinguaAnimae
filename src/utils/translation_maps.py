@@ -98,3 +98,36 @@ BOOK_NAME_MAP_ES = {
     "apocalipsis": "Apocalipsis"
 }
 
+# src/utils/translation_maps.py
+
+GO_EMOTIONS_TO_EKMAN = {
+    "admiration": "joy",
+    "amusement": "joy",
+    "anger": "anger",
+    "annoyance": "anger",
+    "approval": "joy",
+    "caring": "joy",
+    "confusion": "surprise",
+    "curiosity": "surprise",
+    "desire": "joy",
+    "disappointment": "sadness",
+    "disapproval": "disgust",
+    "disgust": "disgust",
+    "embarrassment": "sadness",
+    "excitement": "joy",
+    "fear": "fear",
+    "gratitude": "joy",
+    "grief": "sadness",
+    "joy": "joy",
+    "love": "joy",
+    "nervousness": "fear",
+    "optimism": "joy",
+    "pride": "joy",
+    "realization": "surprise",
+    "relief": "joy",
+    "remorse": "sadness",
+    "sadness": "sadness",
+    "surprise": "surprise",
+    "neutral": "neutral"
+}
+
