@@ -17,6 +17,10 @@ def render_feedback_section(usuario, user_input, recommendations, top_emotion, t
         st.session_state.feedback_value = None
 
     # Feedback submission block (runs only once)
+    if st.session_state.feedback_value and not usuario:
+        st.warning("⚠️ Por favor, introduce tu nombre antes de enviar tu opinión.")
+        return
+
     if st.session_state.feedback_value and usuario and not st.session_state.feedback_submitted:
         # Create a list of formatted verse strings from recommendations DataFrame
         verses_list = [

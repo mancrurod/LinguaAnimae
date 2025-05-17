@@ -77,14 +77,15 @@ def set_background(image_path: str) -> None:
                 transition: all 0.3s ease;
             }}
 
-            header[data-testid="stHeader"] {{
-                display: none;
-            }}
+
 
         """, unsafe_allow_html=True)
     except FileNotFoundError:
         st.warning("⚠️ Background image not found. Please check the path.")
 
+            # header[data-testid="stHeader"] {{
+            #     display: none;
+            # }}
 
 def inject_custom_styles() -> None:
     """
@@ -608,23 +609,40 @@ def main():
         with col2:
             submit = st.form_submit_button(submit_text)
 
-
-    # === Analysis and results ===
+    # === On submit: run analysis and store results ===
     if submit:
         if not validate_user_input(user_input, lang):
             st.stop()
 
         emotion, theme, translated, recommendations = analyze_user_input(user_input, lang)
         render_analysis_results(T, user_input, translated, emotion, theme, recommendations, lang)
-        render_feedback_section_final(user_name, user_input, recommendations, emotion, theme, lang)
-    
+
+        # Store everything needed for feedback in session state
+        st.session_state.analysis_ready = True
+        st.session_state.user_name_text = user_name
+        st.session_state.user_input_text = user_input
+        st.session_state.emotion = emotion
+        st.session_state.theme = theme
+        st.session_state.recommendations = recommendations
+        st.session_state.lang = lang
+
+    # === Feedback section (persists after submit) ===
+    if st.session_state.get("analysis_ready"):
+        render_feedback_section_final(
+            st.session_state.user_name_text,
+            st.session_state.user_input_text,
+            st.session_state.recommendations,
+            st.session_state.emotion,
+            st.session_state.theme,
+            st.session_state.lang
+        )
     # === Footer ===
     st.markdown("""
         <style>
         .custom-footer {
             position: fixed;
             bottom: 0;
-            width: 50%;
+            width: 28%;
             background-color: rgba(243, 229, 209, 0.85);
             color: #4e342e;
             text-align: center;

@@ -17,11 +17,11 @@ altair
 pydeck
 
 # === Transformers ===
-transformers
-sentence-transformers
-torch
-tokenizers
-protobuf
+torch==2.2.2
+transformers==4.40.0
+sentence-transformers==2.7.0
+tokenizers==0.19.1
+protobuf==4.25.3
 
 # === Utilidades ===
 typing-extensions
