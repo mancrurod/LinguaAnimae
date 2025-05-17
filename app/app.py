@@ -92,6 +92,7 @@ def inject_custom_styles() -> None:
     """
     st.markdown("""
     <style>
+                
         div[data-testid="column"] div:nth-child(1) button {
             background-color: #fbe9e7;
             border: 1px solid #5d4037;
@@ -206,6 +207,57 @@ def inject_custom_styles() -> None:
             justify-content: flex-end;
         }
                 
+        .custom-spinner-box {
+            max-width: 400px;
+            margin: 2rem auto;
+            padding: 1rem 1.5rem;
+            background-color: rgba(243, 229, 209, 0.85);
+            border: 1px solid #5d4037;
+            border-radius: 12px;
+            box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.15);
+            text-align: center;
+            font-family: 'Merriweather', serif;
+            font-size: 1.05rem;
+            color: #4e342e;
+        }
+
+        .custom-spinner-box p::after {
+            content: ' ⏳';
+            animation: pulseDots 1.2s infinite;
+        }
+
+        @keyframes pulseDots {
+            0%   { opacity: 0.2; }
+            50%  { opacity: 1; }
+            100% { opacity: 0.2; }
+        }
+                
+        /* Estilo para el enlace de feedback dentro de un bloque Markdown centrado */
+        div[data-testid="stMarkdownContainer"] div[style*="text-align: center"] > a.feedback-button {
+            display: inline-block;
+            background-color: #f3e5d1;
+            border: 1px solid #5d4037;
+            border-radius: 12px;
+            padding: 0.6rem 1.2rem;
+            font-size: 1rem;
+            font-weight: 500;
+            font-family: 'Merriweather', serif;
+            color: #4e342e;
+            text-decoration: none;
+            box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.25s ease-in-out;
+            cursor: pointer;
+            margin-top: 1rem;
+        }
+
+        /* Hover */
+        div[data-testid="stMarkdownContainer"] div[style*="text-align: center"] > a.feedback-button:hover {
+            background-color: #fff1c9;
+            transform: scale(1.03);
+            box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+        }
+
+                                     
     </style>
     """, unsafe_allow_html=True)
 
@@ -382,8 +434,19 @@ def analyze_user_input(text: str, lang: str) -> tuple[dict, dict, str, pd.DataFr
             - recommendations: DataFrame of recommended verses.
     """
     try:
-        with st.spinner("Analizando..." if lang == "es" else "Analyzing..."):
+            spinner_placeholder = st.empty()  # crea un contenedor temporal
+
+            spinner_placeholder.markdown(f"""
+            <div class="custom-spinner-box">
+                <p>{'Analizando...' if lang == 'es' else 'Analyzing...'}</p>
+            </div>
+            """, unsafe_allow_html=True)
+
+            # Aquí ocurre el análisis real
             translated = translate_to_english(text)
+
+            # Eliminar el recuadro una vez terminado
+            spinner_placeholder.empty()
 
             # Emotion classification
             try:
