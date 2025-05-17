@@ -1,6 +1,6 @@
 # === CORE ===
 python==3.10
-numpy==2.2.5
+numpy==1.26.4
 pandas==2.2.3
 scikit-learn==1.6.1
 scipy==1.15.2
@@ -15,16 +15,14 @@ python-dateutil==2.9.0.post0
 pytz==2025.2
 
 # === GPU + Transformers ===
-torch==2.5.1+cu121 --index-url https://download.pytorch.org/whl/cu121
-torchvision==0.18.1+cu121 --index-url https://download.pytorch.org/whl/cu121
-torchaudio==2.5.1+cu121 --index-url https://download.pytorch.org/whl/cu121
-transformers==4.51.3
-tokenizers==0.21.1
-sentence-transformers==4.1.0
-safetensors==0.5.3
+torch==2.2.2
+transformers==4.40.0
+sentence-transformers==2.7.0
+tokenizers==0.19.1
+protobuf==4.25.3
 
 # === Streamlit + Plotting (optional) ===
-streamlit==1.44.1
+streamlit==1.45.1
 altair==5.5.0
 pydeck==0.9.1
 
