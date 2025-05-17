@@ -148,6 +148,7 @@ def inject_custom_styles() -> None:
             transform: scale(1.03);
             box-shadow: 3px 3px 8px rgba(0,0,0,0.2);
         }
+
     </style>
     """, unsafe_allow_html=True)
 
@@ -463,11 +464,7 @@ def render_feedback_section_final(user_name: str, user_input: str, recommendatio
         unsafe_allow_html=True
     )
 
-def main() -> None:
-    """
-    Main Streamlit app logic.
-    Handles setup, language selection, user input, analysis, and output rendering.
-    """
+def main():
     # === Visual setup ===
     image_path = Path(__file__).parent / "assets" / "old-wrinkled-paper.jpg"
     set_background(str(image_path))
@@ -476,18 +473,24 @@ def main() -> None:
     # === Language selector ===
     lang, T = render_language_selector()
 
-    # === Inputs ===
-    user_name, user_input = render_user_inputs(T)
+    # === Input form ===
+    submit_text = T["submit_button"]
+    with st.form(key="input_form"):
+        user_name, user_input = render_user_inputs(T)
+        col1, col2, col3 = st.columns([1, 1, 1])
+        with col2:
+            submit = st.form_submit_button(submit_text)
 
-    # === Input validation ===
-    if not validate_user_input(user_input, lang):
-        st.stop()
 
     # === Analysis and results ===
-    if user_input:
+    if submit:
+        if not validate_user_input(user_input, lang):
+            st.stop()
+
         emotion, theme, translated, recommendations = analyze_user_input(user_input, lang)
         render_analysis_results(T, user_input, translated, emotion, theme, recommendations, lang)
         render_feedback_section_final(user_name, user_input, recommendations, emotion, theme, lang)
+
 
 if __name__ == "__main__":
     main()

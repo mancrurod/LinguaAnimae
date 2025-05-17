@@ -15,7 +15,8 @@ TEXTS = {
         "nombre_ok": "¡Hola,",
         "name_label": "Dime tu nombre",
         "input_label": "✍️ ¿Qué tal estás?",
-         "mental_health_note": "Si te sientes mal a menudo, recuerda que es bueno cuidar tu salud mental y un/a psicólogo/a siempre podrá ayudarte. ❤️‍🩹",   
+        "mental_health_note": "Si te sientes mal a menudo, recuerda que es bueno cuidar tu salud mental y un/a psicólogo/a siempre podrá ayudarte. ❤️‍🩹",
+        "submit_button": "🧬 Analizar",
         },
     "en": {
         "subtitle": "How do you feel? Tell me and I will show you verses that will try to help you feel understood.",
@@ -28,6 +29,7 @@ TEXTS = {
         "name_label": "What's your name?",
         "input_label": "✍️ How are you feeling today?",
         "mental_health_note": "If you often feel unwell, remember that it's good to take care of your mental health. A psychologist will always help you. ❤️‍🩹",
+        "submit_button": "🧬 Analyze",
     }
 }
 
