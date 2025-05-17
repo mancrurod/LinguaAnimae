@@ -7,7 +7,9 @@ sys.path.append(str(Path(__file__).resolve().parent.parent))
 import streamlit as st
 import base64
 import pandas as pd
-from deep_translator import GoogleTranslator
+import deepl
+import os
+from dotenv import load_dotenv
 from transformers import pipeline
 
 from texts import TEXTS
@@ -18,6 +20,7 @@ from src.interface.recommender import load_entire_corpus, recommend_verses
 from src.utils.save_feedback_to_gsheet import save_feedback_to_gsheet
 from src.utils.translation_maps import BOOK_NAME_MAP_ES
 
+load_dotenv()
 
 # === Streamlit config ===
 st.set_page_config(page_title="Lingua Animae", page_icon="📖")
@@ -233,7 +236,7 @@ def inject_custom_styles() -> None:
             100% { opacity: 0.2; }
         }
                 
-        /* Estilo para el enlace de feedback dentro de un bloque Markdown centrado */
+        /* Style for the feedback link inside a centered Markdown block */
         div[data-testid="stMarkdownContainer"] div[style*="text-align: center"] > a.feedback-button {
             display: inline-block;
             background-color: #f3e5d1;
@@ -264,17 +267,23 @@ def inject_custom_styles() -> None:
 
 def translate_to_english(text: str) -> str:
     """
-    Translate any input text to English.
+    Translate any input text to English using DeepL API.
 
     Args:
         text (str): Input text in any language.
 
     Returns:
-        str: Translated text in English, or original text if translation fails.
+        str: Translated text in English, or original if translation fails.
     """
     try:
-        return GoogleTranslator(source="auto", target="en").translate(text)
-    except Exception:
+        api_key = os.getenv("DEEPL_API_KEY")
+        if not api_key:
+            raise ValueError("DEEPL_API_KEY environment variable not set.")
+        translator = deepl.Translator(api_key)
+        result = translator.translate_text(text, target_lang="EN-US")
+        return result.text
+    except Exception as e:
+        print(f"❌ DeepL translation failed: {e}")
         return text
 
 @st.cache_resource
@@ -328,7 +337,7 @@ def get_top_theme(text: str, lang: str) -> dict:
 def render_language_selector() -> tuple[str, dict]:
     lang_options = {"ES": "es", "EN": "en"}
 
-    # Validar clave previa
+    # Validate previous key
     stored_key = st.session_state.get("lang_selector", "ES")
     default_lang_key = stored_key if stored_key in lang_options else "ES"
     default_lang_code = lang_options[default_lang_key]
@@ -435,7 +444,7 @@ def analyze_user_input(text: str, lang: str) -> tuple[dict, dict, str, pd.DataFr
             - recommendations: DataFrame of recommended verses.
     """
     try:
-            spinner_placeholder = st.empty()  # crea un contenedor temporal
+            spinner_placeholder = st.empty()  # create a temporary container
 
             spinner_placeholder.markdown(f"""
             <div class="custom-spinner-box">
@@ -443,10 +452,10 @@ def analyze_user_input(text: str, lang: str) -> tuple[dict, dict, str, pd.DataFr
             </div>
             """, unsafe_allow_html=True)
 
-            # Aquí ocurre el análisis real
+            # The actual analysis happens here
             translated = translate_to_english(text)
 
-            # Eliminar el recuadro una vez terminado
+            # Remove the box once finished
             spinner_placeholder.empty()
 
             # Emotion classification
@@ -487,8 +496,6 @@ def analyze_user_input(text: str, lang: str) -> tuple[dict, dict, str, pd.DataFr
         st.stop()
 
     return top_emotion, theme_result, translated, recommendations
-
-from src.utils.translation_maps import BOOK_NAME_MAP_ES
 
 def render_analysis_results(
     T: dict,
@@ -634,8 +641,9 @@ def main():
             st.session_state.recommendations,
             st.session_state.emotion,
             st.session_state.theme,
-            st.session_state.lang
+            lang  # <--- solo esto, no pases T ni session_state.lang
         )
+
     # === Footer ===
     st.markdown("""
         <style>

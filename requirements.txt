@@ -29,5 +29,5 @@ pyarrow
 PyYAML
 gspread
 oauth2client
-deep-translator
-qdrant-client
+deepl
+python-dotenv

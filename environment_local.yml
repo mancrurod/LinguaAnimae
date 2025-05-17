@@ -115,4 +115,6 @@ dependencies:
       - ucimlrepo==0.0.7
       - urllib3==2.4.0
       - watchdog==6.0.0
+      - deepl
+      - python-dotenv
 prefix: C:\Users\manue\miniconda3\envs\LinguaAnimae
