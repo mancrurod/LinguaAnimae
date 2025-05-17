@@ -93,6 +93,15 @@ def set_background(image_path: str) -> None:
                 display: none;
             }}
 
+            span[data-testid="stFormSubmitHelper"] {{
+                display: none !important;
+            }}
+
+            div[data-testid="InputInstructions"] {{
+                display: none !important;
+            }}
+
+        </style>
         """, unsafe_allow_html=True)
     except FileNotFoundError:
         st.warning("⚠️ Background image not found. Please check the path.")
