@@ -50,7 +50,7 @@ def set_background(image_path: str) -> None:
 
             html, body, .stApp, [class^="css"], [class*="st-"] {{
                 font-family: 'Cormorant Garamond', serif !important;
-                font-size: 22px;
+                font-size: 18px;
                 color: #5d4037;
                 background-color: transparent;
                 text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
@@ -77,13 +77,14 @@ def set_background(image_path: str) -> None:
                 transition: all 0.3s ease;
             }}
 
+            header[data-testid="stHeader"] {{
+                display: none;
+            }}
+
         """, unsafe_allow_html=True)
     except FileNotFoundError:
         st.warning("⚠️ Background image not found. Please check the path.")
 
-            # header[data-testid="stHeader"] {{
-            #     display: none;
-            # }}
 
 def inject_custom_styles() -> None:
     """
@@ -314,14 +315,14 @@ def render_user_inputs(T: dict) -> tuple[str, str]:
     with st.container():
         # Title
         st.markdown("""
-            <h1 style='font-family: Cormorant Garamond, serif; font-size: 2.5rem; font-weight: 600;
+            <h1 style='font-family: Cormorant Garamond, serif; font-size: 2rem; font-weight: 600;
             color: #5d4037; text-align: center; margin-top: 0.5rem; text-shadow: 1px 1px 2px rgba(0,0,0,0.2);'>
             📖 Lingua Animae 📖</h1>
         """, unsafe_allow_html=True)
 
         # Subtitle
         st.markdown(
-            f"<p style='font-family: Merriweather, serif; font-size: 1.15rem; line-height: 1.6; font-weight: 300; text-shadow: 0.5px 0.5px 1px rgba(0,0,0,0.15); text-align: center; margin-top: 0.5rem;'>"
+            f"<p style='font-family: Merriweather, serif; font-size: 1rem; line-height: 1.6; font-weight: 300; text-shadow: 0.5px 0.5px 1px rgba(0,0,0,0.15); text-align: center; margin-top: 0.5rem;'>"
             f"{T['subtitle']}</p>", unsafe_allow_html=True
         )
 
