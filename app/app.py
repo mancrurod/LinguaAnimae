@@ -316,7 +316,7 @@ def render_user_inputs(T: dict) -> tuple[str, str]:
         # Title
         st.markdown("""
             <h1 style='font-family: Cormorant Garamond, serif; font-size: 2rem; font-weight: 600;
-            color: #5d4037; text-align: center; margin-top: 0.5rem; text-shadow: 1px 1px 2px rgba(0,0,0,0.2);'>
+            color: #5d4037; text-align: center; margin-top: 0.25rem; text-shadow: 1px 1px 2px rgba(0,0,0,0.2);'>
             📖 Lingua Animae 📖</h1>
         """, unsafe_allow_html=True)
 
