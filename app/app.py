@@ -46,7 +46,7 @@ def set_background(image_path: str) -> None:
         bg_base64 = get_base64_bg(image_path)
         st.markdown(f"""
         <style>
-            @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Merriweather:wght@300;400&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700;800;900&family=Merriweather:wght@300;400&display=swap');
 
             html, body, .stApp, [class^="css"], [class*="st-"] {{
                 font-family: 'Cormorant Garamond', serif !important;
@@ -70,21 +70,20 @@ def set_background(image_path: str) -> None:
 
             .stTextInput > div > div > input {{
                 background-color: #fdf6e3cc;
-                border: 1px solid #a1887f;
+                border: 1px solid #5d4037;
                 border-radius: 10px;
                 padding: 0.6rem;
                 color: #4e342e;
                 transition: all 0.3s ease;
             }}
 
-            footer {{ visibility: hidden; }}
-
-            header[data-testid="stHeader"] {{
-                display: none;
-            }}
         """, unsafe_allow_html=True)
     except FileNotFoundError:
         st.warning("⚠️ Background image not found. Please check the path.")
+
+            # header[data-testid="stHeader"] {{
+            #     display: none;
+            # }}
 
 def inject_custom_styles() -> None:
     """
@@ -93,28 +92,28 @@ def inject_custom_styles() -> None:
     st.markdown("""
     <style>
         div[data-testid="column"] div:nth-child(1) button {
-            background-color: rgba(76, 175, 80, 0.2);
-            border: 1px solid #4CAF50;
+            background-color: #fbe9e7;
+            border: 1px solid #5d4037;
             color: #2e7d32;
             font-weight: 600;
             border-radius: 10px;
         }
 
         div[data-testid="column"] div:nth-child(1) + div button {
-            background-color: rgba(244, 67, 54, 0.2);
-            border: 1px solid #f44336;
+            background-color: #fbe9e7;
+            border: 1px solid #5d4037;
             color: #c62828;
             font-weight: 600;
             border-radius: 10px;
         }
-
+                
         button:hover {
             opacity: 0.85;
         }
 
         button[kind="secondary"] {
             background-color: #fdf6e3cc;
-            border: 1px solid #a1887f;
+            border: 1px solid #5d4037;
             border-radius: 12px;
             padding: 0.6rem 1rem;
             font-size: 1.1rem;
@@ -129,26 +128,83 @@ def inject_custom_styles() -> None:
             background-color: #fbe9e7;
         }
 
-        .feedback-button {
-            display: inline-block;
-            padding: 0.75rem 1.5rem;
-            background-color: #fbe9e7;
-            border: 1px solid #a1887f;
+        button[data-testid="stBaseButton-secondary"] {
+            background-color: #f3e5d1;
+            border: 1px solid #5d4037;
             border-radius: 12px;
             font-size: 1.05rem;
             font-weight: 500;
             color: #4e342e;
             text-decoration: none;
-            box-shadow: 2px 2px 6px rgba(0,0,0,0.12);
+            box-shadow: 2px 2px 6px rgba(0,0,0,0.6);
             transition: all 0.25s ease-in-out;
+            padding: 0.75rem 1.5rem;
         }
 
-        .feedback-button:hover {
-            background-color: #f8d9ce;
-            transform: scale(1.03);
+        button[data-testid="stBaseButton-secondary"]:hover {
+            background-color: #fff1c9;
+            transform: scale(1.05);
             box-shadow: 3px 3px 8px rgba(0,0,0,0.2);
         }
+                
+        button[data-testid="stBaseButton-secondaryFormSubmit"] {
+            font-family: 'Cormorant Garamond', serif !important;
+            background-color: #f3e5d1;
+            border: 1px solid #5d4037;
+            border-radius: 12px;
+            padding: 0.75rem 1.5rem;
+            font-size: 1.2rem;
+            font-weight: 800 !important;
+            color: #4e342e;
+            box-shadow: 2px 2px 12px rgba(0,0,0,0.6);
+            display: block;
+            margin: 1rem auto 0 auto;
+            transition: all 0.2s ease-in-out;
+        }
+                
+        button[data-testid="stBaseButton-secondaryFormSubmit"] p {
+            font-family: 'Cormorant Garamond', serif !important;
+            font-weight: 800 !important;
+        }
 
+        button[data-testid="stBaseButton-secondaryFormSubmit"]:hover {
+            background-color: #fff1c9;
+            transform: scale(1.05);
+        }
+                
+        div[data-testid="stForm"] {
+            background-color: #f3e5d1;
+            border: 1px solid #5d4037; 
+            border-radius: 16px;
+            padding: 2rem 2.5rem;
+            margin-top: 1rem;
+            box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.6);
+        }
+                
+        div[data-testid="stRadio"] label {
+            background: none !important;
+            border: none !important;
+            font-size: 1.6rem;
+            transition: transform 0.25s ease, filter 0.25s ease;
+            cursor: pointer;
+            transform-origin: center;
+        }
+
+        div[data-testid="stRadio"] label:hover {
+            transform: scale(1.3);
+            filter: brightness(1.3);
+        }
+
+        div[data-testid="stRadio"] input[type="radio"]:checked + div p {
+            transform: scale(1.3);
+            text-decoration: underline;
+        }
+
+        div[data-testid="stRadio"] {
+            display: flex !important;
+            justify-content: flex-end;
+        }
+                
     </style>
     """, unsafe_allow_html=True)
 
@@ -216,18 +272,23 @@ def get_top_theme(text: str, lang: str) -> dict:
     return {"label": label, "score": score}
 
 def render_language_selector() -> tuple[str, dict]:
-    """
-    Render the language selection UI and return selected language and translation dictionary.
-
-    Returns:
-        tuple[str, dict]: Selected language code and translation dictionary.
-    """
     lang_options = {"ES": "es", "EN": "en"}
-    col1, col2 = st.columns([7, 3])
-    with col2:
-        default_lang = st.session_state.get("lang_selector", "ES")
-        label = "Elegir idioma" if default_lang == "ES" else "Choose language"
-        st.markdown(f"**{label}**")
+
+    # Validar clave previa
+    stored_key = st.session_state.get("lang_selector", "ES")
+    default_lang_key = stored_key if stored_key in lang_options else "ES"
+    default_lang_code = lang_options[default_lang_key]
+    T = TEXTS[default_lang_code]
+
+    with st.container():
+        st.markdown(f"""
+        <div style='text-align: right; width: 100%;'>
+            <p style="font-weight: 600; font-size: 1rem; font-family: 'Cormorant Garamond', serif; margin-bottom: 0.3rem;">
+                {T["language_label"]}
+            </p>
+        </div>
+        """, unsafe_allow_html=True)
+
         selected_key = st.radio(
             "Language selector",
             options=list(lang_options.keys()),
@@ -235,8 +296,10 @@ def render_language_selector() -> tuple[str, dict]:
             key="lang_selector",
             label_visibility="collapsed"
         )
+
     language = lang_options[selected_key]
     return language, TEXTS[language]
+
 
 def render_user_inputs(T: dict) -> tuple[str, str]:
     """
@@ -397,7 +460,7 @@ def render_analysis_results(
     render_theme_block(st, theme["label"], theme["score"], lang=lang)
 
     st.markdown(
-        f"<p style='font-size: 0.95rem; color: #4e342e; text-shadow: 0.5px 0.5px 1px rgba(0,0,0,0.2); margin-top: 1rem; text-align: center;'>"
+        f"<p style='font-size: 0.75rem; color: #4e342e; text-shadow: 0.5px 0.5px 1px rgba(0,0,0,0.2); margin-top: 1rem; text-align: center; opacity: 0.7;'>"
         f"{T['translated_as']} <i>{translated}</i></p>",
         unsafe_allow_html=True
     )
@@ -421,7 +484,7 @@ def render_analysis_results(
                 f"""
                 <div style='margin-bottom: 1.2rem; padding: 1rem; border-left: 4px solid #5d4037;
                             background-color: #fefefeaa; border-radius: 8px;
-                            box-shadow: 0 1px 3px rgba(0,0,0,0.08);'>
+                            box-shadow: 0 1px 3px rgba(0,0,0,0.6);'>
                     <p style='font-size: 1.05rem; line-height: 1.6; margin-bottom: 0.5rem;'>{row['text']}</p>
                     <p style='font-size: 0.9rem; color: #6d4c41; font-style: italic;'>({book_display} {row['chapter']}:{row['verse']})</p>
                 </div>
@@ -490,6 +553,45 @@ def main():
         emotion, theme, translated, recommendations = analyze_user_input(user_input, lang)
         render_analysis_results(T, user_input, translated, emotion, theme, recommendations, lang)
         render_feedback_section_final(user_name, user_input, recommendations, emotion, theme, lang)
+    
+    # === Footer ===
+    st.markdown("""
+        <style>
+        .custom-footer {
+            position: fixed;
+            bottom: 0;
+            width: 50%;
+            background-color: rgba(243, 229, 209, 0.85);
+            color: #4e342e;
+            text-align: center;
+            font-size: 0.65rem;
+            padding: 0.6rem 1rem;
+            font-family: 'Merriweather', serif;
+            border-top: 1px solid #5d4037;
+            border-radius: 10px 10px 0 0;
+            box-shadow: 0px -2px 12px rgba(0, 0, 0, 0.5);
+            z-index: 9999;
+        }
+        .custom-footer a {
+            color: #6d4c41;
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-block;
+            position: relative; 
+            transition: all 0.25s ease
+        }
+                
+        .custom-footer a:hover {
+            transform: scale(1.5);
+            filter: drop-shadow(0 0 4px rgba(255,255,255,0.4)) brightness(1.2);
+            text-shadow: 0 0 2px rgba(255, 255, 255, 0.2);
+        }
+        </style>
+
+        <div class="custom-footer">
+            Hecho con ❤️ por Manuel Cruz Rodríguez · <a href="https://www.linkedin.com/in/mancrurod/" target="_blank">🌐</a>
+        </div>
+        """, unsafe_allow_html=True)
 
 
 if __name__ == "__main__":

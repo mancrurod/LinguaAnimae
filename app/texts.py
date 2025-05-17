@@ -17,6 +17,7 @@ TEXTS = {
         "input_label": "✍️ ¿Qué tal estás?",
         "mental_health_note": "Si te sientes mal a menudo, recuerda que es bueno cuidar tu salud mental y un/a psicólogo/a siempre podrá ayudarte. ❤️‍🩹",
         "submit_button": "🧬 Analizar",
+        "language_label": "Elegir idioma",
         },
     "en": {
         "subtitle": "How do you feel? Tell me and I will show you verses that will try to help you feel understood.",
@@ -30,6 +31,7 @@ TEXTS = {
         "input_label": "✍️ How are you feeling today?",
         "mental_health_note": "If you often feel unwell, remember that it's good to take care of your mental health. A psychologist will always help you. ❤️‍🩹",
         "submit_button": "🧬 Analyze",
+        "language_label": "Choose language",
     }
 }
 
