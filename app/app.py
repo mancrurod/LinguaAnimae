@@ -284,6 +284,16 @@ def inject_custom_styles() -> None:
     </style>
     """, unsafe_allow_html=True)
 
+def get_deepl_key():
+    # Try st.secrets first, then fallback to env variable
+    if "DEEPL_API_KEY" in st.secrets:
+        return st.secrets["DEEPL_API_KEY"]
+    elif "DEEPL_API_KEY" in os.environ:
+        return os.environ["DEEPL_API_KEY"]
+    else:
+        raise ValueError("DEEPL_API_KEY not set!")
+
+
 def translate_to_english(text: str) -> str:
     """
     Translate any input text to English using DeepL API.
@@ -295,14 +305,13 @@ def translate_to_english(text: str) -> str:
         str: Translated text in English, or original if translation fails.
     """
     try:
-        api_key = os.getenv("DEEPL_API_KEY")
-        if not api_key:
-            raise ValueError("DEEPL_API_KEY environment variable not set.")
+        api_key = get_deepl_key()
         translator = deepl.Translator(api_key)
         result = translator.translate_text(text, target_lang="EN-US")
         return result.text
     except Exception as e:
-        print(f"❌ DeepL translation failed: {e}")
+        # Cambia a st.error si usas Streamlit en la interfaz
+        st.error(f"❌ DeepL translation failed: {e}")
         return text
 
 @st.cache_resource
