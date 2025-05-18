@@ -116,6 +116,10 @@ def inject_custom_styles() -> None:
     st.markdown("""
     <style>
                 
+        div[data-testid="stSpinner"], .stSpinner {
+            display: none !important;
+        }
+                
         div[data-testid="column"] div:nth-child(1) button {
             background-color: #fbe9e7;
             border: 1px solid #5d4037;
