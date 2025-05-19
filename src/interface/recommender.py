@@ -2,6 +2,7 @@ from pathlib import Path
 import pandas as pd
 from typing import List, Literal
 from src.utils.translation_maps import EMOTION_MAP, THEME_MAP
+import streamlit as st
 
 
 # ==============================
@@ -16,6 +17,7 @@ MAX_RESULTS = 5
 # === RECOMMENDATION LOGIC ==== 
 # ==============================
 
+@st.cache_data
 def load_entire_corpus(lang: str = "en") -> pd.DataFrame:
     """
     Load the entire labeled corpus for the selected language.
