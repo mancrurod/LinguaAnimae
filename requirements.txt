@@ -12,7 +12,7 @@ python-dateutil
 pytz
 
 # === Streamlit + Visuals ===
-streamlit
+streamlit==1.45.0
 altair
 pydeck
 
