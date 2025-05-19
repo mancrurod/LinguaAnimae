@@ -639,8 +639,8 @@ def render_feedback_section_final(user_name: str, user_input: str, recommendatio
     """
     render_feedback_section(user_name, user_input, recommendations, emotion, theme, lang)
 
-    form_url = "https://forms.gle/y61oV5xXLqew22K4A"
-    label = "📋 Sería de gran ayuda conocer tu opinión:" if lang == "es" else "📋 Would you like to give us more detailed feedback?"
+    form_url = "https://forms.gle/ATXVWXTaoCDR19rf9"
+    label = "📋 Sería de gran ayuda conocer su opinión:" if lang == "es" else "📋 Would you like to give us more detailed feedback?"
     button_text = "Ir al formulario del feedback" if lang == "es" else "Open feedback form"
 
     st.markdown(
