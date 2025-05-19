@@ -90,9 +90,7 @@ def set_background(image_path: str) -> None:
                 transition: all 0.3s ease;
             }}
 
-            header[data-testid="stHeader"] {{
-                display: none;
-            }}
+
 
             span[data-testid="stFormSubmitHelper"] {{
                 display: none !important;
@@ -107,7 +105,9 @@ def set_background(image_path: str) -> None:
     except FileNotFoundError:
         st.warning("⚠️ Background image not found. Please check the path.")
 
-
+            # header[data-testid="stHeader"] {{
+            #     display: none;
+            # }}
 
 def inject_custom_styles() -> None:
     """
