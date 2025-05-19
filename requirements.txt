@@ -31,3 +31,4 @@ gspread
 oauth2client
 deepl
 python-dotenv
+hf_xet
