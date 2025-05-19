@@ -504,9 +504,6 @@ def analyze_user_input(text: str, lang: str) -> tuple[dict, dict, str, pd.DataFr
             # The actual analysis happens here
             translated = translate_to_english(text)
 
-            # Remove the box once finished
-            spinner_placeholder.empty()
-
             # Emotion classification
             try:
                 emotion_model = load_emotion_model()
@@ -549,6 +546,9 @@ def analyze_user_input(text: str, lang: str) -> tuple[dict, dict, str, pd.DataFr
                  else "❌ An unexpected error occurred during analysis.")
         st.stop()
 
+    # Remove the box once finished
+    spinner_placeholder.empty()
+    
     return top_emotion, theme_result, translated, recommendations
 
 def render_analysis_results(
