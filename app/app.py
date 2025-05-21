@@ -374,6 +374,7 @@ def get_top_theme(text: str, lang: str) -> dict:
         dict: Dictionary with top theme and score.
     """
     classifier = load_theme_model()
+    log_memory_usage("After loading theme model")
     themes_en = ["Love", "Faith", "Hope", "Forgiveness", "Fear"]
     themes_es = ["Amor", "Fe", "Esperanza", "Perdón", "Miedo"]
     result = classifier(text, candidate_labels=themes_en)
@@ -507,6 +508,7 @@ def analyze_user_input(text: str, lang: str) -> tuple[dict, dict, str, pd.DataFr
             # Emotion classification
             try:
                 emotion_model = load_emotion_model()
+                log_memory_usage("After loading emotion model")
                 emotion_result = classify_ekman_emotion(translated, emotion_model)
                 top_emotion = {
                     "label": emotion_result["ekman_label"],   # Esta es la emoción Ekman mapeada
@@ -528,6 +530,7 @@ def analyze_user_input(text: str, lang: str) -> tuple[dict, dict, str, pd.DataFr
 
             # Load verse corpus
             df_verses = load_entire_corpus(lang=lang)
+            log_memory_usage("After loading corpus")
             if df_verses.empty:
                 st.warning("⚠️ No se pudo cargar el corpus de versículos." if lang == "es"
                            else "⚠️ Verse corpus could not be loaded.")
@@ -540,6 +543,7 @@ def analyze_user_input(text: str, lang: str) -> tuple[dict, dict, str, pd.DataFr
                 theme_result["label"],
                 lang=lang
             )
+            log_memory_usage("After generating recommendations")
 
     except Exception:
         st.error("❌ Ha ocurrido un error inesperado durante el análisis." if lang == "es"
@@ -549,6 +553,7 @@ def analyze_user_input(text: str, lang: str) -> tuple[dict, dict, str, pd.DataFr
     # Remove the box once finished
     spinner_placeholder.empty()
     
+    log_memory_usage("End of analyze_user_input")
     return top_emotion, theme_result, translated, recommendations
 
 def render_analysis_results(
@@ -653,7 +658,19 @@ def render_feedback_section_final(user_name: str, user_input: str, recommendatio
         unsafe_allow_html=True
     )
 
+import psutil
+import os
+import streamlit as st
+
+def log_memory_usage(tag=""):
+    process = psutil.Process(os.getpid())
+    mem_mb = process.memory_info().rss / 1024 ** 2
+    st.write(f"🔍 [{tag}] Memory usage: {mem_mb:.2f} MB")
+    # Si no quieres que salga en la interfaz, usa logging:
+    # import logging; logging.info(f"Memory usage: {mem_mb:.2f} MB")
+
 def main():
+    log_memory_usage("Start of main")
     # === Visual setup ===
     image_path = Path(__file__).parent / "assets" / "old-wrinkled-paper.jpg"
     set_background(str(image_path))
@@ -677,6 +694,7 @@ def main():
 
         emotion, theme, translated, recommendations = analyze_user_input(user_input, lang)
         render_analysis_results(T, user_input, translated, emotion, theme, recommendations, lang)
+        log_memory_usage("After render_analysis_results")
 
         # Store everything needed for feedback in session state
         st.session_state.analysis_ready = True
@@ -686,6 +704,8 @@ def main():
         st.session_state.theme = theme
         st.session_state.recommendations = recommendations
         st.session_state.lang = lang
+        log_memory_usage("After saving to session_state")
+
 
     # === Feedback section (persists after submit) ===
     if st.session_state.get("analysis_ready"):
