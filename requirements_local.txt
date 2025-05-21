@@ -1,30 +1,44 @@
 # === CORE ===
 python==3.10
 numpy==1.26.4
-pandas==2.2.3
-scikit-learn==1.6.1
-scipy==1.15.2
-matplotlib==3.10.1
+pandas==2.2.2
+scikit-learn==1.4.2
+scipy==1.13.1
+matplotlib==3.8.4
 seaborn==0.13.2
-tqdm==4.67.1
-regex==2024.11.6
+tqdm==4.66.4
+regex==2024.4.16
 requests==2.32.3
-beautifulsoup4==4.13.4
-soupsieve==2.7
+beautifulsoup4==4.12.3
+soupsieve==2.5
 python-dateutil==2.9.0.post0
-pytz==2025.2
+pytz==2024.1
 
 # === GPU + Transformers ===
+# IMPORTANT: PyTorch CUDA is NOT automatically installed by pip.
+# If you have a CUDA-compatible NVIDIA GPU (e.g. RTX 4060Ti), after creating your environment:
+# - Uninstall any torch version installed by pip: pip uninstall torch torchvision torchaudio
+# - Then install the correct CUDA version (for CUDA 12.x, use:)
+# pip install torch==2.2.2+cu121 torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+#
+# If you DON'T have a compatible NVIDIA GPU, use:
+# pip install torch==2.2.2+cpu torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
+#
+# Reference: https://pytorch.org/get-started/locally/
+#
+# For compatibility, 'torch==2.2.2' is listed below, but REMOVE it before pip install if following the above.
 torch==2.2.2
 transformers==4.40.0
 sentence-transformers==2.7.0
 tokenizers==0.19.1
 protobuf==4.25.3
+datasets==2.19.0
+accelerate>=0.21.0
 
 # === Streamlit + Plotting (optional) ===
-streamlit==1.45.1
-altair==5.5.0
-pydeck==0.9.1
+streamlit==1.45.0
+altair==5.2.0
+pydeck==0.9.0
 
 # === Jupyter / Notebook ===
 ipykernel
@@ -35,16 +49,22 @@ traitlets
 tornado
 
 # === Utility ===
-filelock==3.18.0
-huggingface-hub==0.30.2
+filelock==3.13.1
+huggingface-hub==0.23.0
 joblib==1.4.2
-protobuf==5.29.4
 typing_extensions==4.12.2
-packaging==23.2
+packaging==24.0
 psutil==5.9.8
-pyarrow==19.0.1
-PyYAML==6.0.2
-gspread
-oauth2client
-deepl
-python-dotenv
+pyarrow==16.1.0
+PyYAML==6.0.1
+gspread==6.2.0
+oauth2client==4.1.3
+deepl==1.22.0
+python-dotenv==1.0.1
+
+# === Notes ===
+# - If you want maximum reproducibility, pin all package versions.
+# - If using GPU: after installing all, test with:
+#     import torch; print(torch.cuda.is_available())
+#   Should print 'True' if GPU is detected.
+# - If using CPU only, the rest of the stack will still work, just slower for training/inference.

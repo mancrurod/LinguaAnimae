@@ -1,7 +1,7 @@
 # === CORE ===
 numpy==1.26.4
-pandas
-scikit-learn
+pandas==2.2.2
+scikit-learn==1.4.2
 scipy
 tqdm
 regex
@@ -22,6 +22,7 @@ transformers==4.40.0
 sentence-transformers==2.7.0
 tokenizers==0.19.1
 protobuf==4.25.3
+datasets
 
 # === Utilidades ===
 typing-extensions
@@ -34,4 +35,3 @@ python-dotenv
 hf_xet
 unidecode
 psutil
-

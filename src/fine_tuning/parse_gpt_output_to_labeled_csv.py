@@ -7,9 +7,9 @@ producing a CSV ready for fine-tuning: id, verse_id, verse, label.
 import pandas as pd
 from pathlib import Path
 
-SAMPLES_FILE = Path(__file__).parent.parent.parent / "data" / "evaluation" / "emotion_verses_to_label.csv"
-GPT_OUTPUT_FILE = Path(__file__).parent.parent.parent / "data" / "evaluation" / "gpt_output.csv"
-OUTPUT_FILE = Path(__file__).parent.parent.parent / "data" / "evaluation" / "emotion_verses_labeled.csv"
+SAMPLES_FILE = Path(__file__).parent.parent.parent / "data" / "evaluation" / "emotion_verses_to_label_2.csv"
+GPT_OUTPUT_FILE = Path(__file__).parent.parent.parent / "data" / "evaluation" / "gpt_output_2.csv"
+OUTPUT_FILE = Path(__file__).parent.parent.parent / "data" / "evaluation" / "emotion_verses_labeled_2.csv"
 
 def main():
     print("🔗 Loading sample verses...")

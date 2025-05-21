@@ -6,10 +6,8 @@ def render_emotion_block(st, label: str, score: float, lang: str = "en"):
         "sadness": "#90caf9",
         "anger": "#ef5350",
         "fear": "#e57373",
-        "trust": "#a5d6a7",
         "surprise": "#ce93d8",
         "neutral": "#e0e0e0",
-        "love": "#f48fb1",
         "disgust": "#c5e1a5"
     }
 
@@ -18,10 +16,8 @@ def render_emotion_block(st, label: str, score: float, lang: str = "en"):
         "sadness": "😔",
         "anger": "😡",
         "fear": "😱",
-        "trust": "💕",
         "surprise": "😮",
         "neutral": "⚪",
-        "love": "💖",
         "disgust": "🤮"
     }
 
@@ -30,17 +26,16 @@ def render_emotion_block(st, label: str, score: float, lang: str = "en"):
         "sadness": "Tristeza",
         "anger": "Ira",
         "fear": "Miedo",
-        "trust": "Confianza",
         "surprise": "Sorpresa",
         "neutral": "Neutral",
-        "love": "Amor",
         "disgust": "Asco"
     }
 
     label_lc = label.lower()
     color = EMOTION_COLORS.get(label_lc, "#eeeeee")
-    icon = EMOTION_ICONS.get(label_lc, "")
-    label_translated = EMOTION_TRANSLATIONS[label_lc] if lang == "es" else label.capitalize()
+    icon = EMOTION_ICONS.get(label_lc, "❓")
+    # Fallback: si no está la traducción, muestra el label tal cual (en mayúscula)
+    label_translated = EMOTION_TRANSLATIONS.get(label_lc, label.capitalize()) if lang == "es" else label.capitalize()
 
     porcentaje = score * 100
     if lang == "es":

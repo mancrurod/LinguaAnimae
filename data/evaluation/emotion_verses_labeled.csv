@@ -1,0 +1,982 @@
+id,verse_id,verse,label
+0,2_kings_1_10,"And Elijah answered and said to the captain of fifty, If I be a man of God, then let fire come down from heaven, and consume thee and thy fifty. And there came down fire from heaven, and consumed him and his fifty.",anger
+1,1_samuel_19_21,"And when it was told Saul, he sent other messengers, and they prophesied likewise. And Saul sent messengers again the third time, and they prophesied also.",surprise
+2,1_chronicles_21_21,"And as David came to Ornan, Ornan looked and saw David, and went out of the threshingfloor, and bowed himself to David with his face to the ground.",neutral
+3,song_of_solomon_2_4,"He brought me to the banqueting house, and his banner over me was love.",joy
+4,hosea_4_4,"Yet let no man strive, nor reprove another: for thy people are as they that strive with the priest.",disgust
+5,luke_13_7,"Then said he unto the dresser of his vineyard, Behold, these three years I come seeking fruit on this fig tree, and find none: cut it down; why cumbereth it the ground?",anger
+6,leviticus_10_10,"And that ye may put difference between holy and unholy, and between unclean and clean;",neutral
+7,lamentations_1_1,"How doth the city sit solitary, that was full of people how is she become as a widow she that was great among the nations, and princess among the provinces, how is she become tributary",sadness
+8,jeremiah_42_3,"That the LORD thy God may shew us the way wherein we may walk, and the thing that we may do.",fear
+9,numbers_1_48,"For the LORD had spoken unto Moses, saying,",neutral
+10,2_samuel_3_38,"And the king said unto his servants, Know ye not that there is a prince and a great man fallen this day in Israel?",sadness
+11,1_kings_9_15,"And this is the reason of the levy which king Solomon raised; for to build the house of the LORD, and his own house, and Millo, and the wall of Jerusalem, and Hazor, and Megiddo, and Gezer.",neutral
+12,matthew_18_27,"Then the lord of that servant was moved with compassion, and loosed him, and forgave him the debt.",joy
+13,1_samuel_13_20,"But all the Israelites went down to the Philistines, to sharpen every man his share, and his coulter, and his axe, and his mattock.",neutral
+14,psalms_130_7,"Let Israel hope in the LORD: for with the LORD there is mercy, and with him is plenteous redemption.",joy
+15,job_13_27,"Thou puttest my feet also in the stocks, and lookest narrowly unto all my paths; thou settest a print upon the heels of my feet.",fear
+16,deuteronomy_2_32,"Then Sihon came out against us, he and all his people, to fight at Jahaz.",anger
+17,isaiah_30_29,"Ye shall have a song, as in the night when a holy solemnity is kept; and gladness of heart, as when one goeth with a pipe to come into the mountain of the LORD, to the mighty One of Israel.",joy
+18,job_37_24,Men do therefore fear him: he respecteth not any that are wise of heart.,fear
+19,psalms_145_21,My mouth shall speak the praise of the LORD: and let all flesh bless his holy name for ever and ever.,joy
+20,2_chronicles_9_12,"And king Solomon gave to the queen of Sheba all her desire, whatsoever she asked, beside that which she had brought unto the king. So she turned, and went away to her own land, she and her servants.",neutral
+21,acts_11_18,"When they heard these things, they held their peace, and glorified God, saying, Then hath God also to the Gentiles granted repentance unto life.",surprise
+22,john_3_19,"And this is the condemnation, that light is come into the world, and men loved darkness rather than light, because their deeds were evil.",disgust
+23,numbers_12_11,"And Aaron said unto Moses, Alas, my lord, I beseech thee, lay not the sin upon us, wherein we have done foolishly, and wherein we have sinned.",sadness
+24,psalms_102_4,"My heart is smitten, and withered like grass; so that I forget to eat my bread.",sadness
+25,galatians_3_15,"Brethren, I speak after the manner of men; Though it be but a man's covenant, yet if it be confirmed, no man disannulleth, or addeth thereto.",neutral
+26,ezekiel_30_10,Thus saith the Lord GOD; I will also make the multitude of Egypt to cease by the hand of Nebuchadrezzar king of Babylon.,anger
+27,1_chronicles_16_22,"Saying, Touch not mine anointed, and do my prophets no harm.",neutral
+28,revelation_15_7,"And one of the four beasts gave unto the seven angels seven golden vials full of the wrath of God, who liveth for ever and ever.",anger
+29,proverbs_24_21,"My son, fear thou the LORD and the king: and meddle not with them that are given to change:",fear
+30,jeremiah_22_12,"But he shall die in the place whither they have led him captive, and shall see this land no more.",sadness
+31,luke_12_43,"Blessed is that servant, whom his lord when he cometh shall find so doing.",joy
+32,lamentations_1_7,"Jerusalem remembered in the days of her affliction and of her miseries all her pleasant things that she had in the days of old, when her people fell into the hand of the enemy, and none did help her: the adversaries saw her, and did mock at her sabbaths.",sadness
+33,luke_18_35,"And it came to pass, that as he was come nigh unto Jericho, a certain blind man sat by the way side begging:",sadness
+34,job_6_29,"Return, I pray you, let it not be iniquity; yea, return again, my righteousness is in it.",anger
+35,1_corinthians_15_34,"Awake to righteousness, and sin not; for some have not the knowledge of God: I speak this to your shame.",disgust
+36,nehemiah_7_11,"The children of Pahath-moab, of the children of Jeshua and Joab, two thousand and eight hundred and eighteen.",neutral
+37,proverbs_6_33,A wound and dishonour shall he get; and his reproach shall not be wiped away.,sadness
+38,proverbs_23_25,"Thy father and thy mother shall be glad, and she that bare thee shall rejoice.",joy
+39,psalms_119_13,With my lips have I declared all the judgments of thy mouth.,joy
+40,psalms_147_4,He telleth the number of the stars; he calleth them all by their names.,neutral
+41,acts_4_35,And laid them down at the apostles' feet: and distribution was made unto every man according as he had need.,joy
+42,acts_24_22,"And when Felix heard these things, having more perfect knowledge of that way, he deferred them, and said, When Lysias the chief captain shall come down, I will know the uttermost of your matter.",neutral
+43,psalms_106_39,"Thus were they defiled with their own works, and went a whoring with their own inventions.",disgust
+44,colossians_1_27,"To whom God would make known what is the riches of the glory of this mystery among the Gentiles; which is Christ in you, the hope of glory:",joy
+45,exodus_28_42,And thou shalt make them linen breeches to cover their nakedness; from the loins even unto the thighs they shall reach:,neutral
+46,isaiah_48_22,"There is no peace, saith the LORD, unto the wicked.",sadness
+47,deuteronomy_31_26,"Take this book of the law, and put it in the side of the ark of the covenant of the LORD your God, that it may be there for a witness against thee.",fear
+48,luke_19_38,"Saying, Blessed be the King that cometh in the name of the Lord: peace in heaven, and glory in the highest.",joy
+49,ezekiel_43_26,Seven days shall they purge the altar and purify it; and they shall consecrate themselves.,neutral
+50,esther_9_6,And in Shushan the palace the Jews slew and destroyed five hundred men.,anger
+51,isaiah_2_20,"In that day a man shall cast his idols of silver, and his idols of gold, which they made each one for himself to worship, to the moles and to the bats;",disgust
+52,job_38_29,"Out of whose womb came the ice? and the hoary frost of heaven, who hath gendered it?",surprise
+53,romans_6_22,"But now being made free from sin, and become servants to God, ye have your fruit unto holiness, and the end everlasting life.",joy
+54,mark_14_72,"And the second time the cock crew. And Peter called to mind the word that Jesus said unto him, Before the cock crow twice, thou shalt deny me thrice. And when he thought thereon, he wept.",sadness
+55,1_samuel_17_22,"And David left his carriage in the hand of the keeper of the carriage, and ran into the army, and came and saluted his brethren.",joy
+56,deuteronomy_4_45,"These are the testimonies, and the statutes, and the judgments, which Moses spake unto the children of Israel, after they came forth out of Egypt,",neutral
+57,2_corinthians_12_13,"For what is it wherein ye were inferior to other churches, except it be that I myself was not burdensome to you? forgive me this wrong.",sadness
+58,2_kings_2_2,"And Elijah said unto Elisha, Tarry here, I pray thee; for the LORD hath sent me to Bethel. And Elisha said unto him, As the LORD liveth, and as thy soul liveth, I will not leave thee. So they went down to Bethel.",joy
+59,numbers_7_44,"One golden spoon of ten shekels, full of incense:",neutral
+60,james_3_5,"Even so the tongue is a little member, and boasteth great things. Behold, how great a matter a little fire kindleth!",anger
+61,2_samuel_9_6,"Now when Mephibosheth, the son of Jonathan, the son of Saul, was come unto David, he fell on his face, and did reverence. And David said, Mephibosheth. And he answered, Behold thy servant!",neutral
+62,jeremiah_25_31,"A noise shall come even to the ends of the earth; for the LORD hath a controversy with the nations, he will plead with all flesh; he will give them that are wicked to the sword, saith the LORD.",anger
+63,numbers_7_54,"On the eighth day offered Gamaliel the son of Pedahzur, prince of the children of Manasseh:",neutral
+64,genesis_1_16,"And God made two great lights; the greater light to rule the day, and the lesser light to rule the night: he made the stars also.",joy
+65,1_timothy_6_1,"Let as many servants as are under the yoke count their own masters worthy of all honour, that the name of God and his doctrine be not blasphemed.",neutral
+66,genesis_4_3,"And in process of time it came to pass, that Cain brought of the fruit of the ground an offering unto the LORD.",neutral
+67,ezekiel_30_12,"And I will make the rivers dry, and sell the land into the hand of the wicked: and I will make the land waste, and all that is therein, by the hand of strangers: I the LORD have spoken it.",fear
+68,ezekiel_27_29,"And all that handle the oar, the mariners, and all the pilots of the sea, shall come down from their ships, they shall stand upon the land;",sadness
+69,2_chronicles_13_11,"And they burn unto the LORD every morning and every evening burnt sacrifices and sweet incense: the shewbread also set they in order upon the pure table; and the candlestick of gold with the lamps thereof, to burn every evening: for we keep the charge of the LORD our God; but ye have forsaken him.",anger
+70,jeremiah_38_10,"Then the king commanded Ebed-melech the Ethiopian, saying, Take from hence thirty men with thee, and take up Jeremiah the prophet out of the dungeon, before he die.",joy
+71,luke_1_72,"To perform the mercy promised to our fathers, and to remember his holy covenant;",joy
+72,numbers_5_30,"Or when the spirit of jealousy cometh upon him, and he be jealous over his wife, and shall set the woman before the LORD, and the priest shall execute upon her all this law.",anger
+73,john_5_29,"And shall come forth; they that have done good, unto the resurrection of life; and they that have done evil, unto the resurrection of damnation.",fear
+74,psalms_106_12,Then believed they his words; they sang his praise.,joy
+75,mark_13_23,"But take ye heed: behold, I have foretold you all things.",fear
+76,leviticus_25_7,"And for thy cattle, and for the beast that are in thy land, shall all the increase thereof be meat.",neutral
+77,2_chronicles_5_3,Wherefore all the men of Israel assembled themselves unto the king in the feast which was in the seventh month.,neutral
+78,ezekiel_30_8,"And they shall know that I am the LORD, when I have set a fire in Egypt, and when all her helpers shall be destroyed.",anger
+79,numbers_3_16,"And Moses numbered them according to the word of the LORD, as he was commanded.",neutral
+80,joshua_10_38,"And Joshua returned, and all Israel with him, to Debir; and fought against it:",anger
+81,numbers_20_9,"And Moses took the rod from before the LORD, as he commanded him.",neutral
+82,nehemiah_11_31,"The children also of Benjamin from Geba dwelt at Michmash, and Aija, and Bethel, and in their villages,",neutral
+83,jeremiah_41_8,"But ten men were found among them that said unto Ishmael, Slay us not: for we have treasures in the field, of wheat, and of barley, and of oil, and of honey. So he forbare, and slew them not among their brethren.",fear
+84,proverbs_21_15,It is joy to the just to do judgment: but destruction shall be to the workers of iniquity.,joy
+85,genesis_49_21,Naphtali is a hind let loose: he giveth goodly words.,joy
+86,luke_19_48,And could not find what they might do: for all the people were very attentive to hear him.,surprise
+87,genesis_19_33,"And they made their father drink wine that night: and the firstborn went in, and lay with her father; and he perceived not when she lay down, nor when she arose.",disgust
+88,jeremiah_29_30,"Then came the word of the LORD unto Jeremiah, saying,",neutral
+89,exodus_12_43,"And the LORD said unto Moses and Aaron, This is the ordinance of the passover: There shall no stranger eat thereof:",neutral
+90,romans_10_8,"But what saith it? The word is nigh thee, even in thy mouth, and in thy heart: that is, the word of faith, which we preach;",joy
+91,2_chronicles_29_24,"And the priests killed them, and they made reconciliation with their blood upon the altar, to make an atonement for all Israel: for the king commanded that the burnt offering and the sin offering should be made for all Israel.",joy
+92,psalms_37_26,"He is ever merciful, and lendeth; and his seed is blessed.",joy
+93,job_18_7,"The steps of his strength shall be straitened, and his own counsel shall cast him down.",sadness
+94,matthew_3_2,"And saying, Repent ye: for the kingdom of heaven is at hand.",neutral
+95,ezra_2_30,"The children of Magbish, an hundred fifty and six.",neutral
+96,ezekiel_5_14,"Moreover I will make thee waste, and a reproach among the nations that are round about thee, in the sight of all that pass by.",anger
+97,ezekiel_17_23,"In the mountain of the height of Israel will I plant it: and it shall bring forth boughs, and bear fruit, and be a goodly cedar: and under it shall dwell all fowl of every wing; in the shadow of the branches thereof shall they dwell.",joy
+98,isaiah_42_19,"Who is blind, but my servant? or deaf, as my messenger that I sent? who is blind as he that is perfect, and blind as the LORD'S servant?",disgust
+99,psalms_5_4,For thou art not a God that hath pleasure in wickedness: neither shall evil dwell with thee.,anger
+100,1_chronicles_26_14,"And the lot eastward fell to Shelemiah. Then for Zechariah his son, a wise counsellor, they cast lots; and his lot came out northward.",neutral
+101,job_7_8,"The eye of him that hath seen me shall see me no more: thine eyes are upon me, and I am not.",sadness
+102,psalms_116_14,I will pay my vows unto the LORD now in the presence of all his people.,joy
+103,leviticus_19_18,"Thou shalt not avenge, nor bear any grudge against the children of thy people, but thou shalt love thy neighbour as thyself: I am the LORD.",joy
+104,jeremiah_16_13,"Therefore will I cast you out of this land into a land that ye know not, neither ye nor your fathers; and there shall ye serve other gods day and night; where I will not shew you favour.",sadness
+105,deuteronomy_4_44,And this is the law which Moses set before the children of Israel:,neutral
+106,matthew_27_39,"And they that passed by reviled him, wagging their heads,",disgust
+107,1_chronicles_26_4,"Moreover the sons of Obed-edom were, Shemaiah the firstborn, Jehozabad the second, Joah the third, and Sacar the fourth, and Nethaneel the fifth,",neutral
+108,deuteronomy_8_13,"And when thy herds and thy flocks multiply, and thy silver and thy gold is multiplied, and all that thou hast is multiplied;",joy
+109,2_chronicles_24_19,"Yet he sent prophets to them, to bring them again unto the LORD; and they testified against them: but they would not give ear.",anger
+110,ezekiel_17_9,"Say thou, Thus saith the Lord GOD; Shall it prosper? shall he not pull up the roots thereof, and cut off the fruit thereof, that it wither? it shall wither in all the leaves of her spring, even without great power or many people to pluck it up by the roots thereof.",sadness
+111,numbers_2_1,"And the LORD spake unto Moses and unto Aaron, saying,",neutral
+112,mark_15_21,"And they compel one Simon a Cyrenian, who passed by, coming out of the country, the father of Alexander and Rufus, to bear his cross.",sadness
+113,ezekiel_29_10,"Behold, therefore I am against thee, and against thy rivers, and I will make the land of Egypt utterly waste and desolate, from the tower of Syene even unto the border of Ethiopia.",anger
+114,zephaniah_2_11,"The LORD will be terrible unto them: for he will famish all the gods of the earth; and men shall worship him, every one from his place, even all the isles of the heathen.",fear
+115,joshua_2_18,"Behold, when we come into the land, thou shalt bind this line of scarlet thread in the window which thou didst let us down by: and thou shalt bring thy father, and thy mother, and thy brethren, and all thy father's household, home unto thee.",fear
+116,revelation_6_3,"And when he had opened the second seal, I heard the second beast say, Come and see.",surprise
+117,1_samuel_28_22,"Now therefore, I pray thee, hearken thou also unto the voice of thine handmaid, and let me set a morsel of bread before thee; and eat, that thou mayest have strength, when thou goest on thy way.",joy
+118,john_10_33,"The Jews answered him, saying, For a good work we stone thee not; but for blasphemy; and because that thou, being a man, makest thyself God.",anger
+119,leviticus_4_17,"And the priest shall dip his finger in some of the blood, and sprinkle it seven times before the LORD, even before the vail.",neutral
+120,numbers_26_58,"These are the families of the Levites: the family of the Libnites, the family of the Hebronites, the family of the Mahlites, the family of the Mushites, the family of the Korathites. And Kohath begat Amram.",neutral
+121,matthew_9_36,"But when he saw the multitudes, he was moved with compassion on them, because they fainted, and were scattered abroad, as sheep having no shepherd.",joy
+122,amos_1_3,"Thus saith the LORD; For three transgressions of Damascus, and for four, I will not turn away the punishment thereof; because they have threshed Gilead with threshing instruments of iron:",anger
+123,exodus_34_13,"But ye shall destroy their altars, break their images, and cut down their groves:",anger
+124,job_29_4,"As I was in the days of my youth, when the secret of God was upon my tabernacle;",sadness
+125,ezekiel_33_18,"When the righteous turneth from his righteousness, and committeth iniquity, he shall even die thereby.",fear
+126,ecclesiastes_1_15,That which is crooked cannot be made straight: and that which is wanting cannot be numbered.,sadness
+127,jeremiah_44_22,"So that the LORD could no longer bear, because of the evil of your doings, and because of the abominations which ye have committed; therefore is your land a desolation, and an astonishment, and a curse, without an inhabitant, as at this day.",anger
+128,john_14_19,"Yet a little while, and the world seeth me no more; but ye see me: because I live, ye shall live also.",joy
+129,hosea_1_11,"Then shall the children of Judah and the children of Israel be gathered together, and appoint themselves one head, and they shall come up out of the land: for great shall be the day of Jezreel.",joy
+130,luke_8_41,"And, behold, there came a man named Jairus, and he was a ruler of the synagogue: and he fell down at Jesus' feet, and besought him that he would come into his house:",fear
+131,judges_7_10,"But if thou fear to go down, go thou with Phurah thy servant down to the host:",fear
+132,1_kings_21_28,"And the word of the LORD came to Elijah the Tishbite, saying,",neutral
+133,job_29_14,"I put on righteousness, and it clothed me: my judgment was as a robe and a diadem.",joy
+134,2_chronicles_25_26,"Now the rest of the acts of Amaziah, first and last, behold, are they not written in the book of the kings of Judah and Israel?",neutral
+135,titus_3_12,"When I shall send Artemas unto thee, or Tychicus, be diligent to come unto me to Nicopolis: for I have determined there to winter.",neutral
+136,daniel_6_20,"And when he came to the den, he cried with a lamentable voice unto Daniel: and the king spake and said to Daniel, O Daniel, servant of the living God, is thy God, whom thou servest continually, able to deliver thee from the lions?",fear
+137,romans_1_3,"Concerning his Son Jesus Christ our Lord, which was made of the seed of David according to the flesh;",joy
+138,exodus_12_34,"And the people took their dough before it was leavened, their kneadingtroughs being bound up in their clothes upon their shoulders.",neutral
+139,deuteronomy_23_14,"For the LORD thy God walketh in the midst of thy camp, to deliver thee, and to give up thine enemies before thee; therefore shall thy camp be holy: that he see no unclean thing in thee, and turn away from thee.",joy
+140,2_peter_2_1,"But there were false prophets also among the people, even as there shall be false teachers among you, who privily shall bring in damnable heresies, even denying the Lord that bought them, and bring upon themselves swift destruction.",anger
+141,joshua_2_21,"And she said, According unto your words, so be it. And she sent them away, and they departed: and she bound the scarlet line in the window.",neutral
+142,psalms_143_11,"Quicken me, O LORD, for thy name's sake: for thy righteousness' sake bring my soul out of trouble.",fear
+143,proverbs_11_7,"When a wicked man dieth, his expectation shall perish: and the hope of unjust men perisheth.",sadness
+144,jeremiah_19_6,"Therefore, behold, the days come, saith the LORD, that this place shall no more be called Tophet, nor The valley of the son of Hinnom, but The valley of slaughter.",anger
+145,1_samuel_19_7,"And Jonathan called David, and Jonathan shewed him all those things. And Jonathan brought David to Saul, and he was in his presence, as in times past.",joy
+146,jeremiah_6_24,"We have heard the fame thereof: our hands wax feeble: anguish hath taken hold of us, and pain, as of a woman in travail.",fear
+147,1_chronicles_25_22,"The fifteenth to Jeremoth, he, his sons, and his brethren, were twelve:",neutral
+148,genesis_46_23,And the sons of Dan; Hushim.,neutral
+149,1_samuel_10_24,"And Samuel said to all the people, See ye him whom the LORD hath chosen, that there is none like him among all the people? And all the people shouted, and said, God save the king.",joy
+150,matthew_14_7,Whereupon he promised with an oath to give her whatsoever she would ask.,neutral
+151,exodus_12_27,"That ye shall say, It is the sacrifice of the LORD'S passover, who passed over the houses of the children of Israel in Egypt, when he smote the Egyptians, and delivered our houses. And the people bowed the head and worshipped.",joy
+152,1_kings_1_39,"And Zadok the priest took an horn of oil out of the tabernacle, and anointed Solomon. And they blew the trumpet; and all the people said, God save king Solomon.",joy
+153,john_3_3,"Jesus answered and said unto him, Verily, verily, I say unto thee, Except a man be born again, he cannot see the kingdom of God.",neutral
+154,job_6_30,Is there iniquity in my tongue? cannot my taste discern perverse things?,anger
+155,philippians_2_7,"But made himself of no reputation, and took upon him the form of a servant, and was made in the likeness of men:",joy
+156,john_5_3,"In these lay a great multitude of impotent folk, of blind, halt, withered, waiting for the moving of the water.",sadness
+157,1_kings_15_21,"And it came to pass, when Baasha heard thereof, that he left off building of Ramah, and dwelt in Tirzah.",neutral
+158,hebrews_9_17,For a testament is of force after men are dead: otherwise it is of no strength at all while the testator liveth.,neutral
+159,ezekiel_16_39,"And I will also give thee into their hand, and they shall throw down thine eminent place, and shall break down thy high places: they shall strip thee also of thy clothes, and shall take thy fair jewels, and leave thee naked and bare.",disgust
+160,ezekiel_24_26,"That he that escapeth in that day shall come unto thee, to cause thee to hear it with thine ears?",surprise
+161,lamentations_4_11,"The LORD hath accomplished his fury; he hath poured out his fierce anger, and hath kindled a fire in Zion, and it hath devoured the foundations thereof.",anger
+162,jeremiah_38_25,"But if the princes hear that I have talked with thee, and they come unto thee, and say unto thee, Declare unto us now what thou hast said unto the king, hide it not from us, and we will not put thee to death; also what the king said unto thee:",fear
+163,genesis_37_3,"Now Israel loved Joseph more than all his children, because he was the son of his old age: and he made him a coat of many colours.",joy
+164,job_30_19,"He hath cast me into the mire, and I am become like dust and ashes.",sadness
+165,esther_2_5,"Now in Shushan the palace there was a certain Jew, whose name was Mordecai, the son of Jair, the son of Shimei, the son of Kish, a Benjamite;",neutral
+166,job_24_9,"They pluck the fatherless from the breast, and take a pledge of the poor.",sadness
+167,2_chronicles_25_17,"Then Amaziah king of Judah took advice, and sent to Joash, the son of Jehoahaz, the son of Jehu, king of Israel, saying, Come, let us see one another in the face.",neutral
+168,1_chronicles_6_76,"And out of the tribe of Naphtali; Kedesh in Galilee with her suburbs, and Hammon with her suburbs, and Kirjathaim with her suburbs.",neutral
+169,jeremiah_46_18,"As I live, saith the King, whose name is the LORD of hosts, Surely as Tabor is among the mountains, and as Carmel by the sea, so shall he come.",anger
+170,ecclesiastes_7_24,"That which is far off, and exceeding deep, who can find it out?",sadness
+171,jeremiah_24_9,"And I will deliver them to be removed into all the kingdoms of the earth for their hurt, to be a reproach and a proverb, a taunt and a curse, in all places whither I shall drive them.",anger
+172,1_chronicles_28_5,"And of all my sons, (for the LORD hath given me many sons,) he hath chosen Solomon my son to sit upon the throne of the kingdom of the LORD over Israel.",joy
+173,deuteronomy_11_18,"Therefore shall ye lay up these my words in your heart and in your soul, and bind them for a sign upon your hand, that they may be as frontlets between your eyes.",neutral
+174,2_kings_8_11,"And he settled his countenance stedfastly, until he was ashamed: and the man of God wept.",sadness
+175,leviticus_27_10,"He shall not alter it, nor change it, a good for a bad, or a bad for a good: and if he shall at all change beast for beast, then it and the exchange thereof shall be holy.",neutral
+176,matthew_14_31,"And immediately Jesus stretched forth his hand, and caught him, and said unto him, O thou of little faith, wherefore didst thou doubt?",fear
+177,mark_8_23,"And he took the blind man by the hand, and led him out of the town; and when he had spit on his eyes, and put his hands upon him, he asked him if he saw ought.",joy
+178,daniel_4_28,All this came upon the king Nebuchadnezzar.,neutral
+179,exodus_10_25,"And Moses said, Thou must give us also sacrifices and burnt offerings, that we may sacrifice unto the LORD our God.",neutral
+180,2_samuel_17_2,"And I will come upon him while he is weary and weak handed, and will make him afraid: and all the people that are with him shall flee; and I will smite the king only:",fear
+181,ezekiel_44_26,"And after he is cleansed, they shall reckon unto him seven days.",neutral
+182,job_6_15,"My brethren have dealt deceitfully as a brook, and as the stream of brooks they pass away;",sadness
+183,acts_12_11,"And when Peter was come to himself, he said, Now I know of a surety, that the Lord hath sent his angel, and hath delivered me out of the hand of Herod, and from all the expectation of the people of the Jews.",joy
+184,luke_11_22,"But when a stronger than he shall come upon him, and overcome him, he taketh from him all his armour wherein he trusted, and divideth his spoils.",anger
+185,2_chronicles_3_16,"And he made chains, as in the oracle, and put them on the heads of the pillars; and made an hundred pomegranates, and put them on the chains.",neutral
+186,joshua_15_48,"And in the mountains, Shamir, and Jattir, and Socoh,",neutral
+187,exodus_26_5,"Fifty loops shalt thou make in the one curtain, and fifty loops shalt thou make in the edge of the curtain that is in the coupling of the second; that the loops may take hold one of another.",neutral
+188,isaiah_51_12,"I, even I, am he that comforteth you: who art thou, that thou shouldest be afraid of a man that shall die, and of the son of man which shall be made as grass;",joy
+189,ezekiel_10_17,"When they stood, these stood; and when they were lifted up, these lifted up themselves also: for the spirit of the living creature was in them.",surprise
+190,daniel_5_20,"But when his heart was lifted up, and his mind hardened in pride, he was deposed from his kingly throne, and they took his glory from him:",disgust
+191,jeremiah_38_28,So Jeremiah abode in the court of the prison until the day that Jerusalem was taken: and he was there when Jerusalem was taken.,sadness
+192,numbers_33_34,"And they removed from Jotbathah, and encamped at Ebronah.",neutral
+193,ephesians_6_3,"That it may be well with thee, and thou mayest live long on the earth.",joy
+194,philippians_2_24,But I trust in the Lord that I also myself shall come shortly.,joy
+195,jeremiah_25_38,"He hath forsaken his covert, as the lion: for their land is desolate because of the fierceness of the oppressor, and because of his fierce anger.",anger
+196,judges_21_18,"Howbeit we may not give them wives of our daughters: for the children of Israel have sworn, saying, Cursed be he that giveth a wife to Benjamin.",sadness
+197,genesis_50_3,And forty days were fulfilled for him; for so are fulfilled the days of those which are embalmed: and the Egyptians mourned for him threescore and ten days.,sadness
+198,isaiah_46_6,"They lavish gold out of the bag, and weigh silver in the balance, and hire a goldsmith; and he maketh it a god: they fall down, yea, they worship.",disgust
+199,exodus_9_5,"And the LORD appointed a set time, saying, To morrow the LORD shall do this thing in the land.",neutral
+200,zechariah_14_1,"Behold, the day of the LORD cometh, and thy spoil shall be divided in the midst of thee.",fear
+201,numbers_20_24,"Aaron shall be gathered unto his people: for he shall not enter into the land which I have given unto the children of Israel, because ye rebelled against my word at the water of Meribah.",sadness
+202,1_kings_18_13,"Was it not told my lord what I did when Jezebel slew the prophets of the LORD, how I hid an hundred men of the LORD'S prophets by fifty in a cave, and fed them with bread and water?",joy
+203,numbers_3_50,"Of the firstborn of the children of Israel took he the money; a thousand three hundred and threescore and five shekels, after the shekel of the sanctuary:",neutral
+204,daniel_3_16,"Shadrach, Meshach, and Abed-nego, answered and said to the king, O Nebuchadnezzar, we are not careful to answer thee in this matter.",joy
+205,job_33_32,"If thou hast any thing to say, answer me: speak, for I desire to justify thee.",neutral
+206,jeremiah_21_6,"And I will smite the inhabitants of this city, both man and beast: they shall die of a great pestilence.",anger
+207,job_39_4,"Their young ones are in good liking, they grow up with corn; they go forth, and return not unto them.",joy
+208,ezekiel_45_24,"And he shall prepare a meat offering of an ephah for a bullock, and an ephah for a ram, and an hin of oil for an ephah.",neutral
+209,jeremiah_48_5,For in the going up of Luhith continual weeping shall go up; for in the going down of Horonaim the enemies have heard a cry of destruction.,sadness
+210,1_samuel_23_2,"Therefore David enquired of the LORD, saying, Shall I go and smite these Philistines? And the LORD said unto David, Go, and smite the Philistines, and save Keilah.",neutral
+211,genesis_10_6,"And the sons of Ham; Cush, and Mizraim, and Phut, and Canaan.",neutral
+212,luke_19_8,"And Zacchaeus stood, and said unto the Lord; Behold, Lord, the half of my goods I give to the poor; and if I have taken any thing from any man by false accusation, I restore him fourfold.",joy
+232,revelation_6_8,"And I looked, and behold a pale horse: and his name that sat on him was Death, and Hell followed with him. And power was given unto them over the fourth part of the earth, to kill with sword, and with hunger, and with death, and with the beasts of the earth.",fear
+233,1_chronicles_7_28,"And their possessions and habitations were, Bethel and the towns thereof, and eastward Naaran, and westward Gezer, with the towns thereof; Shechem also and the towns thereof, unto Gaza and the towns thereof:",neutral
+234,1_corinthians_14_5,"I would that ye all spake with tongues, but rather that ye prophesied: for greater is he that prophesieth than he that speaketh with tongues, except he interpret, that the church may receive edifying.",neutral
+235,acts_13_32,"And we declare unto you glad tidings, how that the promise which was made unto the fathers,",joy
+236,2_chronicles_34_19,"And it came to pass, when the king had heard the words of the law, that he rent his clothes.",sadness
+237,malachi_1_13,"Ye said also, Behold, what a weariness is it! and ye have snuffed at it, saith the LORD of hosts; and ye brought that which was torn, and the lame, and the sick; thus ye brought an offering: should I accept this of your hand? saith the LORD.",disgust
+238,hebrews_2_17,"Wherefore in all things it behoved him to be made like unto his brethren, that he might be a merciful and faithful high priest in things pertaining to God, to make reconciliation for the sins of the people.",joy
+239,1_chronicles_27_22,"Of Dan, Azareel the son of Jeroham. These were the princes of the tribes of Israel.",neutral
+240,1_kings_7_17,"And nets of checker work, and wreaths of chain work, for the chapiters which were upon the top of the pillars; seven for the one chapiter, and seven for the other chapiter.",neutral
+241,1_samuel_7_13,"So the Philistines were subdued, and they came no more into the coast of Israel: and the hand of the LORD was against the Philistines all the days of Samuel.",joy
+242,job_6_22,"Did I say, Bring unto me? or, Give a reward for me of your substance?",sadness
+243,exodus_6_27,"These are they which spake to Pharaoh king of Egypt, to bring out the children of Israel from Egypt: these are that Moses and Aaron.",neutral
+244,deuteronomy_6_18,"And thou shalt do that which is right and good in the sight of the LORD: that it may be well with thee, and that thou mayest go in and possess the good land which the LORD sware unto thy fathers,",joy
+245,leviticus_5_16,"And he shall make amends for the harm that he hath done in the holy thing, and shall add the fifth part thereto, and give it unto the priest: and the priest shall make an atonement for him with the ram of the trespass offering, and it shall be forgiven him.",joy
+246,john_8_2,"And early in the morning he came again into the temple, and all the people came unto him; and he sat down, and taught them.",joy
+247,numbers_21_13,"From thence they removed, and pitched on the other side of Arnon, which is in the wilderness that cometh out of the coasts of the Amorites: for Arnon is the border of Moab, between Moab and the Amorites.",neutral
+248,joshua_15_55,"Maon, Carmel, and Ziph, and Juttah,",neutral
+249,2_john_1_10,"If there come any unto you, and bring not this doctrine, receive him not into your house, neither bid him God speed:",anger
+250,judges_1_12,"And Caleb said, He that smiteth Kirjath-sepher, and taketh it, to him will I give Achsah my daughter to wife.",neutral
+251,1_chronicles_9_30,And some of the sons of the priests made the ointment of the spices.,neutral
+252,1_kings_20_41,"And he hasted, and took the ashes away from his face; and the king of Israel discerned him that he was of the prophets.",surprise
+253,mark_7_25,"For a certain woman, whose young daughter had an unclean spirit, heard of him, and came and fell at his feet:",fear
+254,1_corinthians_15_2,"By which also ye are saved, if ye keep in memory what I preached unto you, unless ye have believed in vain.",joy
+255,2_kings_25_14,"And the pots, and the shovels, and the snuffers, and the spoons, and all the vessels of brass wherewith they ministered, took they away.",sadness
+256,proverbs_27_10,"Thine own friend, and thy father's friend, forsake not; neither go into thy brother's house in the day of thy calamity: for better is a neighbour that is near than a brother far off.",joy
+257,job_15_19,"Unto whom alone the earth was given, and no stranger passed among them.",neutral
+258,ephesians_4_16,"From whom the whole body fitly joined together and compacted by that which every joint supplieth, according to the effectual working in the measure of every part, maketh increase of the body unto the edifying of itself in love.",joy
+259,jeremiah_44_29,"And this shall be a sign unto you, saith the LORD, that I will punish you in this place, that ye may know that my words shall surely stand against you for evil:",anger
+260,psalms_109_13,Let his posterity be cut off; and in the generation following let their name be blotted out.,anger
+261,numbers_33_21,"And they removed from Libnah, and pitched at Rissah.",neutral
+262,deuteronomy_2_26,"And I sent messengers out of the wilderness of Kedemoth unto Sihon king of Heshbon with words of peace, saying,",neutral
+263,matthew_15_4,"For God commanded, saying, Honour thy father and mother: and, He that curseth father or mother, let him die the death.",fear
+264,luke_11_49,"Therefore also said the wisdom of God, I will send them prophets and apostles, and some of them they shall slay and persecute:",sadness
+265,luke_24_44,"And he said unto them, These are the words which I spake unto you, while I was yet with you, that all things must be fulfilled, which were written in the law of Moses, and in the prophets, and in the psalms, concerning me.",joy
+266,psalms_40_15,"Let them be desolate for a reward of their shame that say unto me, Aha, aha.",anger
+267,acts_13_50,"But the Jews stirred up the devout and honourable women, and the chief men of the city, and raised persecution against Paul and Barnabas, and expelled them out of their coasts.",anger
+268,matthew_20_17,"And Jesus going up to Jerusalem took the twelve disciples apart in the way, and said unto them,",neutral
+269,genesis_42_36,"And Jacob their father said unto them, Me have ye bereaved of my children: Joseph is not, and Simeon is not, and ye will take Benjamin away: all these things are against me.",sadness
+270,genesis_33_9,"And Esau said, I have enough, my brother; keep that thou hast unto thyself.",joy
+271,leviticus_6_4,"Then it shall be, because he hath sinned, and is guilty, that he shall restore that which he took violently away, or the thing which he hath deceitfully gotten, or that which was delivered him to keep, or the lost thing which he found,",neutral
+272,mark_9_46,"Where their worm dieth not, and the fire is not quenched.",fear
+273,deuteronomy_5_5,"(I stood between the LORD and you at that time, to shew you the word of the LORD: for ye were afraid by reason of the fire, and went not up into the mount;) saying,",fear
+274,psalms_85_7,"Shew us thy mercy, O LORD, and grant us thy salvation.",joy
+275,esther_4_3,"And in every province, whithersoever the king's commandment and his decree came, there was great mourning among the Jews, and fasting, and weeping, and wailing; and many lay in sackcloth and ashes.",sadness
+276,deuteronomy_21_16,"Then it shall be, when he maketh his sons to inherit that which he hath, that he may not make the son of the beloved firstborn before the son of the hated, which is indeed the firstborn:",neutral
+277,mark_10_24,"And the disciples were astonished at his words. But Jesus answereth again, and saith unto them, Children, how hard is it for them that trust in riches to enter into the kingdom of God!",surprise
+278,1_kings_11_37,"And I will take thee, and thou shalt reign according to all that thy soul desireth, and shalt be king over Israel.",joy
+279,mark_14_49,"I was daily with you in the temple teaching, and ye took me not: but the scriptures must be fulfilled.",sadness
+280,joshua_11_2,"And to the kings that were on the north of the mountains, and of the plains south of Chinneroth, and in the valley, and in the borders of Dor on the west,",neutral
+281,proverbs_4_21,Let them not depart from thine eyes; keep them in the midst of thine heart.,neutral
+282,genesis_21_19,"And God opened her eyes, and she saw a well of water; and she went, and filled the bottle with water, and gave the lad drink.",joy
+283,ecclesiastes_9_15,"Now there was found in it a poor wise man, and he by his wisdom delivered the city; yet no man remembered that same poor man.",sadness
+284,numbers_32_40,And Moses gave Gilead unto Machir the son of Manasseh; and he dwelt therein.,neutral
+285,genesis_24_10,"And the servant took ten camels of the camels of his master, and departed; for all the goods of his master were in his hand: and he arose, and went to Mesopotamia, unto the city of Nahor.",neutral
+286,nehemiah_7_60,"All the Nethinims, and the children of Solomon's servants, were three hundred ninety and two.",neutral
+287,esther_9_21,"To stablish this among them, that they should keep the fourteenth day of the month Adar, and the fifteenth day of the same, yearly,",joy
+288,2_timothy_4_13,"The cloke that I left at Troas with Carpus, when thou comest, bring with thee, and the books, but especially the parchments.",neutral
+289,numbers_4_5,"And when the camp setteth forward, Aaron shall come, and his sons, and they shall take down the covering vail, and cover the ark of testimony with it:",neutral
+290,genesis_38_15,"When Judah saw her, he thought her to be an harlot; because she had covered her face.",disgust
+291,psalms_107_6,"Then they cried unto the LORD in their trouble, and he delivered them out of their distresses.",joy
+292,joshua_20_8,"And on the other side Jordan by Jericho eastward, they assigned Bezer in the wilderness upon the plain out of the tribe of Reuben, and Ramoth in Gilead out of the tribe of Gad, and Golan in Bashan out of the tribe of Manasseh.",neutral
+293,1_kings_13_27,"And he spake to his sons, saying, Saddle me the ass. And they saddled him.",neutral
+294,luke_21_10,"Then said he unto them, Nation shall rise against nation, and kingdom against kingdom:",fear
+295,isaiah_51_1,"Hearken to me, ye that follow after righteousness, ye that seek the LORD: look unto the rock whence ye are hewn, and to the hole of the pit whence ye are digged.",neutral
+296,esther_7_4,"For we are sold, I and my people, to be destroyed, to be slain, and to perish. But if we had been sold for bondmen and bondwomen, I had held my tongue, although the enemy could not countervail the king's damage.",fear
+297,1_kings_11_5,"For Solomon went after Ashtoreth the goddess of the Zidonians, and after Milcom the abomination of the Ammonites.",disgust
+298,exodus_8_22,"And I will sever in that day the land of Goshen, in which my people dwell, that no swarms of flies shall be there; to the end thou mayest know that I am the LORD in the midst of the earth.",joy
+299,acts_19_22,"So he sent into Macedonia two of them that ministered unto him, Timotheus and Erastus; but he himself stayed in Asia for a season.",neutral
+300,proverbs_2_17,"Which forsaketh the guide of her youth, and forgetteth the covenant of her God.",disgust
+301,joshua_23_6,"Be ye therefore very courageous to keep and to do all that is written in the book of the law of Moses, that ye turn not aside therefrom to the right hand or to the left;",joy
+302,ezekiel_44_30,"And the first of all the firstfruits of all things, and every oblation of all, of every sort of your oblations, shall be the priest's: ye shall also give unto the priest the first of your dough, that he may cause the blessing to rest in thine house.",joy
+303,jeremiah_36_25,Nevertheless Elnathan and Delaiah and Gemariah had made intercession to the king that he would not burn the roll: but he would not hear them.,sadness
+304,jeremiah_51_37,"And Babylon shall become heaps, a dwelling place for dragons, an astonishment, and an hissing, without an inhabitant.",anger
+305,revelation_22_14,"Blessed are they that do his commandments, that they may have right to the tree of life, and may enter in through the gates into the city.",joy
+306,ezekiel_34_13,"And I will bring them out from the people, and gather them from the countries, and will bring them to their own land, and feed them upon the mountains of Israel by the rivers, and in all the inhabited places of the country.",joy
+307,zechariah_1_4,"Be ye not as your fathers, unto whom the former prophets have cried, saying, Thus saith the LORD of hosts; Turn ye now from your evil ways, and from your evil doings: but they did not hear, nor hearken unto me, saith the LORD.",anger
+308,job_6_27,"Yea, ye overwhelm the fatherless, and ye dig a pit for your friend.",sadness
+309,psalms_116_17,"I will offer to thee the sacrifice of thanksgiving, and will call upon the name of the LORD.",joy
+310,acts_13_9,"Then Saul, (who also is called Paul,) filled with the Holy Ghost, set his eyes on him,",neutral
+311,joshua_6_8,"And it came to pass, when Joshua had spoken unto the people, that the seven priests bearing the seven trumpets of rams' horns passed on before the LORD, and blew with the trumpets: and the ark of the covenant of the LORD followed them.",joy
+312,ezekiel_34_12,"As a shepherd seeketh out his flock in the day that he is among his sheep that are scattered; so will I seek out my sheep, and will deliver them out of all places where they have been scattered in the cloudy and dark day.",joy
+313,psalms_119_80,Let my heart be sound in thy statutes; that I be not ashamed.,neutral
+314,hebrews_3_2,"Who was faithful to him that appointed him, as also Moses was faithful in all his house.",neutral
+315,psalms_144_3,"LORD, what is man, that thou takest knowledge of him! or the son of man, that thou makest account of him!",surprise
+316,2_kings_15_21,"And the rest of the acts of Menahem, and all that he did, are they not written in the book of the chronicles of the kings of Israel?",neutral
+317,ezekiel_36_7,"Therefore thus saith the Lord GOD; I have lifted up mine hand, Surely the heathen that are about you, they shall bear their shame.",anger
+318,numbers_25_14,"Now the name of the Israelite that was slain, even that was slain with the Midianitish woman, was Zimri, the son of Salu, a prince of a chief house among the Simeonites.",neutral
+319,leviticus_24_22,"Ye shall have one manner of law, as well for the stranger, as for one of your own country: for I am the LORD your God.",joy
+320,1_corinthians_10_16,"The cup of blessing which we bless, is it not the communion of the blood of Christ? The bread which we break, is it not the communion of the body of Christ?",joy
+321,colossians_3_20,"Children, obey your parents in all things: for this is well pleasing unto the Lord.",joy
+322,1_corinthians_6_6,"But brother goeth to law with brother, and that before the unbelievers.",disgust
+323,judges_8_12,"And when Zebah and Zalmunna fled, he pursued after them, and took the two kings of Midian, Zebah and Zalmunna, and discomfited all the host.",anger
+324,exodus_28_1,"And take thou unto thee Aaron thy brother, and his sons with him, from among the children of Israel, that he may minister unto me in the priest's office, even Aaron, Nadab and Abihu, Eleazar and Ithamar, Aaron's sons.",neutral
+325,john_13_22,"Then the disciples looked one on another, doubting of whom he spake.",surprise
+326,john_17_8,"For I have given unto them the words which thou gavest me; and they have received them, and have known surely that I came out from thee, and they have believed that thou didst send me.",joy
+327,amos_2_2,"But I will send a fire upon Moab, and it shall devour the palaces of Kirioth: and Moab shall die with tumult, with shouting, and with the sound of the trumpet:",anger
+328,2_corinthians_1_1,"Paul, an apostle of Jesus Christ by the will of God, and Timothy our brother, unto the church of God which is at Corinth, with all the saints which are in all Achaia:",neutral
+329,job_8_12,"Whilst it is yet in his greenness, and not cut down, it withereth before any other herb.",sadness
+330,genesis_10_31,"These are the sons of Shem, after their families, after their tongues, in their lands, after their nations.",neutral
+331,amos_4_2,"The Lord GOD hath sworn by his holiness, that, lo, the days shall come upon you, that he will take you away with hooks, and your posterity with fishhooks.",fear
+332,isaiah_11_6,"The wolf also shall dwell with the lamb, and the leopard shall lie down with the kid; and the calf and the young lion and the fatling together; and a little child shall lead them.",joy
+333,romans_3_28,Therefore we conclude that a man is justified by faith without the deeds of the law.,joy
+334,jeremiah_51_48,"Then the heaven and the earth, and all that is therein, shall sing for Babylon: for the spoilers shall come unto her from the north, saith the LORD.",joy
+335,2_chronicles_17_7,"Also in the third year of his reign he sent to his princes, even to Ben-hail, and to Obadiah, and to Zechariah, and to Nethaneel, and to Michaiah, to teach in the cities of Judah.",neutral
+336,2_chronicles_10_14,"And answered them after the advice of the young men, saying, My father made your yoke heavy, but I will add thereto: my father chastised you with whips, but I will chastise you with scorpions.",anger
+337,joshua_2_10,"For we have heard how the LORD dried up the water of the Red sea for you, when ye came out of Egypt; and what ye did unto the two kings of the Amorites, that were on the other side Jordan, Sihon and Og, whom ye utterly destroyed.",fear
+338,mark_14_15,And he will shew you a large upper room furnished and prepared: there make ready for us.,neutral
+339,2_samuel_12_3,"But the poor man had nothing, save one little ewe lamb, which he had bought and nourished up: and it grew up together with him, and with his children; it did eat of his own meat, and drank of his own cup, and lay in his bosom, and was unto him as a daughter.",joy
+340,psalms_99_8,"Thou answeredst them, O LORD our God: thou wast a God that forgavest them, though thou tookest vengeance of their inventions.",joy
+341,luke_19_16,"Then came the first, saying, Lord, thy pound hath gained ten pounds.",joy
+342,lamentations_3_41,Let us lift up our heart with our hands unto God in the heavens.,joy
+343,hosea_1_6,"And she conceived again, and bare a daughter. And God said unto him, Call her name Lo-ruhamah: for I will no more have mercy upon the house of Israel; but I will utterly take them away.",sadness
+344,matthew_21_13,"And said unto them, It is written, My house shall be called the house of prayer; but ye have made it a den of thieves.",anger
+345,luke_18_19,"And Jesus said unto him, Why callest thou me good? none is good, save one, that is, God.",neutral
+346,isaiah_35_6,"Then shall the lame man leap as an hart, and the tongue of the dumb sing: for in the wilderness shall waters break out, and streams in the desert.",joy
+347,colossians_1_20,"And, having made peace through the blood of his cross, by him to reconcile all things unto himself; by him, I say, whether they be things in earth, or things in heaven.",joy
+348,psalms_100_2,Serve the LORD with gladness: come before his presence with singing.,joy
+349,numbers_6_6,All the days that he separateth himself unto the LORD he shall come at no dead body.,neutral
+350,esther_9_8,"And Poratha, and Adalia, and Aridatha,",neutral
+351,job_6_19,"The troops of Tema looked, the companies of Sheba waited for them.",sadness
+352,1_samuel_5_4,"And when they arose early on the morrow morning, behold, Dagon was fallen upon his face to the ground before the ark of the LORD; and the head of Dagon and both the palms of his hands were cut off upon the threshold; only the stump of Dagon was left to him.",surprise
+353,genesis_5_27,And all the days of Methuselah were nine hundred sixty and nine years: and he died.,neutral
+354,psalms_31_17,"Let me not be ashamed, O LORD; for I have called upon thee: let the wicked be ashamed, and let them be silent in the grave.",fear
+355,matthew_14_3,"For Herod had laid hold on John, and bound him, and put him in prison for Herodias' sake, his brother Philip's wife.",sadness
+356,ezekiel_30_19,Thus will I execute judgments in Egypt: and they shall know that I am the LORD.,anger
+357,proverbs_19_8,He that getteth wisdom loveth his own soul: he that keepeth understanding shall find good.,joy
+358,psalms_139_24,"And see if there be any wicked way in me, and lead me in the way everlasting.",joy
+359,leviticus_23_23,"And the LORD spake unto Moses, saying,",neutral
+360,mark_15_47,And Mary Magdalene and Mary the mother of Joses beheld where he was laid.,sadness
+361,luke_11_3,Give us day by day our daily bread.,neutral
+362,james_4_11,"Speak not evil one of another, brethren. He that speaketh evil of his brother, and judgeth his brother, speaketh evil of the law, and judgeth the law: but if thou judge the law, thou art not a doer of the law, but a judge.",anger
+363,numbers_16_32,"And the earth opened her mouth, and swallowed them up, and their houses, and all the men that appertained unto Korah, and all their goods.",fear
+364,isaiah_58_11,"And the LORD shall guide thee continually, and satisfy thy soul in drought, and make fat thy bones: and thou shalt be like a watered garden, and like a spring of water, whose waters fail not.",joy
+365,jonah_3_2,"Arise, go unto Nineveh, that great city, and preach unto it the preaching that I bid thee.",neutral
+366,luke_18_26,"And they that heard it said, Who then can be saved?",surprise
+367,numbers_29_35,On the eighth day ye shall have a solemn assembly: ye shall do no servile work therein:,neutral
+368,deuteronomy_34_4,"And the LORD said unto him, This is the land which I sware unto Abraham, unto Isaac, and unto Jacob, saying, I will give it unto thy seed: I have caused thee to see it with thine eyes, but thou shalt not go over thither.",sadness
+369,jeremiah_16_2,"Thou shalt not take thee a wife, neither shalt thou have sons or daughters in this place.",sadness
+370,john_6_40,"And this is the will of him that sent me, that every one which seeth the Son, and believeth on him, may have everlasting life: and I will raise him up at the last day.",joy
+371,esther_1_9,Also Vashti the queen made a feast for the women in the royal house which belonged to king Ahasuerus.,neutral
+372,deuteronomy_5_23,"And it came to pass, when ye heard the voice out of the midst of the darkness, (for the mountain did burn with fire,) that ye came near unto me, even all the heads of your tribes, and your elders;",fear
+373,hosea_13_13,The sorrows of a travailing woman shall come upon him: he is an unwise son; for he should not stay long in the place of the breaking forth of children.,sadness
+374,numbers_13_30,"And Caleb stilled the people before Moses, and said, Let us go up at once, and possess it; for we are well able to overcome it.",joy
+375,1_thessalonians_5_18,In every thing give thanks: for this is the will of God in Christ Jesus concerning you.,joy
+376,2_kings_8_19,"Yet the LORD would not destroy Judah for David his servant's sake, as he promised him to give him alway a light, and to his children.",joy
+377,genesis_36_5,"And Aholibamah bare Jeush, and Jaalam, and Korah: these are the sons of Esau, which were born unto him in the land of Canaan.",neutral
+378,2_chronicles_32_24,"In those days Hezekiah was sick to the death, and prayed unto the LORD: and he spake unto him, and he gave him a sign.",joy
+379,1_samuel_4_18,"And it came to pass, when he made mention of the ark of God, that he fell from off the seat backward by the side of the gate, and his neck brake, and he died: for he was an old man, and heavy. And he had judged Israel forty years.",sadness
+380,numbers_14_27,"How long shall I bear with this evil congregation, which murmur against me? I have heard the murmurings of the children of Israel, which they murmur against me.",anger
+381,jeremiah_40_7,"Now when all the captains of the forces which were in the fields, even they and their men, heard that the king of Babylon had made Gedaliah the son of Ahikam governor in the land, and had committed unto him men, and women, and children, and of the poor of the land, of them that were not carried away captive to Babylon;",neutral
+382,luke_15_24,"For this my son was dead, and is alive again; he was lost, and is found. And they began to be merry.",joy
+383,1_kings_3_28,"And all Israel heard of the judgment which the king had judged; and they feared the king: for they saw that the wisdom of God was in him, to do judgment.",fear
+384,leviticus_13_26,"But if the priest look on it, and, behold, there be no white hair in the bright spot, and it be no lower than the other skin, but be somewhat dark; then the priest shall shut him up seven days:",neutral
+385,numbers_2_32,These are those which were numbered of the children of Israel by the house of their fathers: all those that were numbered of the camps throughout their hosts were six hundred thousand and three thousand and five hundred and fifty.,neutral
+386,genesis_34_20,"And Hamor and Shechem his son came unto the gate of their city, and communed with the men of their city, saying,",neutral
+387,genesis_44_31,"It shall come to pass, when he seeth that the lad is not with us, that he will die: and thy servants shall bring down the gray hairs of thy servant our father with sorrow to the grave.",sadness
+388,revelation_7_3,"Saying, Hurt not the earth, neither the sea, nor the trees, till we have sealed the servants of our God in their foreheads.",neutral
+389,jeremiah_26_4,"And thou shalt say unto them, Thus saith the LORD; If ye will not hearken to me, to walk in my law, which I have set before you,",anger
+390,nahum_1_4,"He rebuketh the sea, and maketh it dry, and drieth up all the rivers: Bashan languisheth, and Carmel, and the flower of Lebanon languisheth.",anger
+391,numbers_29_31,"And one goat for a sin offering; beside the continual burnt offering, his meat offering, and his drink offering.",neutral
+392,genesis_17_3,"And Abram fell on his face: and God talked with him, saying,",joy
+393,2_chronicles_9_8,"Blessed be the LORD thy God, which delighted in thee to set thee on his throne, to be king for the LORD thy God: because thy God loved Israel, to establish them for ever, therefore made he thee king over them, to do judgment and justice.",joy
+394,1_chronicles_10_2,"And the Philistines followed hard after Saul, and after his sons; and the Philistines slew Jonathan, and Abinadab, and Malchi-shua, the sons of Saul.",sadness
+395,john_13_29,"For some of them thought, because Judas had the bag, that Jesus had said unto him, Buy those things that we have need of against the feast; or, that he should give something to the poor.",neutral
+396,leviticus_10_7,"And ye shall not go out from the door of the tabernacle of the congregation, lest ye die: for the anointing oil of the LORD is upon you. And they did according to the word of Moses.",fear
+397,genesis_19_22,"Haste thee, escape thither; for I cannot do any thing till thou be come thither. Therefore the name of the city was called Zoar.",fear
+398,2_samuel_16_5,"And when king David came to Bahurim, behold, thence came out a man of the family of the house of Saul, whose name was Shimei, the son of Gera: he came forth, and cursed still as he came.",anger
+399,2_corinthians_8_23,"Whether any do enquire of Titus, he is my partner and fellowhelper concerning you: or our brethren be enquired of, they are the messengers of the churches, and the glory of Christ.",joy
+400,john_19_27,"Then saith he to the disciple, Behold thy mother! And from that hour that disciple took her unto his own home .",joy
+401,numbers_32_30,"But if they will not pass over with you armed, they shall have possessions among you in the land of Canaan.",neutral
+402,psalms_119_172,My tongue shall speak of thy word: for all thy commandments are righteousness.,joy
+403,ecclesiastes_7_14,"In the day of prosperity be joyful, but in the day of adversity consider: God also hath set the one over against the other, to the end that man should find nothing after him.",neutral
+404,hosea_10_2,"Their heart is divided; now shall they be found faulty: he shall break down their altars, he shall spoil their images.",anger
+405,2_corinthians_9_5,"Therefore I thought it necessary to exhort the brethren, that they would go before unto you, and make up beforehand your bounty, whereof ye had notice before, that the same might be ready, as a matter of bounty, and not as of covetousness.",joy
+406,genesis_30_2,"And Jacob's anger was kindled against Rachel: and he said, Am I in God's stead, who hath withheld from thee the fruit of the womb?",anger
+407,john_16_19,"Now Jesus knew that they were desirous to ask him, and said unto them, Do ye enquire among yourselves of that I said, A little while, and ye shall not see me: and again, a little while, and ye shall see me?",surprise
+408,james_2_4,"Are ye not then partial in yourselves, and are become judges of evil thoughts?",disgust
+409,1_kings_8_34,"Then hear thou in heaven, and forgive the sin of thy people Israel, and bring them again unto the land which thou gavest unto their fathers.",joy
+410,1_chronicles_27_20,"Of the children of Ephraim, Hoshea the son of Azaziah: of the half tribe of Manasseh, Joel the son of Pedaiah:",neutral
+411,2_chronicles_20_14,"Then upon Jahaziel the son of Zechariah, the son of Benaiah, the son of Jeiel, the son of Mattaniah, a Levite of the sons of Asaph, came the Spirit of the LORD in the midst of the congregation;",joy
+412,proverbs_4_9,She shall give to thine head an ornament of grace: a crown of glory shall she deliver to thee.,joy
+413,job_6_17,"What time they wax warm, they vanish: when it is hot, they are consumed out of their place.",sadness
+414,2_kings_23_26,"Notwithstanding the LORD turned not from the fierceness of his great wrath, wherewith his anger was kindled against Judah, because of all the provocations that Manasseh had provoked him withal.",anger
+415,genesis_37_8,"And his brethren said to him, Shalt thou indeed reign over us? or shalt thou indeed have dominion over us? And they hated him yet the more for his dreams, and for his words.",anger
+416,deuteronomy_3_19,"But your wives, and your little ones, and your cattle, ( for I know that ye have much cattle,) shall abide in your cities which I have given you;",neutral
+417,judges_18_19,"And they said unto him, Hold thy peace, lay thine hand upon thy mouth, and go with us, and be to us a father and a priest: is it better for thee to be a priest unto the house of one man, or that thou be a priest unto a tribe and a family in Israel?",neutral
+418,job_36_29,"Also can any understand the spreadings of the clouds, or the noise of his tabernacle?",surprise
+419,leviticus_16_4,"He shall put on the holy linen coat, and he shall have the linen breeches upon his flesh, and shall be girded with a linen girdle, and with the linen mitre shall he be attired: these are holy garments; therefore shall he wash his flesh in water, and so put them on.",neutral
+420,luke_22_36,"Then said he unto them, But now, he that hath a purse, let him take it, and likewise his scrip: and he that hath no sword, let him sell his garment, and buy one.",fear
+421,mark_6_6,"And he marvelled because of their unbelief. And he went round about the villages, teaching.",surprise
+422,matthew_4_7,"Jesus said unto him, It is written again, Thou shalt not tempt the Lord thy God.",neutral
+423,jeremiah_15_7,"And I will fan them with a fan in the gates of the land; I will bereave them of children, I will destroy my people, since they return not from their ways.",anger
+424,john_16_12,"I have yet many things to say unto you, but ye cannot bear them now.",neutral
+425,acts_9_36,"Now there was at Joppa a certain disciple named Tabitha, which by interpretation is called Dorcas: this woman was full of good works and almsdeeds which she did.",joy
+426,deuteronomy_32_4,"He is the Rock, his work is perfect: for all his ways are judgment: a God of truth and without iniquity, just and right is he.",joy
+427,job_19_8,"He hath fenced up my way that I cannot pass, and he hath set darkness in my paths.",sadness
+428,2_samuel_19_3,"And the people gat them by stealth that day into the city, as people being ashamed steal away when they flee in battle.",sadness
+429,2_chronicles_18_6,"But Jehoshaphat said, Is there not here a prophet of the LORD besides, that we might enquire of him?",neutral
+430,isaiah_47_4,"As for our redeemer, the LORD of hosts is his name, the Holy One of Israel.",joy
+431,2_samuel_12_10,"Now therefore the sword shall never depart from thine house; because thou hast despised me, and hast taken the wife of Uriah the Hittite to be thy wife.",anger
+432,numbers_14_26,"And the LORD spake unto Moses and unto Aaron, saying,",neutral
+433,matthew_12_10,"And, behold, there was a man which had his hand withered. And they asked him, saying, Is it lawful to heal on the sabbath days? that they might accuse him.",anger
+434,1_chronicles_8_19,"And Jakim, and Zichri, and Zabdi,",neutral
+435,isaiah_28_8,"For all tables are full of vomit and filthiness, so that there is no place clean.",disgust
+436,jeremiah_4_30,"And when thou art spoiled, what wilt thou do? Though thou clothest thyself with crimson, though thou deckest thee with ornaments of gold, though thou rentest thy face with painting, in vain shalt thou make thyself fair; thy lovers will despise thee, they will seek thy life.",disgust
+437,jeremiah_3_16,"And it shall come to pass, when ye be multiplied and increased in the land, in those days, saith the LORD, they shall say no more, The ark of the covenant of the LORD: neither shall it come to mind: neither shall they remember it; neither shall they visit it; neither shall that be done any more.",neutral
+438,romans_2_2,But we are sure that the judgment of God is according to truth against them which commit such things.,neutral
+439,1_samuel_22_21,And Abiathar shewed David that Saul had slain the LORD'S priests.,sadness
+440,luke_22_22,"And truly the Son of man goeth, as it was determined: but woe unto that man by whom he is betrayed!",sadness
+441,acts_26_28,"Then Agrippa said unto Paul, Almost thou persuadest me to be a Christian.",surprise
+442,1_chronicles_12_21,"And they helped David against the band of the rovers: for they were all mighty men of valour, and were captains in the host.",joy
+443,john_14_28,"Ye have heard how I said unto you, I go away, and come again unto you. If ye loved me, ye would rejoice, because I said, I go unto the Father: for my Father is greater than I.",joy
+444,exodus_27_7,"And the staves shall be put into the rings, and the staves shall be upon the two sides of the altar, to bear it.",neutral
+445,amos_9_8,"Behold, the eyes of the Lord GOD are upon the sinful kingdom, and I will destroy it from off the face of the earth; saving that I will not utterly destroy the house of Jacob, saith the LORD.",anger
+446,1_corinthians_11_26,"For as often as ye eat this bread, and drink this cup, ye do shew the Lord's death till he come.",joy
+447,psalms_69_23,"Let their eyes be darkened, that they see not; and make their loins continually to shake.",anger
+448,ecclesiastes_7_11,Wisdom is good with an inheritance: and by it there is profit to them that see the sun.,joy
+449,psalms_62_11,God hath spoken once; twice have I heard this; that power belongeth unto God.,joy
+450,genesis_36_41,"Duke Aholibamah, duke Elah, duke Pinon,",neutral
+451,genesis_18_30,"And he said unto him, Oh let not the Lord be angry, and I will speak: Peradventure there shall thirty be found there. And he said, I will not do it, if I find thirty there.",fear
+452,philippians_2_6,"Who, being in the form of God, thought it not robbery to be equal with God:",joy
+453,psalms_112_5,"A good man sheweth favour, and lendeth: he will guide his affairs with discretion.",joy
+454,exodus_34_22,"And thou shalt observe the feast of weeks, of the firstfruits of wheat harvest, and the feast of ingathering at the year's end.",joy
+455,daniel_6_11,"Then these men assembled, and found Daniel praying and making supplication before his God.",joy
+456,micah_6_11,"Shall I count them pure with the wicked balances, and with the bag of deceitful weights?",disgust
+457,1_corinthians_11_18,"For first of all, when ye come together in the church, I hear that there be divisions among you; and I partly believe it.",anger
+458,1_samuel_17_6,"And he had greaves of brass upon his legs, and a target of brass between his shoulders.",neutral
+459,ezekiel_1_8,And they had the hands of a man under their wings on their four sides; and they four had their faces and their wings.,surprise
+460,psalms_114_2,"Judah was his sanctuary, and Israel his dominion.",joy
+461,job_10_18,"Wherefore then hast thou brought me forth out of the womb? Oh that I had given up the ghost, and no eye had seen me!",sadness
+462,romans_15_4,"For whatsoever things were written aforetime were written for our learning, that we through patience and comfort of the scriptures might have hope.",joy
+463,zechariah_8_6,"Thus saith the LORD of hosts; If it be marvellous in the eyes of the remnant of this people in these days, should it also be marvellous in mine eyes? saith the LORD of hosts.",surprise
+464,judges_7_25,"And they took two princes of the Midianites, Oreb and Zeeb; and they slew Oreb upon the rock Oreb, and Zeeb they slew at the winepress of Zeeb, and pursued Midian, and brought the heads of Oreb and Zeeb to Gideon on the other side Jordan.",anger
+465,micah_1_5,"For the transgression of Jacob is all this, and for the sins of the house of Israel. What is the transgression of Jacob? is it not Samaria? and what are the high places of Judah? are they not Jerusalem?",anger
+466,job_30_17,My bones are pierced in me in the night season: and my sinews take no rest.,sadness
+467,luke_2_17,"And when they had seen it, they made known abroad the saying which was told them concerning this child.",joy
+468,philemon_1_10,"I beseech thee for my son Onesimus, whom I have begotten in my bonds:",joy
+469,john_7_47,"Then answered them the Pharisees, Are ye also deceived?",disgust
+470,2_samuel_16_20,"Then said Absalom to Ahithophel, Give counsel among you what we shall do.",neutral
+471,job_33_31,"Mark well, O Job, hearken unto me: hold thy peace, and I will speak.",neutral
+472,genesis_20_18,"For the LORD had fast closed up all the wombs of the house of Abimelech, because of Sarah Abraham's wife.",anger
+473,1_corinthians_12_19,"And if they were all one member, where were the body?",neutral
+474,luke_12_11,"And when they bring you unto the synagogues, and unto magistrates, and powers, take ye no thought how or what thing ye shall answer, or what ye shall say:",fear
+475,exodus_37_4,"And he made staves of shittim wood, and overlaid them with gold.",neutral
+476,habakkuk_2_20,But the LORD is in his holy temple: let all the earth keep silence before him.,joy
+477,deuteronomy_31_16,"And the LORD said unto Moses, Behold, thou shalt sleep with thy fathers; and this people will rise up, and go a whoring after the gods of the strangers of the land, whither they go to be among them, and will forsake me, and break my covenant which I have made with them.",sadness
+478,judges_16_2,"And it was told the Gazites, saying, Samson is come hither. And they compassed him in, and laid wait for him all night in the gate of the city, and were quiet all the night, saying, In the morning, when it is day, we shall kill him.",fear
+479,acts_25_27,"For it seemeth to me unreasonable to send a prisoner, and not withal to signify the crimes laid against him.",surprise
+480,john_11_52,"And not for that nation only, but that also he should gather together in one the children of God that were scattered abroad.",joy
+481,matthew_22_32,"I am the God of Abraham, and the God of Isaac, and the God of Jacob? God is not the God of the dead, but of the living.",joy
+482,romans_15_2,Let every one of us please his neighbour for his good to edification.,joy
+483,1_corinthians_7_15,"But if the unbelieving depart, let him depart. A brother or a sister is not under bondage in such cases: but God hath called us to peace.",neutral
+484,genesis_16_2,"And Sarai said unto Abram, Behold now, the LORD hath restrained me from bearing: I pray thee, go in unto my maid; it may be that I may obtain children by her. And Abram hearkened to the voice of Sarai.",sadness
+485,genesis_45_19,"Now thou art commanded, this do ye; take you wagons out of the land of Egypt for your little ones, and for your wives, and bring your father, and come.",joy
+486,2_peter_1_18,"And this voice which came from heaven we heard, when we were with him in the holy mount.",surprise
+487,jeremiah_13_17,"But if ye will not hear it, my soul shall weep in secret places for your pride; and mine eye shall weep sore, and run down with tears, because the LORD'S flock is carried away captive.",sadness
+488,deuteronomy_30_15,"See, I have set before thee this day life and good, and death and evil;",neutral
+489,judges_9_48,"And Abimelech gat him up to mount Zalmon, he and all the people that were with him; and Abimelech took an axe in his hand, and cut down a bough from the trees, and took it, and laid it on his shoulder, and said unto the people that were with him, What ye have seen me do, make haste, and do as I have done.",neutral
+490,2_kings_4_30,"And the mother of the child said, As the LORD liveth, and as thy soul liveth, I will not leave thee. And he arose, and followed her.",joy
+491,leviticus_26_26,"And when I have broken the staff of your bread, ten women shall bake your bread in one oven, and they shall deliver you your bread again by weight: and ye shall eat, and not be satisfied.",sadness
+492,mark_5_27,"When she had heard of Jesus, came in the press behind, and touched his garment.",joy
+493,acts_27_21,"But after long abstinence Paul stood forth in the midst of them, and said, Sirs, ye should have hearkened unto me, and not have loosed from Crete, and to have gained this harm and loss.",anger
+494,exodus_10_18,"And he went out from Pharaoh, and intreated the LORD.",neutral
+495,leviticus_19_19,Ye shall keep my statutes. Thou shalt not let thy cattle gender with a diverse kind: thou shalt not sow thy field with mingled seed: neither shall a garment mingled of linen and woollen come upon thee.,neutral
+496,exodus_40_25,And he lighted the lamps before the LORD; as the LORD commanded Moses.,neutral
+497,luke_11_32,"The men of Nineve shall rise up in the judgment with this generation, and shall condemn it: for they repented at the preaching of Jonas; and, behold, a greater than Jonas is here.",anger
+498,psalms_55_11,Wickedness is in the midst thereof: deceit and guile depart not from her streets.,disgust
+499,numbers_13_23,"And they came unto the brook of Eshcol, and cut down from thence a branch with one cluster of grapes, and they bare it between two upon a staff; and they brought of the pomegranates, and of the figs.",joy
+500,proverbs_4_11,I have taught thee in the way of wisdom; I have led thee in right paths.,joy
+501,ezekiel_2_10,"And he spread it before me; and it was written within and without: and there was written therein lamentations, and mourning, and woe.",sadness
+502,james_1_15,"Then when lust hath conceived, it bringeth forth sin: and sin, when it is finished, bringeth forth death.",fear
+503,john_1_32,"And John bare record, saying, I saw the Spirit descending from heaven like a dove, and it abode upon him.",joy
+504,daniel_9_1,"In the first year of Darius the son of Ahasuerus, of the seed of the Medes, which was made king over the realm of the Chaldeans;",neutral
+505,romans_14_19,"Let us therefore follow after the things which make for peace, and things wherewith one may edify another.",joy
+506,daniel_10_19,"And said, O man greatly beloved, fear not: peace be unto thee, be strong, yea, be strong. And when he had spoken unto me, I was strengthened, and said, Let my lord speak; for thou hast strengthened me.",joy
+507,psalms_135_18,They that make them are like unto them: so is every one that trusteth in them.,disgust
+508,numbers_16_29,"If these men die the common death of all men, or if they be visited after the visitation of all men; then the LORD hath not sent me.",fear
+509,psalms_57_8,"Awake up, my glory; awake, psaltery and harp: I myself will awake early.",joy
+510,numbers_28_26,"Also in the day of the firstfruits, when ye bring a new meat offering unto the LORD, after your weeks be out, ye shall have an holy convocation; ye shall do no servile work:",joy
+511,daniel_3_27,"And the princes, governors, and captains, and the king's counsellors, being gathered together, saw these men, upon whose bodies the fire had no power, nor was an hair of their head singed, neither were their coats changed, nor the smell of fire had passed on them.",surprise
+512,romans_2_9,"Tribulation and anguish, upon every soul of man that doeth evil, of the Jew first, and also of the Gentile;",fear
+513,ezekiel_7_5,"Thus saith the Lord GOD; An evil, an only evil, behold, is come.",fear
+514,1_samuel_2_32,"And thou shalt see an enemy in my habitation, in all the wealth which God shall give Israel: and there shall not be an old man in thine house for ever.",sadness
+515,1_samuel_22_11,"Then the king sent to call Ahimelech the priest, the son of Ahitub, and all his father's house, the priests that were in Nob: and they came all of them to the king.",neutral
+516,joshua_15_51,"And Goshen, and Holon, and Giloh; eleven cities with their villages:",neutral
+517,joshua_21_12,"But the fields of the city, and the villages thereof, gave they to Caleb the son of Jephunneh for his possession.",neutral
+518,malachi_2_9,"Therefore have I also made you contemptible and base before all the people, according as ye have not kept my ways, but have been partial in the law.",anger
+519,psalms_145_3,"Great is the LORD, and greatly to be praised; and his greatness is unsearchable.",joy
+520,luke_22_43,"And there appeared an angel unto him from heaven, strengthening him.",joy
+521,psalms_55_8,I would hasten my escape from the windy storm and tempest.,fear
+522,luke_14_19,"And another said, I have bought five yoke of oxen, and I go to prove them: I pray thee have me excused.",neutral
+523,1_corinthians_10_18,Behold Israel after the flesh: are not they which eat of the sacrifices partakers of the altar?,neutral
+524,psalms_119_49,"Remember the word unto thy servant, upon which thou hast caused me to hope.",joy
+525,exodus_15_11,"Who is like unto thee, O LORD, among the gods? who is like thee, glorious in holiness, fearful in praises, doing wonders?",joy
+526,1_chronicles_4_26,"And the sons of Mishma; Hamuel his son, Zacchur his son, Shimei his son.",neutral
+527,ezekiel_20_6,"In the day that I lifted up mine hand unto them, to bring them forth of the land of Egypt into a land that I had espied for them, flowing with milk and honey, which is the glory of all lands:",joy
+528,amos_5_20,"Shall not the day of the LORD be darkness, and not light? even very dark, and no brightness in it?",fear
+529,philemon_1_12,"Whom I have sent again: thou therefore receive him, that is, mine own bowels:",joy
+530,deuteronomy_24_4,"Her former husband, which sent her away, may not take her again to be his wife, after that she is defiled; for that is abomination before the LORD: and thou shalt not cause the land to sin, which the LORD thy God giveth thee for an inheritance.",disgust
+531,john_1_9,"That was the true Light, which lighteth every man that cometh into the world.",joy
+532,habakkuk_2_15,"Woe unto him that giveth his neighbour drink, that puttest thy bottle to him, and makest him drunken also, that thou mayest look on their nakedness!",disgust
+533,mark_13_30,"Verily I say unto you, that this generation shall not pass, till all these things be done.",surprise
+534,isaiah_44_11,"Behold, all his fellows shall be ashamed: and the workmen, they are of men: let them all be gathered together, let them stand up; yet they shall fear, and they shall be ashamed together.",sadness
+535,1_chronicles_14_3,And David took more wives at Jerusalem: and David begat more sons and daughters.,neutral
+536,2_kings_25_30,"And his allowance was a continual allowance given him of the king, a daily rate for every day, all the days of his life.",joy
+537,1_chronicles_2_48,"Maachah, Caleb's concubine, bare Sheber, and Tirhanah.",neutral
+538,zephaniah_3_1,"Woe to her that is filthy and polluted, to the oppressing city!",disgust
+539,jeremiah_6_11,"Therefore I am full of the fury of the LORD; I am weary with holding in: I will pour it out upon the children abroad, and upon the assembly of young men together: for even the husband with the wife shall be taken, the aged with him that is full of days.",anger
+540,luke_5_23,"Whether is easier, to say, Thy sins be forgiven thee; or to say, Rise up and walk?",surprise
+541,acts_20_25,"And now, behold, I know that ye all, among whom I have gone preaching the kingdom of God, shall see my face no more.",sadness
+542,1_corinthians_15_5,"And that he was seen of Cephas, then of the twelve:",joy
+543,revelation_22_21,The grace of our Lord Jesus Christ be with you all. Amen.,joy
+544,leviticus_8_1,"And the LORD spake unto Moses, saying,",neutral
+545,romans_2_21,"Thou therefore which teachest another, teachest thou not thyself? thou that preachest a man should not steal, dost thou steal?",anger
+546,james_1_9,Let the brother of low degree rejoice in that he is exalted:,joy
+547,job_20_1,"Then answered Zophar the Naamathite, and said,",neutral
+548,isaiah_8_9,"Associate yourselves, O ye people, and ye shall be broken in pieces; and give ear, all ye of far countries: gird yourselves, and ye shall be broken in pieces; gird yourselves, and ye shall be broken in pieces.",anger
+549,deuteronomy_3_21,"And I commanded Joshua at that time, saying, Thine eyes have seen all that the LORD your God hath done unto these two kings: so shall the LORD do unto all the kingdoms whither thou passest.",joy
+550,esther_6_13,"And Haman told Zeresh his wife and all his friends every thing that had befallen him. Then said his wise men and Zeresh his wife unto him, If Mordecai be of the seed of the Jews, before whom thou hast begun to fall, thou shalt not prevail against him, but shalt surely fall before him.",fear
+551,genesis_26_1,"And there was a famine in the land, beside the first famine that was in the days of Abraham. And Isaac went unto Abimelech king of the Philistines unto Gerar.",fear
+552,daniel_5_30,In that night was Belshazzar the king of the Chaldeans slain.,anger
+553,numbers_28_4,"The one lamb shalt thou offer in the morning, and the other lamb shalt thou offer at even;",neutral
+554,joshua_9_1,"And it came to pass, when all the kings which were on this side Jordan, in the hills, and in the valleys, and in all the coasts of the great sea over against Lebanon, the Hittite, and the Amorite, the Canaanite, the Perizzite, the Hivite, and the Jebusite, heard thereof;",neutral
+555,matthew_14_25,"And in the fourth watch of the night Jesus went unto them, walking on the sea.",surprise
+556,deuteronomy_4_8,"And what nation is there so great, that hath statutes and judgments so righteous as all this law, which I set before you this day?",joy
+557,1_chronicles_9_25,"And their brethren, which were in their villages, were to come after seven days from time to time with them.",neutral
+558,genesis_8_14,"And in the second month, on the seven and twentieth day of the month, was the earth dried.",joy
+559,joshua_19_10,And the third lot came up for the children of Zebulun according to their families: and the border of their inheritance was unto Sarid:,neutral
+560,luke_23_19,"(Who for a certain sedition made in the city, and for murder, was cast into prison.)",anger
+561,daniel_7_3,"And four great beasts came up from the sea, diverse one from another.",fear
+562,1_chronicles_19_16,"And when the Syrians saw that they were put to the worse before Israel, they sent messengers, and drew forth the Syrians that were beyond the river: and Shophach the captain of the host of Hadarezer went before them.",fear
+563,ezekiel_2_1,"And he said unto me, Son of man, stand upon thy feet, and I will speak unto thee.",neutral
+564,psalms_66_20,"Blessed be God, which hath not turned away my prayer, nor his mercy from me.",joy
+565,1_corinthians_7_16,"For what knowest thou, O wife, whether thou shalt save thy husband? or how knowest thou, O man, whether thou shalt save thy wife?",joy
+566,hebrews_6_3,"And this will we do, if God permit.",neutral
+567,1_samuel_17_40,"And he took his staff in his hand, and chose him five smooth stones out of the brook, and put them in a shepherd's bag which he had, even in a scrip; and his sling was in his hand: and he drew near to the Philistine.",joy
+568,1_chronicles_24_22,Of the Izharites; Shelomoth: of the sons of Shelomoth; Jahath.,neutral
+569,1_chronicles_1_37,"The sons of Reuel; Nahath, Zerah, Shammah, and Mizzah.",neutral
+570,psalms_94_20,"Shall the throne of iniquity have fellowship with thee, which frameth mischief by a law?",anger
+571,ezekiel_39_10,"So that they shall take no wood out of the field, neither cut down any out of the forests; for they shall burn the weapons with fire: and they shall spoil those that spoiled them, and rob those that robbed them, saith the Lord GOD.",anger
+572,jeremiah_49_12,"For thus saith the LORD; Behold, they whose judgment was not to drink of the cup have assuredly drunken; and art thou he that shall altogether go unpunished? thou shalt not go unpunished, but thou shalt surely drink of it.",anger
+573,1_chronicles_29_19,"And give unto Solomon my son a perfect heart, to keep thy commandments, thy testimonies, and thy statutes, and to do all these things, and to build the palace, for the which I have made provision.",joy
+574,john_6_14,"Then those men, when they had seen the miracle that Jesus did, said, This is of a truth that prophet that should come into the world.",surprise
+575,psalms_106_44,"Nevertheless he regarded their affliction, when he heard their cry:",sadness
+576,1_chronicles_27_10,"The seventh captain for the seventh month was Helez the Pelonite, of the children of Ephraim: and in his course were twenty and four thousand.",neutral
+577,1_chronicles_4_21,"The sons of Shelah the son of Judah were, Er the father of Lecah, and Laadah the father of Mareshah, and the families of the house of them that wrought fine linen, of the house of Ashbea,",neutral
+578,jeremiah_9_5,"And they will deceive every one his neighbour, and will not speak the truth: they have taught their tongue to speak lies, and weary themselves to commit iniquity.",disgust
+579,numbers_13_15,"Of the tribe of Gad, Geuel the son of Machi.",neutral
+580,zechariah_12_1,"The burden of the word of the LORD for Israel, saith the LORD, which stretcheth forth the heavens, and layeth the foundation of the earth, and formeth the spirit of man within him.",neutral
+581,acts_14_22,"Confirming the souls of the disciples, and exhorting them to continue in the faith, and that we must through much tribulation enter into the kingdom of God.",sadness
+582,psalms_106_48,"Blessed be the Lord God of Israel from everlasting to everlasting: and let all the people say, Amen. Praise ye the LORD.",joy
+583,1_corinthians_10_20,"But I say, that the things which the Gentiles sacrifice, they sacrifice to devils, and not to God: and I would not that ye should have fellowship with devils.",disgust
+584,genesis_41_52,And the name of the second called he Ephraim: For God hath caused me to be fruitful in the land of my affliction.,joy
+585,revelation_20_13,And the sea gave up the dead which were in it; and death and hell delivered up the dead which were in them: and they were judged every man according to their works.,fear
+586,john_9_3,"Jesus answered, Neither hath this man sinned, nor his parents: but that the works of God should be made manifest in him.",neutral
+587,deuteronomy_18_13,Thou shalt be perfect with the LORD thy God.,neutral
+588,leviticus_22_26,"And the LORD spake unto Moses, saying,",neutral
+589,ezekiel_1_13,"As for the likeness of the living creatures, their appearance was like burning coals of fire, and like the appearance of lamps: it went up and down among the living creatures; and the fire was bright, and out of the fire went forth lightning.",surprise
+590,judges_11_16,"But when Israel came up from Egypt, and walked through the wilderness unto the Red sea, and came to Kadesh;",neutral
+591,1_chronicles_17_8,"And I have been with thee whithersoever thou hast walked, and have cut off all thine enemies from before thee, and have made thee a name like the name of the great men that are in the earth.",joy
+592,deuteronomy_20_1,"When thou goest out to battle against thine enemies, and seest horses, and chariots, and a people more than thou, be not afraid of them: for the LORD thy God is with thee, which brought thee up out of the land of Egypt.",fear
+593,job_6_13,Is not my help in me? and is wisdom driven quite from me?,sadness
+594,numbers_33_12,"And they took their journey out of the wilderness of Sin, and encamped in Dophkah.",neutral
+595,ezekiel_42_9,"And from under these chambers was the entry on the east side, as one goeth into them from the utter court.",neutral
+596,ezekiel_11_22,"Then did the cherubims lift up their wings, and the wheels beside them; and the glory of the God of Israel was over them above.",surprise
+597,isaiah_1_31,"And the strong shall be as tow, and the maker of it as a spark, and they shall both burn together, and none shall quench them.",anger
+598,isaiah_46_9,"Remember the former things of old: for I am God, and there is none else; I am God, and there is none like me,",joy
+599,psalms_78_46,"He gave also their increase unto the caterpiller, and their labour unto the locust.",sadness
+600,genesis_8_13,"And it came to pass in the six hundredth and first year, in the first month, the first day of the month, the waters were dried up from off the earth: and Noah removed the covering of the ark, and looked, and, behold, the face of the ground was dry.",joy
+601,jeremiah_25_22,"And all the kings of Tyrus, and all the kings of Zidon, and the kings of the isles which are beyond the sea,",neutral
+602,nehemiah_13_11,"Then contended I with the rulers, and said, Why is the house of God forsaken? And I gathered them together, and set them in their place.",anger
+603,nahum_2_9,"Take ye the spoil of silver, take the spoil of gold: for there is none end of the store and glory out of all the pleasant furniture.",joy
+604,exodus_33_15,"And he said unto him, If thy presence go not with me, carry us not up hence.",fear
+605,1_corinthians_1_20,Where is the wise? where is the scribe? where is the disputer of this world? hath not God made foolish the wisdom of this world?,surprise
+606,2_chronicles_17_10,"And the fear of the LORD fell upon all the kingdoms of the lands that were round about Judah, so that they made no war against Jehoshaphat.",fear
+607,acts_26_2,"I think myself happy, king Agrippa, because I shall answer for myself this day before thee touching all the things whereof I am accused of the Jews:",joy
+608,numbers_21_20,"And from Bamoth in the valley, that is in the country of Moab, to the top of Pisgah, which looketh toward Jeshimon.",neutral
+609,exodus_5_19,"And the officers of the children of Israel did see that they were in evil case, after it was said, Ye shall not minish ought from your bricks of your daily task.",sadness
+610,john_18_17,"Then saith the damsel that kept the door unto Peter, Art not thou also one of this man's disciples? He saith, I am not.",fear
+611,2_timothy_1_1,"Paul, an apostle of Jesus Christ by the will of God, according to the promise of life which is in Christ Jesus,",neutral
+612,jeremiah_6_29,"The bellows are burned, the lead is consumed of the fire; the founder melteth in vain: for the wicked are not plucked away.",anger
+613,genesis_47_13,"And there was no bread in all the land; for the famine was very sore, so that the land of Egypt and all the land of Canaan fainted by reason of the famine.",sadness
+614,2_kings_25_9,"And he burnt the house of the LORD, and the king's house, and all the houses of Jerusalem, and every great man's house burnt he with fire.",anger
+615,nehemiah_8_14,"And they found written in the law which the LORD had commanded by Moses, that the children of Israel should dwell in booths in the feast of the seventh month:",surprise
+616,psalms_139_15,"My substance was not hid from thee, when I was made in secret, and curiously wrought in the lowest parts of the earth.",joy
+617,acts_4_2,"Being grieved that they taught the people, and preached through Jesus the resurrection from the dead.",anger
+618,isaiah_19_21,"And the LORD shall be known to Egypt, and the Egyptians shall know the LORD in that day, and shall do sacrifice and oblation; yea, they shall vow a vow unto the LORD, and perform it.",joy
+619,numbers_30_14,"But if her husband altogether hold his peace at her from day to day; then he establisheth all her vows, or all her bonds, which are upon her: he confirmeth them, because he held his peace at her in the day that he heard them.",neutral
+620,matthew_8_29,"And, behold, they cried out, saying, What have we to do with thee, Jesus, thou Son of God? art thou come hither to torment us before the time?",fear
+621,mark_14_59,But neither so did their witness agree together.,disgust
+622,isaiah_40_31,"But they that wait upon the LORD shall renew their strength; they shall mount up with wings as eagles; they shall run, and not be weary; and they shall walk, and not faint.",joy
+623,joshua_19_30,"Ummah also, and Aphek, and Rehob: twenty and two cities with their villages.",neutral
+624,1_chronicles_19_19,"And when the servants of Hadarezer saw that they were put to the worse before Israel, they made peace with David, and became his servants: neither would the Syrians help the children of Ammon any more.",joy
+625,1_kings_22_30,"And the king of Israel said unto Jehoshaphat, I will disguise myself, and enter into the battle; but put thou on thy robes. And the king of Israel disguised himself, and went into the battle.",fear
+626,exodus_10_27,"But the LORD hardened Pharaoh's heart, and he would not let them go.",anger
+627,1_kings_18_12,"And it shall come to pass, as soon as I am gone from thee, that the Spirit of the LORD shall carry thee whither I know not; and so when I come and tell Ahab, and he cannot find thee, he shall slay me: but I thy servant fear the LORD from my youth.",fear
+628,1_samuel_17_45,"Then said David to the Philistine, Thou comest to me with a sword, and with a spear, and with a shield: but I come to thee in the name of the LORD of hosts, the God of the armies of Israel, whom thou hast defied.",joy
+629,zechariah_9_16,"And the LORD their God shall save them in that day as the flock of his people: for they shall be as the stones of a crown, lifted up as an ensign upon his land.",joy
+630,2_kings_22_20,"Behold therefore, I will gather thee unto thy fathers, and thou shalt be gathered into thy grave in peace; and thine eyes shall not see all the evil which I will bring upon this place. And they brought the king word again.",neutral
+631,1_chronicles_1_11,"And Mizraim begat Ludim, and Anamim, and Lehabim, and Napthtuhim,",neutral
+632,2_chronicles_11_19,"Which bare him children; Jeush, and Shamariah, and Zaham.",neutral
+633,mark_4_31,"It is like a grain of mustard seed, which, when it is sown in the earth, is less than all the seeds that be in the earth:",neutral
+634,1_chronicles_14_16,David therefore did as God commanded him: and they smote the host of the Philistines from Gibeon even to Gazer.,joy
+635,numbers_12_1,And Miriam and Aaron spake against Moses because of the Ethiopian woman whom he had married: for he had married an Ethiopian woman.,anger
+636,jeremiah_52_28,This is the people whom Nebuchadrezzar carried away captive: in the seventh year three thousand Jews and three and twenty:,sadness
+637,2_chronicles_1_13,"Then Solomon came from his journey to the high place that was at Gibeon to Jerusalem, from before the tabernacle of the congregation, and reigned over Israel.",neutral
+638,genesis_11_3,"And they said one to another, Go to, let us make brick, and burn them throughly. And they had brick for stone, and slime had they for morter.",neutral
+639,numbers_26_40,"And the sons of Bela were Ard and Naaman: of Ard, the family of the Ardites: and of Naaman, the family of the Naamites.",neutral
+640,numbers_27_20,"And thou shalt put some of thine honour upon him, that all the congregation of the children of Israel may be obedient.",neutral
+641,genesis_29_29,And Laban gave to Rachel his daughter Bilhah his handmaid to be her maid.,neutral
+642,genesis_25_12,"Now these are the generations of Ishmael, Abraham's son, whom Hagar the Egyptian, Sarah's handmaid, bare unto Abraham:",neutral
+643,song_of_solomon_7_10,"I am my beloved's, and his desire is toward me.",joy
+644,genesis_34_22,"Only herein will the men consent unto us for to dwell with us, to be one people, if every male among us be circumcised, as they are circumcised.",neutral
+645,proverbs_21_3,To do justice and judgment is more acceptable to the LORD than sacrifice.,joy
+646,nehemiah_4_3,"Now Tobiah the Ammonite was by him, and he said, Even that which they build, if a fox go up, he shall even break down their stone wall.",disgust
+647,1_thessalonians_5_11,"Wherefore comfort yourselves together, and edify one another, even as also ye do.",joy
+648,genesis_46_15,"These be the sons of Leah, which she bare unto Jacob in Padan-aram, with his daughter Dinah: all the souls of his sons and his daughters were thirty and three.",neutral
+649,leviticus_2_3,And the remnant of the meat offerings shall be Aaron's and his sons': it is a thing most holy of the offerings of the LORD made by fire.,neutral
+650,acts_17_10,And the brethren immediately sent away Paul and Silas by night unto Berea: who coming thither went into the synagogue of the Jews.,fear
+651,numbers_22_37,"And Balak said unto Balaam, Did I not earnestly send unto thee to call thee? wherefore camest thou not unto me? am I not able indeed to promote thee to honour?",anger
+652,numbers_21_35,"So they smote him, and his sons, and all his people, until there was none left him alive: and they possessed his land.",anger
+653,numbers_26_35,"These are the sons of Ephraim after their families: of Shuthelah, the family of the Shuthalhites: of Becher, the family of the Bachrites: of Tahan, the family of the Tahanites.",neutral
+654,nehemiah_11_12,"And their brethren that did the work of the house were eight hundred twenty and two: and Adaiah the son of Jeroham, the son of Pelaliah, the son of Amzi, the son of Zechariah, the son of Pashur, the son of Malchiah,",neutral
+655,exodus_32_18,"And he said, It is not the voice of them that shout for mastery, neither is it the voice of them that cry for being overcome: but the noise of them that sing do I hear.",surprise
+656,psalms_46_5,"God is in the midst of her; she shall not be moved: God shall help her, and that right early.",joy
+657,jeremiah_50_43,"The king of Babylon hath heard the report of them, and his hands waxed feeble: anguish took hold of him, and pangs as of a woman in travail.",fear
+658,lamentations_1_2,"She weepeth sore in the night, and her tears are on her cheeks: among all her lovers she hath none to comfort her: all her friends have dealt treacherously with her, they are become her enemies.",sadness
+659,jeremiah_36_23,"And it came to pass, that when Jehudi had read three or four leaves, he cut it with the penknife, and cast it into the fire that was on the hearth, until all the roll was consumed in the fire that was on the hearth.",anger
+660,isaiah_33_19,"Thou shalt not see a fierce people, a people of a deeper speech than thou canst perceive; of a stammering tongue, that thou canst not understand.",fear
+661,isaiah_24_12,"In the city is left desolation, and the gate is smitten with destruction.",sadness
+662,proverbs_30_27,"The locusts have no king, yet go they forth all of them by bands;",neutral
+663,numbers_2_12,And those which pitch by him shall be the tribe of Simeon: and the captain of the children of Simeon shall be Shelumiel the son of Zurishaddai.,neutral
+664,nehemiah_4_7,"But it came to pass, that when Sanballat, and Tobiah, and the Arabians, and the Ammonites, and the Ashdodites, heard that the walls of Jerusalem were made up, and that the breaches began to be stopped, then they were very wroth,",anger
+665,ezekiel_33_22,"Now the hand of the LORD was upon me in the evening, afore he that was escaped came; and had opened my mouth, until he came to me in the morning; and my mouth was opened, and I was no more dumb.",surprise
+666,jeremiah_26_16,Then said the princes and all the people unto the priests and to the prophets; This man is not worthy to die: for he hath spoken to us in the name of the LORD our God.,joy
+667,psalms_22_21,Save me from the lion's mouth: for thou hast heard me from the horns of the unicorns.,fear
+668,isaiah_36_6,"Lo, thou trustest in the staff of this broken reed, on Egypt; whereon if a man lean, it will go into his hand, and pierce it: so is Pharaoh king of Egypt to all that trust in him.",disgust
+669,numbers_26_56,According to the lot shall the possession thereof be divided between many and few.,neutral
+670,ezra_10_25,"Moreover of Israel: of the sons of Parosh; Ramiah, and Jeziah, and Malchiah, and Miamin, and Eleazar, and Malchijah, and Benaiah.",neutral
+671,numbers_15_24,"Then it shall be, if ought be committed by ignorance without the knowledge of the congregation, that all the congregation shall offer one young bullock for a burnt offering, for a sweet savour unto the LORD, with his meat offering, and his drink offering, according to the manner, and one kid of the goats for a sin offering.",neutral
+672,romans_7_3,"So then if, while her husband liveth, she be married to another man, she shall be called an adulteress: but if her husband be dead, she is free from that law; so that she is no adulteress, though she be married to another man.",neutral
+673,jeremiah_26_12,"Then spake Jeremiah unto all the princes and to all the people, saying, The LORD sent me to prophesy against this house and against this city all the words that ye have heard.",anger
+674,numbers_5_1,"And the LORD spake unto Moses, saying,",neutral
+675,psalms_78_27,"He rained flesh also upon them as dust, and feathered fowls like as the sand of the sea:",surprise
+676,ecclesiastes_8_13,"But it shall not be well with the wicked, neither shall he prolong his days, which are as a shadow; because he feareth not before God.",fear
+677,isaiah_23_16,"Take an harp, go about the city, thou harlot that hast been forgotten; make sweet melody, sing many songs, that thou mayest be remembered.",sadness
+678,2_chronicles_2_1,"And Solomon determined to build an house for the name of the LORD, and an house for his kingdom.",neutral
+679,1_kings_6_23,"And within the oracle he made two cherubims of olive tree, each ten cubits high.",neutral
+680,2_chronicles_25_25,And Amaziah the son of Joash king of Judah lived after the death of Joash son of Jehoahaz king of Israel fifteen years.,neutral
+681,psalms_46_11,The LORD of hosts is with us; the God of Jacob is our refuge. Selah.,joy
+682,genesis_18_25,"That be far from thee to do after this manner, to slay the righteous with the wicked: and that the righteous should be as the wicked, that be far from thee: Shall not the Judge of all the earth do right?",anger
+683,mark_2_21,"No man also seweth a piece of new cloth on an old garment: else the new piece that filled it up taketh away from the old, and the rent is made worse.",neutral
+684,hebrews_6_4,"For it is impossible for those who were once enlightened, and have tasted of the heavenly gift, and were made partakers of the Holy Ghost,",surprise
+685,luke_6_17,"And he came down with them, and stood in the plain, and the company of his disciples, and a great multitude of people out of all Judaea and Jerusalem, and from the sea coast of Tyre and Sidon, which came to hear him, and to be healed of their diseases;",joy
+686,2_kings_4_36,"And he called Gehazi, and said, Call this Shunammite. So he called her. And when she was come in unto him, he said, Take up thy son.",joy
+687,joshua_14_4,"For the children of Joseph were two tribes, Manasseh and Ephraim: therefore they gave no part unto the Levites in the land, save cities to dwell in, with their suburbs for their cattle and for their substance.",neutral
+688,matthew_10_6,But go rather to the lost sheep of the house of Israel.,neutral
+689,psalms_90_8,"Thou hast set our iniquities before thee, our secret sins in the light of thy countenance.",fear
+690,numbers_35_10,"Speak unto the children of Israel, and say unto them, When ye be come over Jordan into the land of Canaan;",neutral
+691,nehemiah_12_38,"And the other company of them that gave thanks went over against them, and I after them, and the half of the people upon the wall, from beyond the tower of the furnaces even unto the broad wall;",joy
+692,deuteronomy_33_8,"And of Levi he said, Let thy Thummim and thy Urim be with thy holy one, whom thou didst prove at Massah, and with whom thou didst strive at the waters of Meribah;",neutral
+693,genesis_41_48,"And he gathered up all the food of the seven years, which were in the land of Egypt, and laid up the food in the cities: the food of the field, which was round about every city, laid he up in the same.",neutral
+694,numbers_4_24,"This is the service of the families of the Gershonites, to serve, and for burdens:",neutral
+695,psalms_35_12,They rewarded me evil for good to the spoiling of my soul.,sadness
+696,ezekiel_44_9,"Thus saith the Lord GOD; No stranger, uncircumcised in heart, nor uncircumcised in flesh, shall enter into my sanctuary, of any stranger that is among the children of Israel.",disgust
+697,2_thessalonians_2_2,"That ye be not soon shaken in mind, or be troubled, neither by spirit, nor by word, nor by letter as from us, as that the day of Christ is at hand.",fear
+698,ezekiel_48_24,"And by the border of Benjamin, from the east side unto the west side, Simeon shall have a portion.",neutral
+699,john_2_13,"And the Jews' passover was at hand, and Jesus went up to Jerusalem,",neutral
+700,ezekiel_22_17,"And the word of the LORD came unto me, saying,",neutral
+701,2_chronicles_28_11,"Now hear me therefore, and deliver the captives again, which ye have taken captive of your brethren: for the fierce wrath of the LORD is upon you.",fear
+702,deuteronomy_9_22,"And at Taberah, and at Massah, and at Kibroth-hattaavah, ye provoked the LORD to wrath.",anger
+703,genesis_48_13,"And Joseph took them both, Ephraim in his right hand toward Israel's left hand, and Manasseh in his left hand toward Israel's right hand, and brought them near unto him.",neutral
+704,jeremiah_6_14,"They have healed also the hurt of the daughter of my people slightly, saying, Peace, peace; when there is no peace.",sadness
+705,song_of_solomon_7_5,"Thine head upon thee is like Carmel, and the hair of thine head like purple; the king is held in the galleries.",joy
+706,numbers_34_26,"And the prince of the tribe of the children of Issachar, Paltiel the son of Azzan.",neutral
+707,psalms_68_19,"Blessed be the Lord, who daily loadeth us with benefits, even the God of our salvation. Selah.",joy
+708,leviticus_17_15,"And every soul that eateth that which died of itself, or that which was torn with beasts, whether it be one of your own country, or a stranger, he shall both wash his clothes, and bathe himself in water, and be unclean until the even: then shall he be clean.",disgust
+709,leviticus_4_25,"And the priest shall take of the blood of the sin offering with his finger, and put it upon the horns of the altar of burnt offering, and shall pour out his blood at the bottom of the altar of burnt offering.",neutral
+710,ezra_2_24,"The children of Azmaveth, forty and two.",neutral
+711,1_samuel_3_4,"That the LORD called Samuel: and he answered, Here am I.",surprise
+712,jonah_2_7,"When my soul fainted within me I remembered the LORD: and my prayer came in unto thee, into thine holy temple.",sadness
+713,luke_12_28,"If then God so clothe the grass, which is to day in the field, and to morrow is cast into the oven; how much more will he clothe you, O ye of little faith?",joy
+714,psalms_22_23,"Ye that fear the LORD, praise him; all ye the seed of Jacob, glorify him; and fear him, all ye the seed of Israel.",joy
+715,joel_2_17,"Let the priests, the ministers of the LORD, weep between the porch and the altar, and let them say, Spare thy people, O LORD, and give not thine heritage to reproach, that the heathen should rule over them: wherefore should they say among the people, Where is their God?",sadness
+716,job_41_10,None is so fierce that dare stir him up: who then is able to stand before me?,fear
+717,genesis_26_16,"And Abimelech said unto Isaac, Go from us; for thou art much mightier than we.",fear
+718,matthew_27_37,"And set up over his head his accusation written, THIS IS JESUS THE KING OF THE JEWS.",sadness
+719,ecclesiastes_9_1,"For all this I considered in my heart even to declare all this, that the righteous, and the wise, and their works, are in the hand of God: no man knoweth either love or hatred by all that is before them.",neutral
+720,luke_8_32,And there was there an herd of many swine feeding on the mountain: and they besought him that he would suffer them to enter into them. And he suffered them.,surprise
+721,matthew_9_9,"And as Jesus passed forth from thence, he saw a man, named Matthew, sitting at the receipt of custom: and he saith unto him, Follow me. And he arose, and followed him.",surprise
+722,exodus_17_13,And Joshua discomfited Amalek and his people with the edge of the sword.,anger
+723,micah_2_1,"Woe to them that devise iniquity, and work evil upon their beds! when the morning is light, they practise it, because it is in the power of their hand.",anger
+724,1_corinthians_15_57,"But thanks be to God, which giveth us the victory through our Lord Jesus Christ.",joy
+725,job_11_15,"For then shalt thou lift up thy face without spot; yea, thou shalt be stedfast, and shalt not fear:",joy
+726,psalms_109_28,"Let them curse, but bless thou: when they arise, let them be ashamed; but let thy servant rejoice.",joy
+727,jeremiah_52_14,"And all the army of the Chaldeans, that were with the captain of the guard, brake down all the walls of Jerusalem round about.",sadness
+728,john_14_27,"Peace I leave with you, my peace I give unto you: not as the world giveth, give I unto you. Let not your heart be troubled, neither let it be afraid.",joy
+729,job_28_20,Whence then cometh wisdom? and where is the place of understanding?,surprise
+730,joshua_19_24,And the fifth lot came out for the tribe of the children of Asher according to their families.,neutral
+731,mark_7_31,"And again, departing from the coasts of Tyre and Sidon, he came unto the sea of Galilee, through the midst of the coasts of Decapolis.",neutral
+732,psalms_56_12,"Thy vows are upon me, O God: I will render praises unto thee.",joy
+733,romans_15_19,"Through mighty signs and wonders, by the power of the Spirit of God; so that from Jerusalem, and round about unto Illyricum, I have fully preached the gospel of Christ.",joy
+734,luke_17_7,"But which of you, having a servant plowing or feeding cattle, will say unto him by and by, when he is come from the field, Go and sit down to meat?",neutral
+735,isaiah_49_21,"Then shalt thou say in thine heart, Who hath begotten me these, seeing I have lost my children, and am desolate, a captive, and removing to and fro? and who hath brought up these? Behold, I was left alone; these, where had they been?",sadness
+736,leviticus_1_15,"And the priest shall bring it unto the altar, and wring off his head, and burn it on the altar; and the blood thereof shall be wrung out at the side of the altar:",disgust
+737,matthew_1_15,And Eliud begat Eleazar; and Eleazar begat Matthan; and Matthan begat Jacob;,neutral
+738,mark_14_28,"But after that I am risen, I will go before you into Galilee.",joy
+739,joshua_15_34,"And Zanoah, and En-gannim, Tappuah, and Enam,",neutral
+740,2_kings_12_10,"And it was so, when they saw that there was much money in the chest, that the king's scribe and the high priest came up, and they put up in bags, and told the money that was found in the house of the LORD.",neutral
+741,job_34_37,"For he addeth rebellion unto his sin, he clappeth his hands among us, and multiplieth his words against God.",anger
+742,numbers_16_3,"And they gathered themselves together against Moses and against Aaron, and said unto them, Ye take too much upon you, seeing all the congregation are holy, every one of them, and the LORD is among them: wherefore then lift ye up yourselves above the congregation of the LORD?",anger
+743,2_samuel_12_16,"David therefore besought God for the child; and David fasted, and went in, and lay all night upon the earth.",sadness
+744,john_17_26,"And I have declared unto them thy name, and will declare it: that the love wherewith thou hast loved me may be in them, and I in them.",joy
+745,2_corinthians_4_13,"We having the same spirit of faith, according as it is written, I believed, and therefore have I spoken; we also believe, and therefore speak;",joy
+746,john_15_10,"If ye keep my commandments, ye shall abide in my love; even as I have kept my Father's commandments, and abide in his love.",joy
+747,leviticus_14_37,"And he shall look on the plague, and, behold, if the plague be in the walls of the house with hollow strakes, greenish or reddish, which in sight are lower than the wall;",disgust
+748,proverbs_16_23,"The heart of the wise teacheth his mouth, and addeth learning to his lips.",joy
+749,ezekiel_26_10,"By reason of the abundance of his horses their dust shall cover thee: thy walls shall shake at the noise of the horsemen, and of the wheels, and of the chariots, when he shall enter into thy gates, as men enter into a city wherein is made a breach.",fear
+750,1_kings_20_21,"And the king of Israel went out, and smote the horses and chariots, and slew the Syrians with a great slaughter.",anger
+751,1_corinthians_14_36,What? came the word of God out from you? or came it unto you only?,anger
+752,genesis_50_21,"Now therefore fear ye not: I will nourish you, and your little ones. And he comforted them, and spake kindly unto them.",joy
+753,job_39_13,Gavest thou the goodly wings unto the peacocks? or wings and feathers unto the ostrich?,neutral
+754,2_thessalonians_2_1,"Now we beseech you, brethren, by the coming of our Lord Jesus Christ, and by our gathering together unto him,",joy
+755,galatians_3_27,For as many of you as have been baptized into Christ have put on Christ.,joy
+756,ezekiel_33_8,"When I say unto the wicked, O wicked man, thou shalt surely die; if thou dost not speak to warn the wicked from his way, that wicked man shall die in his iniquity; but his blood will I require at thine hand.",fear
+757,mark_3_5,"And when he had looked round about on them with anger, being grieved for the hardness of their hearts, he saith unto the man, Stretch forth thine hand. And he stretched it out: and his hand was restored whole as the other.",anger
+758,luke_24_31,"And their eyes were opened, and they knew him; and he vanished out of their sight.",surprise
+759,titus_2_2,"That the aged men be sober, grave, temperate, sound in faith, in charity, in patience.",neutral
+760,2_corinthians_1_10,"Who delivered us from so great a death, and doth deliver: in whom we trust that he will yet deliver us;",joy
+761,jeremiah_52_11,"Then he put out the eyes of Zedekiah; and the king of Babylon bound him in chains, and carried him to Babylon, and put him in prison till the day of his death.",sadness
+762,ezekiel_40_43,"And within were hooks, an hand broad, fastened round about: and upon the tables was the flesh of the offering.",neutral
+763,1_samuel_13_2,"Saul chose him three thousand men of Israel; whereof two thousand were with Saul in Michmash and in mount Bethel, and a thousand were with Jonathan in Gibeah of Benjamin: and the rest of the people he sent every man to his tent.",neutral
+764,psalms_135_4,"For the LORD hath chosen Jacob unto himself, and Israel for his peculiar treasure.",joy
+765,isaiah_54_2,"Enlarge the place of thy tent, and let them stretch forth the curtains of thine habitations: spare not, lengthen thy cords, and strengthen thy stakes;",joy
+766,ecclesiastes_5_4,"When thou vowest a vow unto God, defer not to pay it; for he hath no pleasure in fools: pay that which thou hast vowed.",fear
+767,1_samuel_17_20,"And David rose up early in the morning, and left the sheep with a keeper, and took, and went, as Jesse had commanded him; and he came to the trench, as the host was going forth to the fight, and shouted for the battle.",neutral
+768,1_chronicles_22_6,"Then he called for Solomon his son, and charged him to build an house for the LORD God of Israel.",neutral
+769,judges_6_12,"And the angel of the LORD appeared unto him, and said unto him, The LORD is with thee, thou mighty man of valour.",joy
+770,1_samuel_25_21,"Now David had said, Surely in vain have I kept all that this fellow hath in the wilderness, so that nothing was missed of all that pertained unto him: and he hath requited me evil for good.",anger
+771,isaiah_16_8,"For the fields of Heshbon languish, and the vine of Sibmah: the lords of the heathen have broken down the principal plants thereof, they are come even unto Jazer, they wandered through the wilderness: her branches are stretched out, they are gone over the sea.",sadness
+772,2_kings_6_33,"And while he yet talked with them, behold, the messenger came down unto him: and he said, Behold, this evil is of the LORD; what should I wait for the LORD any longer?",anger
+773,1_kings_1_42,"And while he yet spake, behold, Jonathan the son of Abiathar the priest came: and Adonijah said unto him, Come in; for thou art a valiant man, and bringest good tidings.",surprise
+774,2_kings_17_32,"So they feared the LORD, and made unto themselves of the lowest of them priests of the high places, which sacrificed for them in the houses of the high places.",neutral
+775,colossians_1_12,"Giving thanks unto the Father, which hath made us meet to be partakers of the inheritance of the saints in light:",joy
+776,genesis_40_23,"Yet did not the chief butler remember Joseph, but forgat him.",sadness
+777,1_kings_15_29,"And it came to pass, when he reigned, that he smote all the house of Jeroboam; he left not to Jeroboam any that breathed, until he had destroyed him, according unto the saying of the LORD, which he spake by his servant Ahijah the Shilonite:",anger
+778,psalms_78_48,"He gave up their cattle also to the hail, and their flocks to hot thunderbolts.",anger
+779,jeremiah_19_10,"Then shalt thou break the bottle in the sight of the men that go with thee,",surprise
+780,matthew_4_3,"And when the tempter came to him, he said, If thou be the Son of God, command that these stones be made bread.",neutral
+781,exodus_35_10,"And every wise hearted among you shall come, and make all that the LORD hath commanded;",joy
+782,matthew_14_10,"And he sent, and beheaded John in the prison.",sadness
+783,1_kings_11_7,"Then did Solomon build an high place for Chemosh, the abomination of Moab, in the hill that is before Jerusalem, and for Molech, the abomination of the children of Ammon.",disgust
+784,genesis_41_6,"And, behold, seven thin ears and blasted with the east wind sprung up after them.",fear
+785,ezra_5_9,"Then asked we those elders, and said unto them thus, Who commanded you to build this house, and to make up these walls?",neutral
+786,2_kings_5_11,"But Naaman was wroth, and went away, and said, Behold, I thought, He will surely come out to me, and stand, and call on the name of the LORD his God, and strike his hand over the place, and recover the leper.",anger
+787,2_chronicles_33_20,"So Manasseh slept with his fathers, and they buried him in his own house: and Amon his son reigned in his stead.",neutral
+788,isaiah_5_25,"Therefore is the anger of the LORD kindled against his people, and he hath stretched forth his hand against them, and hath smitten them: and the hills did tremble, and their carcases were torn in the midst of the streets. For all this his anger is not turned away, but his hand is stretched out still.",anger
+789,exodus_40_34,"Then a cloud covered the tent of the congregation, and the glory of the LORD filled the tabernacle.",joy
+790,acts_4_20,For we cannot but speak the things which we have seen and heard.,joy
+791,1_chronicles_22_2,And David commanded to gather together the strangers that were in the land of Israel; and he set masons to hew wrought stones to build the house of God.,neutral
+792,exodus_19_15,"And he said unto the people, Be ready against the third day: come not at your wives.",neutral
+793,nahum_2_11,"Where is the dwelling of the lions, and the feeding place of the young lions, where the lion, even the old lion, walked, and the lion's whelp, and none made them afraid?",surprise
+794,acts_3_21,"Whom the heaven must receive until the times of restitution of all things, which God hath spoken by the mouth of all his holy prophets since the world began.",joy
+795,numbers_4_48,"Even those that were numbered of them, were eight thousand and five hundred and fourscore.",neutral
+796,1_peter_3_19,By which also he went and preached unto the spirits in prison;,neutral
+797,deuteronomy_8_9,"A land wherein thou shalt eat bread without scarceness, thou shalt not lack any thing in it; a land whose stones are iron, and out of whose hills thou mayest dig brass.",joy
+798,1_samuel_12_17,"Is it not wheat harvest to day? I will call unto the LORD, and he shall send thunder and rain; that ye may perceive and see that your wickedness is great, which ye have done in the sight of the LORD, in asking you a king.",fear
+799,isaiah_65_19,"And I will rejoice in Jerusalem, and joy in my people: and the voice of weeping shall be no more heard in her, nor the voice of crying.",joy
+800,1_thessalonians_2_10,"Ye are witnesses, and God also, how holily and justly and unblameably we behaved ourselves among you that believe:",neutral
+801,1_chronicles_4_31,"And at Beth-marcaboth, and Hazar-susim, and at Beth-birei, and at Shaaraim. These were their cities unto the reign of David.",neutral
+802,isaiah_1_13,"Bring no more vain oblations; incense is an abomination unto me; the new moons and sabbaths, the calling of assemblies, I cannot away with; it is iniquity, even the solemn meeting.",disgust
+803,exodus_30_2,"A cubit shall be the length thereof, and a cubit the breadth thereof; foursquare shall it be: and two cubits shall be the height thereof: the horns thereof shall be of the same.",neutral
+804,exodus_35_13,"The table, and his staves, and all his vessels, and the shewbread,",neutral
+805,judges_8_3,"God hath delivered into your hands the princes of Midian, Oreb and Zeeb: and what was I able to do in comparison of you? Then their anger was abated toward him, when he had said that.",anger
+806,1_samuel_30_28,"And to them which were in Aroer, and to them which were in Siphmoth, and to them which were in Eshtemoa,",neutral
+807,ezekiel_28_14,Thou art the anointed cherub that covereth; and I have set thee so: thou wast upon the holy mountain of God; thou hast walked up and down in the midst of the stones of fire.,neutral
+808,exodus_39_20,"And they made two other golden rings, and put them on the two sides of the ephod underneath, toward the forepart of it, over against the other coupling thereof, above the curious girdle of the ephod.",neutral
+809,exodus_10_29,"And Moses said, Thou hast spoken well, I will see thy face again no more.",anger
+810,2_kings_17_41,"So these nations feared the LORD, and served their graven images, both their children, and their children's children: as did their fathers, so do they unto this day.",disgust
+811,psalms_86_16,"O turn unto me, and have mercy upon me; give thy strength unto thy servant, and save the son of thine handmaid.",sadness
+812,isaiah_34_4,"And all the host of heaven shall be dissolved, and the heavens shall be rolled together as a scroll: and all their host shall fall down, as the leaf falleth off from the vine, and as a falling fig from the fig tree.",fear
+813,numbers_29_6,"Beside the burnt offering of the month, and his meat offering, and the daily burnt offering, and his meat offering, and their drink offerings, according unto their manner, for a sweet savour, a sacrifice made by fire unto the LORD.",neutral
+814,numbers_1_37,"Those that were numbered of them, even of the tribe of Benjamin, were thirty and five thousand and four hundred.",neutral
+815,leviticus_12_2,"Speak unto the children of Israel, saying, If a woman have conceived seed, and born a man child: then she shall be unclean seven days; according to the days of the separation for her infirmity shall she be unclean.",neutral
+816,leviticus_23_10,"Speak unto the children of Israel, and say unto them, When ye be come into the land which I give unto you, and shall reap the harvest thereof, then ye shall bring a sheaf of the firstfruits of your harvest unto the priest:",joy
+817,jeremiah_49_14,"I have heard a rumour from the LORD, and an ambassador is sent unto the heathen, saying, Gather ye together, and come against her, and rise up to the battle.",fear
+818,leviticus_22_17,"And the LORD spake unto Moses, saying,",neutral
+819,jeremiah_19_1,"Thus saith the LORD, Go and get a potter's earthen bottle, and take of the ancients of the people, and of the ancients of the priests;",neutral
+820,deuteronomy_33_7,"And this is the blessing of Judah: and he said, Hear, LORD, the voice of Judah, and bring him unto his people: let his hands be sufficient for him; and be thou an help to him from his enemies.",joy
+821,exodus_9_8,"And the LORD said unto Moses and unto Aaron, Take to you handfuls of ashes of the furnace, and let Moses sprinkle it toward the heaven in the sight of Pharaoh.",neutral
+822,psalms_23_2,He maketh me to lie down in green pastures: he leadeth me beside the still waters.,joy
+823,john_1_29,"The next day John seeth Jesus coming unto him, and saith, Behold the Lamb of God, which taketh away the sin of the world.",joy
+824,psalms_145_13,"Thy kingdom is an everlasting kingdom, and thy dominion endureth throughout all generations.",joy
+825,genesis_15_1,"After these things the word of the LORD came unto Abram in a vision, saying, Fear not, Abram: I am thy shield, and thy exceeding great reward.",joy
+826,genesis_21_11,And the thing was very grievous in Abraham's sight because of his son.,sadness
+827,2_samuel_11_14,"And it came to pass in the morning, that David wrote a letter to Joab, and sent it by the hand of Uriah.",neutral
+828,1_chronicles_7_29,"And by the borders of the children of Manasseh, Beth-shean and her towns, Taanach and her towns, Megiddo and her towns, Dor and her towns. In these dwelt the children of Joseph the son of Israel.",neutral
+829,1_kings_11_33,"Because that they have forsaken me, and have worshipped Ashtoreth the goddess of the Zidonians, Chemosh the god of the Moabites, and Milcom the god of the children of Ammon, and have not walked in my ways, to do that which is right in mine eyes, and to keep my statutes and my judgments, as did David his father.",anger
+830,2_corinthians_9_9,"(As it is written, He hath dispersed abroad; he hath given to the poor: his righteousness remaineth for ever.",joy
+831,exodus_34_4,"And he hewed two tables of stone like unto the first; and Moses rose up early in the morning, and went up unto mount Sinai, as the LORD had commanded him, and took in his hand the two tables of stone.",neutral
+832,job_40_19,He is the chief of the ways of God: he that made him can make his sword to approach unto him.,neutral
+833,luke_19_6,"And he made haste, and came down, and received him joyfully.",joy
+834,job_7_21,"And why dost thou not pardon my transgression, and take away mine iniquity? for now shall I sleep in the dust; and thou shalt seek me in the morning, but I shall not be.",sadness
+835,1_chronicles_1_51,"Hadad died also. And the dukes of Edom were; duke Timnah, duke Aliah, duke Jetheth,",neutral
+836,matthew_11_17,"And saying, We have piped unto you, and ye have not danced; we have mourned unto you, and ye have not lamented.",sadness
+837,psalms_72_17,His name shall endure for ever: his name shall be continued as long as the sun: and men shall be blessed in him: all nations shall call him blessed.,joy
+838,galatians_6_5,For every man shall bear his own burden.,neutral
+839,psalms_78_12,"Marvellous things did he in the sight of their fathers, in the land of Egypt, in the field of Zoan.",surprise
+840,numbers_19_14,"This is the law, when a man dieth in a tent: all that come into the tent, and all that is in the tent, shall be unclean seven days.",neutral
+841,psalms_50_5,Gather my saints together unto me; those that have made a covenant with me by sacrifice.,neutral
+842,job_13_25,Wilt thou break a leaf driven to and fro? and wilt thou pursue the dry stubble?,sadness
+843,joshua_15_13,"And unto Caleb the son of Jephunneh he gave a part among the children of Judah, according to the commandment of the LORD to Joshua, even the city of Arba the father of Anak, which city is Hebron.",neutral
+844,luke_13_15,"The Lord then answered him, and said, Thou hypocrite, doth not each one of you on the sabbath loose his ox or his ass from the stall, and lead him away to watering?",anger
+845,daniel_10_18,"Then there came again and touched me one like the appearance of a man, and he strengthened me,",joy
+846,jeremiah_50_15,"Shout against her round about: she hath given her hand: her foundations are fallen, her walls are thrown down: for it is the vengeance of the LORD: take vengeance upon her; as she hath done, do unto her.",anger
+847,1_chronicles_23_32,"And that they should keep the charge of the tabernacle of the congregation, and the charge of the holy place, and the charge of the sons of Aaron their brethren, in the service of the house of the LORD.",neutral
+848,genesis_31_22,And it was told Laban on the third day that Jacob was fled.,surprise
+849,genesis_35_12,"And the land which I gave Abraham and Isaac, to thee I will give it, and to thy seed after thee will I give the land.",joy
+850,exodus_12_31,"And he called for Moses and Aaron by night, and said, Rise up, and get you forth from among my people, both ye and the children of Israel; and go, serve the LORD, as ye have said.",surprise
+851,2_corinthians_12_2,"I knew a man in Christ above fourteen years ago, (whether in the body, I cannot tell; or whether out of the body, I cannot tell: God knoweth;) such an one caught up to the third heaven.",surprise
+852,mark_1_24,"Saying, Let us alone; what have we to do with thee, thou Jesus of Nazareth? art thou come to destroy us? I know thee who thou art, the Holy One of God.",fear
+853,deuteronomy_12_32,"What thing soever I command you, observe to do it: thou shalt not add thereto, nor diminish from it.",neutral
+854,job_12_2,"No doubt but ye are the people, and wisdom shall die with you.",anger
+855,acts_16_31,"And they said, Believe on the Lord Jesus Christ, and thou shalt be saved, and thy house.",joy
+856,matthew_9_7,"And he arose, and departed to his house.",neutral
+857,psalms_19_6,"His going forth is from the end of the heaven, and his circuit unto the ends of it: and there is nothing hid from the heat thereof.",neutral
+858,romans_11_27,"For this is my covenant unto them, when I shall take away their sins.",joy
+859,1_timothy_1_11,"According to the glorious gospel of the blessed God, which was committed to my trust.",joy
+860,2_chronicles_6_27,"Then hear thou from heaven, and forgive the sin of thy servants, and of thy people Israel, when thou hast taught them the good way, wherein they should walk; and send rain upon thy land, which thou hast given unto thy people for an inheritance.",neutral
+861,jeremiah_26_14,"As for me, behold, I am in your hand: do with me as seemeth good and meet unto you.",fear
+862,romans_4_11,"And he received the sign of circumcision, a seal of the righteousness of the faith which he had yet being uncircumcised: that he might be the father of all them that believe, though they be not circumcised; that righteousness might be imputed unto them also:",neutral
+863,acts_1_16,"Men and brethren, this scripture must needs have been fulfilled, which the Holy Ghost by the mouth of David spake before concerning Judas, which was guide to them that took Jesus.",neutral
+864,psalms_104_23,Man goeth forth unto his work and to his labour until the evening.,neutral
+865,isaiah_31_8,"Then shall the Assyrian fall with the sword, not of a mighty man; and the sword, not of a mean man, shall devour him: but he shall flee from the sword, and his young men shall be discomfited.",fear
+866,2_samuel_22_45,"Strangers shall submit themselves unto me: as soon as they hear, they shall be obedient unto me.",surprise
+867,2_samuel_17_4,"And the saying pleased Absalom well, and all the elders of Israel.",joy
+868,ezra_8_25,"And weighed unto them the silver, and the gold, and the vessels, even the offering of the house of our God, which the king, and his counsellors, and his lords, and all Israel there present, had offered:",neutral
+869,genesis_35_7,"And he built there an altar, and called the place El-beth-el: because there God appeared unto him, when he fled from the face of his brother.",surprise
+870,ezekiel_22_8,"Thou hast despised mine holy things, and hast profaned my sabbaths.",anger
+871,hosea_1_3,"So he went and took Gomer the daughter of Diblaim; which conceived, and bare him a son.",neutral
+872,1_corinthians_15_7,"After that, he was seen of James; then of all the apostles.",surprise
+873,2_samuel_9_13,So Mephibosheth dwelt in Jerusalem: for he did eat continually at the king's table; and was lame on both his feet.,neutral
+874,psalms_104_22,"The sun ariseth, they gather themselves together, and lay them down in their dens.",neutral
+875,proverbs_4_16,"For they sleep not, except they have done mischief; and their sleep is taken away, unless they cause some to fall.",anger
+876,genesis_4_19,"And Lamech took unto him two wives: the name of the one was Adah, and the name of the other Zillah.",neutral
+877,genesis_3_7,"And the eyes of them both were opened, and they knew that they were naked; and they sewed fig leaves together, and made themselves aprons.",surprise
+878,leviticus_2_13,And every oblation of thy meat offering shalt thou season with salt; neither shalt thou suffer the salt of the covenant of thy God to be lacking from thy meat offering: with all thine offerings thou shalt offer salt.,neutral
+879,ezekiel_12_24,For there shall be no more any vain vision nor flattering divination within the house of Israel.,anger
+880,mark_2_9,"Whether is it easier to say to the sick of the palsy, Thy sins be forgiven thee; or to say, Arise, and take up thy bed, and walk?",surprise
+881,judges_16_8,"Then the lords of the Philistines brought up to her seven green withs which had not been dried, and she bound him with them.",surprise
+882,2_chronicles_6_4,"And he said, Blessed be the LORD God of Israel, who hath with his hands fulfilled that which he spake with his mouth to my father David, saying,",joy
+883,job_5_27,"Lo this, we have searched it, so it is; hear it, and know thou it for thy good.",neutral
+884,2_chronicles_10_6,"And king Rehoboam took counsel with the old men that had stood before Solomon his father while he yet lived, saying, What counsel give ye me to return answer to this people?",neutral
+885,psalms_119_135,Make thy face to shine upon thy servant; and teach me thy statutes.,joy
+886,1_kings_15_1,Now in the eighteenth year of king Jeroboam the son of Nebat reigned Abijam over Judah.,neutral
+887,proverbs_18_17,He that is first in his own cause seemeth just; but his neighbour cometh and searcheth him.,neutral
+888,ezekiel_6_8,"Yet will I leave a remnant, that ye may have some that shall escape the sword among the nations, when ye shall be scattered through the countries.",joy
+889,revelation_21_14,"And the wall of the city had twelve foundations, and in them the names of the twelve apostles of the Lamb.",joy
+890,psalms_135_1,"Praise ye the LORD. Praise ye the name of the LORD; praise him, O ye servants of the LORD.",joy
+891,numbers_33_42,"And they departed from Zalmonah, and pitched in Punon.",neutral
+892,luke_1_32,"He shall be great, and shall be called the Son of the Highest: and the Lord God shall give unto him the throne of his father David:",joy
+893,2_corinthians_3_2,"Ye are our epistle written in our hearts, known and read of all men:",joy
+894,micah_5_5,"And this man shall be the peace, when the Assyrian shall come into our land: and when he shall tread in our palaces, then shall we raise against him seven shepherds, and eight principal men.",joy
+895,isaiah_10_1,"Woe unto them that decree unrighteous decrees, and that write grievousness which they have prescribed;",anger
+896,1_chronicles_8_9,"And he begat of Hodesh his wife, Jobab, and Zibia, and Mesha, and Malcham,",neutral
+897,ezekiel_16_7,"I have caused thee to multiply as the bud of the field, and thou hast increased and waxen great, and thou art come to excellent ornaments: thy breasts are fashioned, and thine hair is grown, whereas thou wast naked and bare.",joy
+898,2_kings_6_17,"And Elisha prayed, and said, LORD, I pray thee, open his eyes, that he may see. And the LORD opened the eyes of the young man; and he saw: and, behold, the mountain was full of horses and chariots of fire round about Elisha.",surprise
+899,ezekiel_20_16,"Because they despised my judgments, and walked not in my statutes, but polluted my sabbaths: for their heart went after their idols.",anger
+900,psalms_27_6,"And now shall mine head be lifted up above mine enemies round about me: therefore will I offer in his tabernacle sacrifices of joy; I will sing, yea, I will sing praises unto the LORD.",joy
+901,judges_6_9,"And I delivered you out of the hand of the Egyptians, and out of the hand of all that oppressed you, and drave them out from before you, and gave you their land;",joy
+902,1_chronicles_19_1,"Now it came to pass after this, that Nahash the king of the children of Ammon died, and his son reigned in his stead.",neutral
+903,genesis_36_23,"And the children of Shobal were these; Alvan, and Manahath, and Ebal, Shepho, and Onam.",neutral
+904,2_kings_4_8,"And it fell on a day, that Elisha passed to Shunem, where was a great woman; and she constrained him to eat bread. And so it was, that as oft as he passed by, he turned in thither to eat bread.",joy
+905,2_chronicles_30_9,"For if ye turn again unto the LORD, your brethren and your children shall find compassion before them that lead them captive, so that they shall come again into this land: for the LORD your God is gracious and merciful, and will not turn away his face from you, if ye return unto him.",joy
+906,luke_11_1,"And it came to pass, that, as he was praying in a certain place, when he ceased, one of his disciples said unto him, Lord, teach us to pray, as John also taught his disciples.",neutral
+907,deuteronomy_6_21,"Then thou shalt say unto thy son, We were Pharaoh's bondmen in Egypt; and the LORD brought us out of Egypt with a mighty hand:",joy
+908,2_chronicles_32_6,"And he set captains of war over the people, and gathered them together to him in the street of the gate of the city, and spake comfortably to them, saying,",joy
+909,joshua_13_24,"And Moses gave inheritance unto the tribe of Gad, even unto the children of Gad according to their families.",neutral
+910,psalms_89_15,"Blessed is the people that know the joyful sound: they shall walk, O LORD, in the light of thy countenance.",joy
+911,matthew_21_26,"But if we shall say, Of men; we fear the people; for all hold John as a prophet.",fear
+912,romans_8_27,"And he that searcheth the hearts knoweth what is the mind of the Spirit, because he maketh intercession for the saints according to the will of God.",joy
+913,1_chronicles_25_8,"And they cast lots, ward against ward, as well the small as the great, the teacher as the scholar.",neutral
+914,genesis_46_32,"And the men are shepherds, for their trade hath been to feed cattle; and they have brought their flocks, and their herds, and all that they have.",neutral
+915,joshua_1_15,"Until the LORD have given your brethren rest, as he hath given you, and they also have possessed the land which the LORD your God giveth them: then ye shall return unto the land of your possession, and enjoy it, which Moses the LORD'S servant gave you on this side Jordan toward the sunrising.",joy
+916,nehemiah_7_22,"The children of Hashum, three hundred twenty and eight.",neutral
+917,matthew_22_30,"For in the resurrection they neither marry, nor are given in marriage, but are as the angels of God in heaven.",surprise
+918,1_samuel_4_8,Woe unto us! who shall deliver us out of the hand of these mighty Gods? these are the Gods that smote the Egyptians with all the plagues in the wilderness.,fear
+919,leviticus_9_14,"And he did wash the inwards and the legs, and burnt them upon the burnt offering on the altar.",neutral
+920,zechariah_9_6,"And a bastard shall dwell in Ashdod, and I will cut off the pride of the Philistines.",anger
+921,1_corinthians_7_24,"Brethren, let every man, wherein he is called, therein abide with God.",neutral
+922,2_timothy_2_4,No man that warreth entangleth himself with the affairs of this life; that he may please him who hath chosen him to be a soldier.,neutral
+923,luke_22_63,"And the men that held Jesus mocked him, and smote him.",anger
+924,acts_10_16,This was done thrice: and the vessel was received up again into heaven.,surprise
+925,2_kings_21_15,"Because they have done that which was evil in my sight, and have provoked me to anger, since the day their fathers came forth out of Egypt, even unto this day.",anger
+926,proverbs_29_5,A man that flattereth his neighbour spreadeth a net for his feet.,disgust
+927,numbers_8_18,And I have taken the Levites for all the firstborn of the children of Israel.,neutral
+928,job_31_19,"If I have seen any perish for want of clothing, or any poor without covering;",sadness
+929,deuteronomy_2_10,"The Emims dwelt therein in times past, a people great, and many, and tall, as the Anakims;",neutral
+930,job_7_20,"I have sinned; what shall I do unto thee, O thou preserver of men? why hast thou set me as a mark against thee, so that I am a burden to myself?",sadness
+931,2_chronicles_35_21,"But he sent ambassadors to him, saying, What have I to do with thee, thou king of Judah? I come not against thee this day, but against the house wherewith I have war: for God commanded me to make haste: forbear thee from meddling with God, who is with me, that he destroy thee not.",fear
+932,judges_3_18,"And when he had made an end to offer the present, he sent away the people that bare the present.",neutral
+933,ezekiel_32_1,"And it came to pass in the twelfth year, in the twelfth month, in the first day of the month, that the word of the LORD came unto me, saying,",neutral
+934,2_kings_17_34,"Unto this day they do after the former manners: they fear not the LORD, neither do they after their statutes, or after their ordinances, or after the law and commandment which the LORD commanded the children of Jacob, whom he named Israel;",disgust
+935,deuteronomy_23_13,"And thou shalt have a paddle upon thy weapon; and it shall be, when thou wilt ease thyself abroad, thou shalt dig therewith, and shalt turn back and cover that which cometh from thee:",neutral
+936,proverbs_9_5,"Come, eat of my bread, and drink of the wine which I have mingled.",joy
+937,isaiah_43_21,This people have I formed for myself; they shall shew forth my praise.,joy
+938,exodus_21_32,"If the ox shall push a manservant or a maidservant; he shall give unto their master thirty shekels of silver, and the ox shall be stoned.",disgust
+939,acts_17_1,"Now when they had passed through Amphipolis and Apollonia, they came to Thessalonica, where was a synagogue of the Jews:",neutral
+940,hebrews_10_32,"But call to remembrance the former days, in which, after ye were illuminated, ye endured a great fight of afflictions;",sadness
+941,hebrews_10_35,"Cast not away therefore your confidence, which hath great recompence of reward.",joy
+942,daniel_6_13,"Then answered they and said before the king, That Daniel, which is of the children of the captivity of Judah, regardeth not thee, O king, nor the decree that thou hast signed, but maketh his petition three times a day.",anger
+943,isaiah_65_7,"Your iniquities, and the iniquities of your fathers together, saith the LORD, which have burned incense upon the mountains, and blasphemed me upon the hills: therefore will I measure their former work into their bosom.",anger
+944,lamentations_5_20,"Wherefore dost thou forget us for ever, and forsake us so long time?",sadness
+945,1_corinthians_3_16,"Know ye not that ye are the temple of God, and that the Spirit of God dwelleth in you?",joy
+946,john_12_35,"Then Jesus said unto them, Yet a little while is the light with you. Walk while ye have the light, lest darkness come upon you: for he that walketh in darkness knoweth not whither he goeth.",fear
+947,matthew_13_22,"He also that received seed among the thorns is he that heareth the word; and the care of this world, and the deceitfulness of riches, choke the word, and he becometh unfruitful.",sadness
+948,ecclesiastes_1_1,"The words of the Preacher, the son of David, king in Jerusalem.",neutral
+949,ecclesiastes_7_19,Wisdom strengtheneth the wise more than ten mighty men which are in the city.,joy
+950,isaiah_30_19,"For the people shall dwell in Zion at Jerusalem: thou shalt weep no more: he will be very gracious unto thee at the voice of thy cry; when he shall hear it, he will answer thee.",joy
+951,numbers_16_33,"They, and all that appertained to them, went down alive into the pit, and the earth closed upon them: and they perished from among the congregation.",fear
+952,1_samuel_1_25,"And they slew a bullock, and brought the child to Eli.",neutral
+953,1_peter_4_3,"For the time past of our life may suffice us to have wrought the will of the Gentiles, when we walked in lasciviousness, lusts, excess of wine, revellings, banquetings, and abominable idolatries:",disgust
+954,psalms_92_9,"For, lo, thine enemies, O LORD, for, lo, thine enemies shall perish; all the workers of iniquity shall be scattered.",anger
+955,1_kings_16_18,"And it came to pass, when Zimri saw that the city was taken, that he went into the palace of the king's house, and burnt the king's house over him with fire, and died,",sadness
+956,luke_11_7,"And he from within shall answer and say, Trouble me not: the door is now shut, and my children are with me in bed; I cannot rise and give thee.",neutral
+957,psalms_78_4,"We will not hide them from their children, shewing to the generation to come the praises of the LORD, and his strength, and his wonderful works that he hath done.",joy
+958,job_35_14,"Although thou sayest thou shalt not see him, yet judgment is before him; therefore trust thou in him.",neutral
+959,2_kings_10_21,"And Jehu sent through all Israel: and all the worshippers of Baal came, so that there was not a man left that came not. And they came into the house of Baal; and the house of Baal was full from one end to another.",neutral
+960,1_john_3_1,"Behold, what manner of love the Father hath bestowed upon us, that we should be called the sons of God: therefore the world knoweth us not, because it knew him not.",joy
+961,genesis_40_18,"And Joseph answered and said, This is the interpretation thereof: The three baskets are three days:",neutral
+962,psalms_15_3,"He that backbiteth not with his tongue, nor doeth evil to his neighbour, nor taketh up a reproach against his neighbour.",joy
+963,leviticus_23_9,"And the LORD spake unto Moses, saying,",neutral
+964,2_chronicles_33_16,"And he repaired the altar of the LORD, and sacrificed thereon peace offerings and thank offerings, and commanded Judah to serve the LORD God of Israel.",joy
+965,ezekiel_40_41,"Four tables were on this side, and four tables on that side, by the side of the gate; eight tables, whereupon they slew their sacrifices.",neutral
+966,psalms_78_14,"In the daytime also he led them with a cloud, and all the night with a light of fire.",neutral
+967,jeremiah_6_25,"Go not forth into the field, nor walk by the way; for the sword of the enemy and fear is on every side.",fear
+968,numbers_21_17,"Then Israel sang this song, Spring up, O well; sing ye unto it:",joy
+969,1_kings_1_48,"And also thus said the king, Blessed be the LORD God of Israel, which hath given one to sit on my throne this day, mine eyes even seeing it.",joy
+970,psalms_25_6,"Remember, O LORD, thy tender mercies and thy lovingkindnesses; for they have been ever of old.",neutral
+971,numbers_16_35,"And there came out a fire from the LORD, and consumed the two hundred and fifty men that offered incense.",anger
+972,genesis_29_28,"And Jacob did so, and fulfilled her week: and he gave him Rachel his daughter to wife also.",neutral
+973,luke_13_30,"And, behold, there are last which shall be first, and there are first which shall be last.",surprise
+974,luke_24_37,"But they were terrified and affrighted, and supposed that they had seen a spirit.",fear
+975,2_samuel_14_12,"Then the woman said, Let thine handmaid, I pray thee, speak one word unto my lord the king. And he said, Say on.",neutral
+976,isaiah_5_6,"And I will lay it waste: it shall not be pruned, nor digged; but there shall come up briers and thorns: I will also command the clouds that they rain no rain upon it.",anger
+977,exodus_13_4,This day came ye out in the month Abib.,neutral
+978,psalms_128_2,"For thou shalt eat the labour of thine hands: happy shalt thou be, and it shall be well with thee.",joy
+979,2_chronicles_11_7,"And Beth-zur, and Shoco, and Adullam,",neutral
+980,ecclesiastes_10_18,By much slothfulness the building decayeth; and through idleness of the hands the house droppeth through.,sadness
+981,esther_2_6,"Who had been carried away from Jerusalem with the captivity which had been carried away with Jeconiah king of Judah, whom Nebuchadnezzar the king of Babylon had carried away.",sadness
+982,ezekiel_30_4,"And the sword shall come upon Egypt, and great pain shall be in Ethiopia, when the slain shall fall in Egypt, and they shall take away her multitude, and her foundations shall be broken down.",fear
+983,mark_13_19,"For in those days shall be affliction, such as was not from the beginning of the creation which God created unto this time, neither shall be.",fear
+984,exodus_35_29,"The children of Israel brought a willing offering unto the LORD, every man and woman, whose heart made them willing to bring for all manner of work, which the LORD had commanded to be made by the hand of Moses.",joy
+985,leviticus_5_2,"Or if a soul touch any unclean thing, whether it be a carcase of an unclean beast, or a carcase of unclean cattle, or the carcase of unclean creeping things, and if it be hidden from him; he also shall be unclean, and guilty.",disgust
+986,psalms_86_6,"Give ear, O LORD, unto my prayer; and attend to the voice of my supplications.",neutral
+987,joshua_3_3,"And they commanded the people, saying, When ye see the ark of the covenant of the LORD your God, and the priests the Levites bearing it, then ye shall remove from your place, and go after it.",neutral
+988,2_kings_8_6,"And when the king asked the woman, she told him. So the king appointed unto her a certain officer, saying, Restore all that was hers, and all the fruits of the field since the day that she left the land, even until now.",joy
+989,luke_11_11,"If a son shall ask bread of any of you that is a father, will he give him a stone? or if he ask a fish, will he for a fish give him a serpent?",surprise
+990,deuteronomy_6_6,"And these words, which I command thee this day, shall be in thine heart:",neutral
+991,matthew_21_36,"Again, he sent other servants more than the first: and they did unto them likewise.",anger
+992,jeremiah_36_15,"And they said unto him, Sit down now, and read it in our ears. So Baruch read it in their ears.",neutral
+993,genesis_39_14,"That she called unto the men of her house, and spake unto them, saying, See, he hath brought in an Hebrew unto us to mock us; he came in unto me to lie with me, and I cried with a loud voice:",anger
+994,psalms_144_10,It is he that giveth salvation unto kings: who delivereth David his servant from the hurtful sword.,joy
+995,exodus_25_10,"And they shall make an ark of shittim wood: two cubits and a half shall be the length thereof, and a cubit and a half the breadth thereof, and a cubit and a half the height thereof.",neutral
+996,acts_17_25,"Neither is worshipped with men's hands, as though he needed any thing, seeing he giveth to all life, and breath, and all things;",neutral
+997,galatians_2_4,"And that because of false brethren unawares brought in, who came in privily to spy out our liberty which we have in Christ Jesus, that they might bring us into bondage:",anger
+998,mark_13_21,"And then if any man shall say to you, Lo, here is Christ; or, lo, he is there; believe him not:",neutral
+999,proverbs_13_12,"Hope deferred maketh the heart sick: but when the desire cometh, it is a tree of life.",sadness

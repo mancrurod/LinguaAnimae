@@ -11,8 +11,8 @@ EMOTION_MAP = {
     "sadness": "Tristeza",
     "anger": "Ira",
     "fear": "Miedo",
-    "trust": "Confianza",
     "surprise": "Sorpresa",
+    "disgust": "Asco",
     "neutral": "Neutral"
 }
 

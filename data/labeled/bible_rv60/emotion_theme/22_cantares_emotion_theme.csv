@@ -1,7 +1,7 @@
 id,book,chapter,verse,subtitle,text,verse_id,source_url,theme,emotion
 1,cantares,1,1,La esposa y las hijas de Jerusalén,"Cantar de los cantares, el cual es de Salomón.",cantares_1_1,https://www.biblia.es/biblia-buscar-libros-1.php?libro=cantares&capitulo=1&version=rv60,fe,Neutral
 2,cantares,1,2,La esposa y las hijas de Jerusalén,"¡Oh, si él me besara con besos de su boca!
-Porque mejores son tus amores que el vino.",cantares_1_2,https://www.biblia.es/biblia-buscar-libros-1.php?libro=cantares&capitulo=1&version=rv60,amor;fe;esperanza;perdón,disgust
+Porque mejores son tus amores que el vino.",cantares_1_2,https://www.biblia.es/biblia-buscar-libros-1.php?libro=cantares&capitulo=1&version=rv60,amor;fe;esperanza;perdón,Asco
 3,cantares,1,3,La esposa y las hijas de Jerusalén,"A más del olor de tus suaves ungüentos,
 Tu nombre es como ungüento derramado;
 Por eso las doncellas te aman.",cantares_1_3,https://www.biblia.es/biblia-buscar-libros-1.php?libro=cantares&capitulo=1&version=rv60,amor,Alegría
@@ -24,15 +24,15 @@ Pues ¿por qué había de estar yo como errante
 Junto a los rebaños de tus compañeros?",cantares_1_7,https://www.biblia.es/biblia-buscar-libros-1.php?libro=cantares&capitulo=1&version=rv60,amor,Miedo
 8,cantares,1,8,La esposa y las hijas de Jerusalén,"Si tú no lo sabes, oh hermosa entre las mujeres,
 Ve, sigue las huellas del rebaño,
-Y apacienta tus cabritas junto a las cabañas de los pastores.",cantares_1_8,https://www.biblia.es/biblia-buscar-libros-1.php?libro=cantares&capitulo=1&version=rv60,amor;fe;esperanza;perdón,disgust
+Y apacienta tus cabritas junto a las cabañas de los pastores.",cantares_1_8,https://www.biblia.es/biblia-buscar-libros-1.php?libro=cantares&capitulo=1&version=rv60,amor;fe;esperanza;perdón,Asco
 9,cantares,1,9,La esposa y el esposo,"A yegua de los carros de Faraón
-Te he comparado, amiga mía.",cantares_1_9,https://www.biblia.es/biblia-buscar-libros-1.php?libro=cantares&capitulo=1&version=rv60,amor,disgust
+Te he comparado, amiga mía.",cantares_1_9,https://www.biblia.es/biblia-buscar-libros-1.php?libro=cantares&capitulo=1&version=rv60,amor,Asco
 10,cantares,1,10,La esposa y el esposo,"Hermosas son tus mejillas entre los pendientes,
 Tu cuello entre los collares.",cantares_1_10,https://www.biblia.es/biblia-buscar-libros-1.php?libro=cantares&capitulo=1&version=rv60,amor,Neutral
 11,cantares,1,11,La esposa y el esposo,"Zarcillos de oro te haremos,
 Tachonados de plata.",cantares_1_11,https://www.biblia.es/biblia-buscar-libros-1.php?libro=cantares&capitulo=1&version=rv60,,Neutral
 12,cantares,1,12,La esposa y el esposo,"Mientras el rey estaba en su reclinatorio,
-Mi nardo dio su olor.",cantares_1_12,https://www.biblia.es/biblia-buscar-libros-1.php?libro=cantares&capitulo=1&version=rv60,,disgust
+Mi nardo dio su olor.",cantares_1_12,https://www.biblia.es/biblia-buscar-libros-1.php?libro=cantares&capitulo=1&version=rv60,,Asco
 13,cantares,1,13,La esposa y el esposo,"Mi amado es para mí un manojito de mirra,
 Que reposa entre mis pechos.",cantares_1_13,https://www.biblia.es/biblia-buscar-libros-1.php?libro=cantares&capitulo=1&version=rv60,amor;perdón;fe,Miedo
 14,cantares,1,14,La esposa y el esposo,"Racimo de flores de alheña en las viñas de En-gadi
@@ -52,11 +52,11 @@ Así es mi amado entre los jóvenes;
 Bajo la sombra del deseado me senté,
 Y su fruto fue dulce a mi paladar.",cantares_2_3,https://www.biblia.es/biblia-buscar-libros-1.php?libro=cantares&capitulo=2&version=rv60,amor;fe,Alegría
 21,cantares,2,4,,"Me llevó a la casa del banquete,
-Y su bandera sobre mí fue amor.",cantares_2_4,https://www.biblia.es/biblia-buscar-libros-1.php?libro=cantares&capitulo=2&version=rv60,amor;esperanza,disgust
+Y su bandera sobre mí fue amor.",cantares_2_4,https://www.biblia.es/biblia-buscar-libros-1.php?libro=cantares&capitulo=2&version=rv60,amor;esperanza,Asco
 22,cantares,2,5,,"Sustentadme con pasas, confortadme con manzanas;
 Porque estoy enferma de amor.",cantares_2_5,https://www.biblia.es/biblia-buscar-libros-1.php?libro=cantares&capitulo=2&version=rv60,,Tristeza
 23,cantares,2,6,,"Su izquierda esté debajo de mi cabeza,
-Y su derecha me abrace.",cantares_2_6,https://www.biblia.es/biblia-buscar-libros-1.php?libro=cantares&capitulo=2&version=rv60,amor;fe;perdón,disgust
+Y su derecha me abrace.",cantares_2_6,https://www.biblia.es/biblia-buscar-libros-1.php?libro=cantares&capitulo=2&version=rv60,amor;fe;perdón,Asco
 24,cantares,2,7,,"Yo os conjuro, oh doncellas de Jerusalén,
 Por los corzos y por las ciervas del campo,
 Que no despertéis ni hagáis velar al amor,
@@ -67,7 +67,7 @@ Brincando sobre los collados.",cantares_2_8,https://www.biblia.es/biblia-buscar-
 26,cantares,2,9,,"Mi amado es semejante al corzo,
 O al cervatillo. Helo aquí, está tras nuestra pared,
 Mirando por las ventanas,
-Atisbando por las celosías.",cantares_2_9,https://www.biblia.es/biblia-buscar-libros-1.php?libro=cantares&capitulo=2&version=rv60,amor;fe;perdón;esperanza,disgust
+Atisbando por las celosías.",cantares_2_9,https://www.biblia.es/biblia-buscar-libros-1.php?libro=cantares&capitulo=2&version=rv60,amor;fe;perdón;esperanza,Asco
 27,cantares,2,10,,"Mi amado habló, y me dijo:
 Levántate, oh amiga mía, hermosa mía, y ven.",cantares_2_10,https://www.biblia.es/biblia-buscar-libros-1.php?libro=cantares&capitulo=2&version=rv60,amor;perdón;fe;esperanza,Neutral
 28,cantares,2,11,,"Porque he aquí ha pasado el invierno,
@@ -107,7 +107,7 @@ Que no despertéis ni hagáis velar al amor,
 Hasta que quiera.",cantares_3_5,https://www.biblia.es/biblia-buscar-libros-1.php?libro=cantares&capitulo=3&version=rv60,miedo;amor;fe,Ira
 40,cantares,3,6,El cortejo de bodas,"¿Quién es ésta que sube del desierto como columna de humo,
 Sahumada de mirra y de incienso
-Y de todo polvo aromático?",cantares_3_6,https://www.biblia.es/biblia-buscar-libros-1.php?libro=cantares&capitulo=3&version=rv60,,disgust
+Y de todo polvo aromático?",cantares_3_6,https://www.biblia.es/biblia-buscar-libros-1.php?libro=cantares&capitulo=3&version=rv60,,Asco
 41,cantares,3,7,El cortejo de bodas,"He aquí es la litera de Salomón;
 Sesenta valientes la rodean,
 De los fuertes de Israel.",cantares_3_7,https://www.biblia.es/biblia-buscar-libros-1.php?libro=cantares&capitulo=3&version=rv60,fe,Neutral
@@ -115,7 +115,7 @@ De los fuertes de Israel.",cantares_3_7,https://www.biblia.es/biblia-buscar-libr
 Cada uno su espada sobre su muslo,
 Por los temores de la noche.",cantares_3_8,https://www.biblia.es/biblia-buscar-libros-1.php?libro=cantares&capitulo=3&version=rv60,miedo,Miedo
 43,cantares,3,9,El cortejo de bodas,"El rey Salomón se hizo una carroza
-De madera del Líbano.",cantares_3_9,https://www.biblia.es/biblia-buscar-libros-1.php?libro=cantares&capitulo=3&version=rv60,fe,disgust
+De madera del Líbano.",cantares_3_9,https://www.biblia.es/biblia-buscar-libros-1.php?libro=cantares&capitulo=3&version=rv60,fe,Asco
 44,cantares,3,10,El cortejo de bodas,"Hizo sus columnas de plata,
 Su respaldo de oro,
 Su asiento de grana,
@@ -127,7 +127,7 @@ Y el día del gozo de su corazón.",cantares_3_11,https://www.biblia.es/biblia-b
 46,cantares,4,1,El esposo alaba a la esposa,"He aquí que tú eres hermosa, amiga mía; he aquí que tú eres hermosa;
 Tus ojos entre tus guedejas como de paloma;
 Tus cabellos como manada de cabras
-Que se recuestan en las laderas de Galaad.",cantares_4_1,https://www.biblia.es/biblia-buscar-libros-1.php?libro=cantares&capitulo=4&version=rv60,amor;fe;perdón;esperanza,disgust
+Que se recuestan en las laderas de Galaad.",cantares_4_1,https://www.biblia.es/biblia-buscar-libros-1.php?libro=cantares&capitulo=4&version=rv60,amor;fe;perdón;esperanza,Asco
 47,cantares,4,2,El esposo alaba a la esposa,"Tus dientes como manadas de ovejas trasquiladas,
 Que suben del lavadero,
 Todas con crías gemelas,
@@ -156,12 +156,12 @@ Has apresado mi corazón con uno de tus ojos,
 Con una gargantilla de tu cuello.",cantares_4_9,https://www.biblia.es/biblia-buscar-libros-1.php?libro=cantares&capitulo=4&version=rv60,,Ira
 55,cantares,4,10,El esposo alaba a la esposa,"¡Cuán hermosos son tus amores, hermana, esposa mía!
 ¡Cuánto mejores que el vino tus amores,
-Y el olor de tus ungüentos que todas las especias aromáticas!",cantares_4_10,https://www.biblia.es/biblia-buscar-libros-1.php?libro=cantares&capitulo=4&version=rv60,amor,disgust
+Y el olor de tus ungüentos que todas las especias aromáticas!",cantares_4_10,https://www.biblia.es/biblia-buscar-libros-1.php?libro=cantares&capitulo=4&version=rv60,amor,Asco
 56,cantares,4,11,El esposo alaba a la esposa,"Como panal de miel destilan tus labios, oh esposa;
 Miel y leche hay debajo de tu lengua;
-Y el olor de tus vestidos como el olor del Líbano.",cantares_4_11,https://www.biblia.es/biblia-buscar-libros-1.php?libro=cantares&capitulo=4&version=rv60,amor;perdón;fe;esperanza,disgust
+Y el olor de tus vestidos como el olor del Líbano.",cantares_4_11,https://www.biblia.es/biblia-buscar-libros-1.php?libro=cantares&capitulo=4&version=rv60,amor;perdón;fe;esperanza,Asco
 57,cantares,4,12,El esposo alaba a la esposa,"Huerto cerrado eres, hermana mía, esposa mía;
-Fuente cerrada, fuente sellada.",cantares_4_12,https://www.biblia.es/biblia-buscar-libros-1.php?libro=cantares&capitulo=4&version=rv60,amor;fe,disgust
+Fuente cerrada, fuente sellada.",cantares_4_12,https://www.biblia.es/biblia-buscar-libros-1.php?libro=cantares&capitulo=4&version=rv60,amor;fe,Asco
 58,cantares,4,13,El esposo alaba a la esposa,"Tus renuevos son paraíso de granados, con frutos suaves,
 De flores de alheña y nardos;",cantares_4_13,https://www.biblia.es/biblia-buscar-libros-1.php?libro=cantares&capitulo=4&version=rv60,fe,Alegría
 59,cantares,4,14,El esposo alaba a la esposa,"Nardo y azafrán, caña aromática y canela,
@@ -185,13 +185,13 @@ Abreme, hermana mía, amiga mía, paloma mía, perfecta mía,
 Porque mi cabeza está llena de rocío,
 Mis cabellos de las gotas de la noche.",cantares_5_2,https://www.biblia.es/biblia-buscar-libros-1.php?libro=cantares&capitulo=5&version=rv60,amor;perdón;fe;esperanza,Miedo
 64,cantares,5,3,El tormento de la separación,"Me he desnudado de mi ropa; ¿cómo me he de vestir?
-He lavado mis pies; ¿cómo los he de ensuciar?",cantares_5_3,https://www.biblia.es/biblia-buscar-libros-1.php?libro=cantares&capitulo=5&version=rv60,,disgust
+He lavado mis pies; ¿cómo los he de ensuciar?",cantares_5_3,https://www.biblia.es/biblia-buscar-libros-1.php?libro=cantares&capitulo=5&version=rv60,,Asco
 65,cantares,5,4,El tormento de la separación,"Mi amado metió su mano por la ventanilla,
 Y mi corazón se conmovió dentro de mí.",cantares_5_4,https://www.biblia.es/biblia-buscar-libros-1.php?libro=cantares&capitulo=5&version=rv60,amor;perdón;miedo;fe;esperanza,Tristeza
 66,cantares,5,5,El tormento de la separación,"Yo me levanté para abrir a mi amado,
 Y mis manos gotearon mirra,
 Y mis dedos mirra, que corría
-Sobre la manecilla del cerrojo.",cantares_5_5,https://www.biblia.es/biblia-buscar-libros-1.php?libro=cantares&capitulo=5&version=rv60,amor;fe;perdón,disgust
+Sobre la manecilla del cerrojo.",cantares_5_5,https://www.biblia.es/biblia-buscar-libros-1.php?libro=cantares&capitulo=5&version=rv60,amor;fe;perdón,Asco
 67,cantares,5,6,El tormento de la separación,"Abrí yo a mi amado;
 Pero mi amado se había ido, había ya pasado;
 Y tras su hablar salió mi alma.
@@ -246,7 +246,7 @@ Y las doncellas sin número;",cantares_6_8,https://www.biblia.es/biblia-buscar-l
 Es la única de su madre,
 La escogida de la que la dio a luz.
 La vieron las doncellas, y la llamaron bienaventurada;
-Las reinas y las concubinas, y la alabaron.",cantares_6_9,https://www.biblia.es/biblia-buscar-libros-1.php?libro=cantares&capitulo=6&version=rv60,amor;fe;perdón;esperanza,disgust
+Las reinas y las concubinas, y la alabaron.",cantares_6_9,https://www.biblia.es/biblia-buscar-libros-1.php?libro=cantares&capitulo=6&version=rv60,amor;fe;perdón;esperanza,Asco
 87,cantares,6,10,Mutuo encanto del esposo y de la esposa,"¿Quién es ésta que se muestra como el alba,
 Hermosa como la luna,
 Esclarecida como el sol,
@@ -254,7 +254,7 @@ Imponente como ejércitos en orden?",cantares_6_10,https://www.biblia.es/biblia-
 88,cantares,6,11,Mutuo encanto del esposo y de la esposa,"Al huerto de los nogales descendí
 A ver los frutos del valle,
 Y para ver si brotaban las vides,
-Si florecían los granados.",cantares_6_11,https://www.biblia.es/biblia-buscar-libros-1.php?libro=cantares&capitulo=6&version=rv60,fe,disgust
+Si florecían los granados.",cantares_6_11,https://www.biblia.es/biblia-buscar-libros-1.php?libro=cantares&capitulo=6&version=rv60,fe,Asco
 89,cantares,6,12,Mutuo encanto del esposo y de la esposa,"Antes que lo supiera, mi alma me puso
 Entre los carros de Aminadab.",cantares_6_12,https://www.biblia.es/biblia-buscar-libros-1.php?libro=cantares&capitulo=6&version=rv60,fe,Neutral
 90,cantares,6,13,Mutuo encanto del esposo y de la esposa,"Vuélvete, vuélvete, oh sulamita;
@@ -268,7 +268,7 @@ Obra de mano de excelente maestro.",cantares_7_1,https://www.biblia.es/biblia-bu
 92,cantares,7,2,,"Tu ombligo como una taza redonda
 Que no le falta bebida.
 Tu vientre como montón de trigo
-Cercado de lirios.",cantares_7_2,https://www.biblia.es/biblia-buscar-libros-1.php?libro=cantares&capitulo=7&version=rv60,,disgust
+Cercado de lirios.",cantares_7_2,https://www.biblia.es/biblia-buscar-libros-1.php?libro=cantares&capitulo=7&version=rv60,,Asco
 93,cantares,7,3,,"Tus dos pechos, como gemelos de gacela.",cantares_7_3,https://www.biblia.es/biblia-buscar-libros-1.php?libro=cantares&capitulo=7&version=rv60,fe,Neutral
 94,cantares,7,4,,"Tu cuello, como torre de marfil;
 Tus ojos, como los estanques de Hesbón junto a la puerta de Bat-rabim;
@@ -276,7 +276,7 @@ Tu nariz, como la torre del Líbano,
 Que mira hacia Damasco.",cantares_7_4,https://www.biblia.es/biblia-buscar-libros-1.php?libro=cantares&capitulo=7&version=rv60,fe,Miedo
 95,cantares,7,5,,"Tu cabeza encima de ti, como el Carmelo;
 Y el cabello de tu cabeza, como la púrpura del rey
-Suspendida en los corredores.",cantares_7_5,https://www.biblia.es/biblia-buscar-libros-1.php?libro=cantares&capitulo=7&version=rv60,fe;amor;perdón,disgust
+Suspendida en los corredores.",cantares_7_5,https://www.biblia.es/biblia-buscar-libros-1.php?libro=cantares&capitulo=7&version=rv60,fe;amor;perdón,Asco
 96,cantares,7,6,,"¡Qué hermosa eres, y cuán suave,
 Oh amor deleitoso!",cantares_7_6,https://www.biblia.es/biblia-buscar-libros-1.php?libro=cantares&capitulo=7&version=rv60,amor;perdón,Alegría
 97,cantares,7,7,,"Tu estatura es semejante a la palmera,
@@ -284,12 +284,12 @@ Y tus pechos a los racimos.",cantares_7_7,https://www.biblia.es/biblia-buscar-li
 98,cantares,7,8,,"Yo dije: Subiré a la palmera,
 Asiré sus ramas.
 Deja que tus pechos sean como racimos de vid,
-Y el olor de tu boca como de manzanas,",cantares_7_8,https://www.biblia.es/biblia-buscar-libros-1.php?libro=cantares&capitulo=7&version=rv60,amor;fe;perdón;esperanza,disgust
+Y el olor de tu boca como de manzanas,",cantares_7_8,https://www.biblia.es/biblia-buscar-libros-1.php?libro=cantares&capitulo=7&version=rv60,amor;fe;perdón;esperanza,Asco
 99,cantares,7,9,,"Y tu paladar como el buen vino,
 Que se entra a mi amado suavemente,
 Y hace hablar los labios de los viejos.",cantares_7_9,https://www.biblia.es/biblia-buscar-libros-1.php?libro=cantares&capitulo=7&version=rv60,amor;fe;perdón;esperanza,Neutral
 100,cantares,7,10,,"Yo soy de mi amado,
-Y conmigo tiene su contentamiento.",cantares_7_10,https://www.biblia.es/biblia-buscar-libros-1.php?libro=cantares&capitulo=7&version=rv60,amor;fe;esperanza,disgust
+Y conmigo tiene su contentamiento.",cantares_7_10,https://www.biblia.es/biblia-buscar-libros-1.php?libro=cantares&capitulo=7&version=rv60,amor;fe;esperanza,Asco
 101,cantares,7,11,,"Ven, oh amado mío, salgamos al campo,
 Moremos en las aldeas.",cantares_7_11,https://www.biblia.es/biblia-buscar-libros-1.php?libro=cantares&capitulo=7&version=rv60,amor;perdón;fe;esperanza,Neutral
 102,cantares,7,12,,"Levantémonos de mañana a las viñas;
@@ -302,13 +302,13 @@ Nuevas y añejas, que para ti, oh amado mío, he guardado.",cantares_7_13,https:
 104,cantares,8,1,,"¡Oh, si tú fueras como un hermano mío
 Que mamó los pechos de mi madre!
 Entonces, hallándote fuera, te besaría,
-Y no me menospreciarían.",cantares_8_1,https://www.biblia.es/biblia-buscar-libros-1.php?libro=cantares&capitulo=8&version=rv60,amor;perdón;esperanza;fe;miedo,disgust
+Y no me menospreciarían.",cantares_8_1,https://www.biblia.es/biblia-buscar-libros-1.php?libro=cantares&capitulo=8&version=rv60,amor;perdón;esperanza;fe;miedo,Asco
 105,cantares,8,2,,"Yo te llevaría, te metería en casa de mi madre;
 Tú me enseñarías,
 Y yo te haría beber vino
-Adobado del mosto de mis granadas.",cantares_8_2,https://www.biblia.es/biblia-buscar-libros-1.php?libro=cantares&capitulo=8&version=rv60,fe,disgust
+Adobado del mosto de mis granadas.",cantares_8_2,https://www.biblia.es/biblia-buscar-libros-1.php?libro=cantares&capitulo=8&version=rv60,fe,Asco
 106,cantares,8,3,,"Su izquierda esté debajo de mi cabeza,
-Y su derecha me abrace.",cantares_8_3,https://www.biblia.es/biblia-buscar-libros-1.php?libro=cantares&capitulo=8&version=rv60,amor;fe,disgust
+Y su derecha me abrace.",cantares_8_3,https://www.biblia.es/biblia-buscar-libros-1.php?libro=cantares&capitulo=8&version=rv60,amor;fe,Asco
 107,cantares,8,4,,"Os conjuro, oh doncellas de Jerusalén,
 Que no despertéis ni hagáis velar al amor,
 Hasta que quiera.",cantares_8_4,https://www.biblia.es/biblia-buscar-libros-1.php?libro=cantares&capitulo=8&version=rv60,amor;miedo;fe,Ira
@@ -324,7 +324,7 @@ Sus brasas, brasas de fuego, fuerte llama.",cantares_8_6,https://www.biblia.es/b
 110,cantares,8,7,El poder del amor,"Las muchas aguas no podrán apagar el amor,
 Ni lo ahogarán los ríos.
 Si diese el hombre todos los bienes de su casa por este amor,
-De cierto lo menospreciarían.",cantares_8_7,https://www.biblia.es/biblia-buscar-libros-1.php?libro=cantares&capitulo=8&version=rv60,amor,disgust
+De cierto lo menospreciarían.",cantares_8_7,https://www.biblia.es/biblia-buscar-libros-1.php?libro=cantares&capitulo=8&version=rv60,amor,Asco
 111,cantares,8,8,El poder del amor,"Tenemos una pequeña hermana,
 Que no tiene pechos;
 ¿Qué haremos a nuestra hermana
@@ -332,12 +332,12 @@ Cuando de ella se hablare?",cantares_8_8,https://www.biblia.es/biblia-buscar-lib
 112,cantares,8,9,El poder del amor,"Si ella es muro,
 Edificaremos sobre él un palacio de plata;
 Si fuere puerta,
-La guarneceremos con tablas de cedro.",cantares_8_9,https://www.biblia.es/biblia-buscar-libros-1.php?libro=cantares&capitulo=8&version=rv60,,disgust
+La guarneceremos con tablas de cedro.",cantares_8_9,https://www.biblia.es/biblia-buscar-libros-1.php?libro=cantares&capitulo=8&version=rv60,,Asco
 113,cantares,8,10,El poder del amor,"Yo soy muro, y mis pechos como torres,
 Desde que fui en sus ojos como la que halla paz.",cantares_8_10,https://www.biblia.es/biblia-buscar-libros-1.php?libro=cantares&capitulo=8&version=rv60,perdón;amor,Sorpresa
 114,cantares,8,11,El poder del amor,"Salomón tuvo una viña en Baal-hamón,
 La cual entregó a guardas,
-Cada uno de los cuales debía traer mil monedas de plata por su fruto.",cantares_8_11,https://www.biblia.es/biblia-buscar-libros-1.php?libro=cantares&capitulo=8&version=rv60,fe,disgust
+Cada uno de los cuales debía traer mil monedas de plata por su fruto.",cantares_8_11,https://www.biblia.es/biblia-buscar-libros-1.php?libro=cantares&capitulo=8&version=rv60,fe,Asco
 115,cantares,8,12,El poder del amor,"Mi viña, que es mía, está delante de mí;
 Las mil serán tuyas, oh Salomón,
 Y doscientas para los que guardan su fruto.",cantares_8_12,https://www.biblia.es/biblia-buscar-libros-1.php?libro=cantares&capitulo=8&version=rv60,fe,Neutral

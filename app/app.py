@@ -12,6 +12,10 @@ import os
 from dotenv import load_dotenv
 from transformers import pipeline
 
+import psutil
+import os
+import streamlit as st
+
 from texts import TEXTS
 from components.render_emotion import render_emotion_block
 from components.render_theme import render_theme_block
@@ -658,9 +662,7 @@ def render_feedback_section_final(user_name: str, user_input: str, recommendatio
         unsafe_allow_html=True
     )
 
-import psutil
-import os
-import streamlit as st
+
 
 def log_memory_usage(tag=""):
     process = psutil.Process(os.getpid())
