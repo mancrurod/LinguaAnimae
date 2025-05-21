@@ -16,7 +16,7 @@ from texts import TEXTS
 from components.render_emotion import render_emotion_block
 from components.render_theme import render_theme_block
 from components.render_feedback import render_feedback_section
-from src.interface.recommender import load_entire_corpus, recommend_verses
+from src.interface.recommender import load_entire_corpus, recommend_verses_by_sections
 from src.utils.save_feedback_to_gsheet import save_feedback_to_gsheet
 from src.utils.translation_maps import BOOK_NAME_MAP_ES
 from src.utils.translation_maps import GO_EMOTIONS_TO_EKMAN
@@ -534,7 +534,7 @@ def analyze_user_input(text: str, lang: str) -> tuple[dict, dict, str, pd.DataFr
                 st.stop()
 
             # Generate recommendations
-            recommendations = recommend_verses(
+            recommendations = recommend_verses_by_sections(
                 df_verses,
                 top_emotion["label"],
                 theme_result["label"],

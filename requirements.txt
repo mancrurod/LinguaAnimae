@@ -32,3 +32,4 @@ oauth2client
 deepl
 python-dotenv
 hf_xet
+unidecode

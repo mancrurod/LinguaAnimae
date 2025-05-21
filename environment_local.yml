@@ -117,4 +117,5 @@ dependencies:
       - watchdog==6.0.0
       - deepl
       - python-dotenv
+      - unicode
 prefix: C:\Users\manue\miniconda3\envs\LinguaAnimae
