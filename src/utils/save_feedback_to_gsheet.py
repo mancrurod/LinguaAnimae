@@ -5,7 +5,8 @@ import streamlit as st
 
 def save_feedback_to_gsheet(feedback_data: dict):
     """
-    Saves user feedback data to a Google Sheet.
+    Safely saves user feedback data to a Google Sheet, never deleting previous rows.
+    If the header changes, missing columns are appended at the end; old data is preserved.
 
     Args:
         feedback_data (dict): Dictionary containing feedback fields.
@@ -44,19 +45,37 @@ def save_feedback_to_gsheet(feedback_data: dict):
         )
         all_fields = fixed_fields + dynamic_fields
 
-        # === Prepare header ===
-        full_header = ["timestamp"] + all_fields
+        # === Prepare header (timestamp always first) ===
+        desired_header = ["timestamp"] + all_fields
         existing_values = worksheet.get_all_values()
+        if existing_values:
+            current_header = existing_values[0]
+        else:
+            current_header = []
 
-        if not existing_values or existing_values[0] != full_header:
-            worksheet.resize(rows=1)  # Clear existing header if needed
-            worksheet.update("A1", [full_header])  # Set new header
+        # === If header is empty, write it ===
+        if not current_header:
+            worksheet.update("A1", [desired_header])
+            current_header = desired_header
 
-        # === Create the row to insert ===
+        # === If header exists, add missing columns at the end ===
+        if current_header != desired_header:
+            # Find missing columns (excluding timestamp, always first)
+            missing = [col for col in desired_header[1:] if col not in current_header]
+            # Append missing columns to current header
+            new_header = current_header + missing
+            # Update header only if different
+            if new_header != current_header:
+                worksheet.update("A1", [new_header])
+                current_header = new_header
+
+        # === Prepare row, using header order ===
         timestamp = datetime.now().isoformat(timespec="seconds")
-        row = [timestamp] + [feedback_data.get(field, "") for field in all_fields]
+        row = [timestamp]  # Always start with timestamp
+        for field in current_header[1:]:  # Exclude timestamp (already added)
+            row.append(feedback_data.get(field, ""))
 
-        # === Append to sheet ===
+        # === Append new feedback ===
         worksheet.append_row(row, value_input_option="USER_ENTERED")
 
     except Exception as e:
