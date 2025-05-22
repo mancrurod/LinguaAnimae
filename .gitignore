@@ -29,3 +29,5 @@ __pycache__/
 notebooks/finetuned-goemotions-bible/
 notebooks/results_finetuned_bible/
 src/fine_tuning/finetuned-goemotions-bible/
+notebooks/results_finetuned_bible_fold_*
+notebooks/results_finetuned_bible_cv

@@ -1,0 +1,22 @@
+You are an expert annotator of biblical texts for emotion analysis.
+
+For each Bible verse listed below, assign exactly ONE main human emotion from this list (write only the emotion word in lowercase English):
+
+joy, sadness, anger, fear, disgust, surprise, neutral
+
+Strict output instructions:
+- Output only in CSV format: id,verse_id,label
+- Do NOT include the verse text, any explanations, extra columns, or blank lines.
+- Follow the order and IDs as provided.
+- Use only the labels from the list above. Never invent or translate new emotions.
+
+EXAMPLE OUTPUT (no verse text):
+0,2_kings_1_10,anger
+1,1_samuel_19_21,surprise
+2,1_chronicles_21_21,neutral
+VERSES TO ANNOTATE:
+
+0,2_kings_1_10,"And Elijah answered and said to the captain of fifty, If I be a man of God, then let fire come down from heaven, and consume thee and thy fifty. And there came down fire from heaven, and consumed him and his fifty."
+1,1_samuel_19_21,"And when it was told Saul, he sent other messengers, and they prophesied likewise. And Saul sent messengers again the third time, and they prophesied also."
+
+If you do not follow the format exactly, your response will be discarded.

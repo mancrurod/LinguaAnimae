@@ -10,8 +10,8 @@ from pathlib import Path
 
 # === Paths ===
 INPUT_DIR = Path(__file__).parent.parent.parent / "data" / "processed" / "bible_kjv"
-OUTPUT_FILE = Path(__file__).parent.parent.parent / "data" / "evaluation" / "verses_to_label" / "emotion_verses_to_label_4.csv" # Change as needed
-N_SAMPLES = 1000
+OUTPUT_FILE = Path(__file__).parent.parent.parent / "data" / "evaluation" / "verses_to_label" / "emotion_verses_to_label_6.csv" # Change as needed
+N_SAMPLES = 6000
 
 def main():
     print("🔎 Searching for CSV files...")
@@ -48,10 +48,9 @@ def main():
         df_all = df_all[~df_all['verse_id'].isin(labeled_ids)]
         print(f"Filtered out {before - len(df_all)} verses already labeled. Now {len(df_all)} left.")
 
-
     # Sample randomly
     n = min(N_SAMPLES, len(df_all))
-    df_sample = df_all.sample(n=n, random_state=22).reset_index(drop=True)
+    df_sample = df_all.sample(n=n, random_state=16).reset_index(drop=True)
 
     # Add 'id' as incremental integer
     df_sample.insert(0, 'id', range(n))

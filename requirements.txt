@@ -23,6 +23,7 @@ sentence-transformers==2.7.0
 tokenizers==0.19.1
 protobuf==4.25.3
 datasets
+optuna
 
 # === Utilidades ===
 typing-extensions
