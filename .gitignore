@@ -24,3 +24,8 @@ __pycache__/
 # Secret files
 .streamlit/secrets.toml
 .env
+
+# Models
+notebooks/finetuned-goemotions-bible/
+notebooks/results_finetuned_bible/
+src/fine_tuning/finetuned-goemotions-bible/
