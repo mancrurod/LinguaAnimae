@@ -11,6 +11,7 @@ import deepl
 import os
 from dotenv import load_dotenv
 from transformers import pipeline
+import requests
 
 import psutil
 import os
@@ -352,19 +353,42 @@ def classify_ekman_emotion(text, emotion_model):
     return {"ekman_label": ekman_label, "go_label": go_label, "score": top_pred["score"]}
 
 
-@st.cache_resource
+import os
+import requests
+import streamlit as st
+from dotenv import load_dotenv
+
+# Cargar variables de entorno desde .env
+load_dotenv()
+
 def load_theme_model():
     """
-    Load the zero-shot classifier for theme detection.
+    Fetch the zero-shot classifier for theme detection from HuggingFace using their API.
+    Ensure the model is private, authenticate with a HuggingFace token.
 
     Returns:
-        Pipeline: Zero-shot classification pipeline.
+        function: Function to query HuggingFace API for theme classification.
     """
-    return pipeline(
-        "zero-shot-classification",
-        model="MoritzLaurer/DeBERTa-v3-base-mnli-fever-anli"
-    )
+    api_url = "https://api-inference.huggingface.co/models/MoritzLaurer/DeBERTa-v3-base-mnli-fever-anli"
+    hf_token = os.getenv("HF_API_TOKEN")
 
+    if not hf_token:
+        st.error("❌ No se encontró el token de Hugging Face. Asegúrate de definir HF_API_TOKEN en tu archivo .env.")
+        raise EnvironmentError("Token de Hugging Face no encontrado.")
+
+    headers = {"Authorization": f"Bearer {hf_token}"}
+
+    def query(payload):
+        try:
+            response = requests.post(api_url, headers=headers, json=payload)
+            response.raise_for_status()  # Si la respuesta no es 200, lanzará un error
+            return response.json()  # Devuelve la respuesta como JSON
+        except requests.exceptions.RequestException as e:
+            st.error(f"❌ Error en la solicitud a la API de HuggingFace: {e}")
+            st.error(f"Error response: {response.text if response else 'No response'}")
+            raise e
+
+    return query
 
 def get_top_theme(text: str, lang: str) -> dict:
     """
@@ -378,15 +402,34 @@ def get_top_theme(text: str, lang: str) -> dict:
         dict: Dictionary with top theme and score.
     """
     classifier = load_theme_model()
-    log_memory_usage("After loading theme model")
     themes_en = ["Love", "Faith", "Hope", "Forgiveness", "Fear"]
     themes_es = ["Amor", "Fe", "Esperanza", "Perdón", "Miedo"]
-    result = classifier(text, candidate_labels=themes_en)
-    label = result["labels"][0]
-    score = result["scores"][0]
-    if lang == "es":
-        label = dict(zip(themes_en, themes_es)).get(label, label)
-    return {"label": label, "score": score}
+
+    payload = {
+        "inputs": text,  # Texto de entrada
+        "parameters": {
+            "candidate_labels": themes_en  # Etiquetas candidatas
+        }
+    }
+    
+    try:
+        result = classifier(payload)  # Realizamos la llamada al modelo
+
+        if "labels" in result and "scores" in result:
+            label = result["labels"][0]
+            score = result["scores"][0]
+        else:
+            st.error(f"❌ Respuesta inesperada de la API: {result}")
+            raise ValueError("Respuesta inesperada de la API.")
+
+        if lang == "es":
+            label = dict(zip(themes_en, themes_es)).get(label, label)
+
+        return {"label": label, "score": score}
+
+    except Exception as e:
+        st.error(f"❌ Error al procesar el análisis de tema: {e}")
+        raise e
 
 def render_language_selector() -> tuple[str, dict]:
     lang_options = {"ES": "es", "EN": "en"}
