@@ -6,6 +6,32 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ---
 
+## [0.6.0] - 2025-05-23
+
+### Added
+- Cross-validation pipeline (`k-fold`) for robust evaluation of emotion classifier, using HuggingFace Trainer + StratifiedKFold.
+- Final fine-tuning script on the entire dataset with support for balanced training (optional oversampling).
+- Automated script to extract 1000 unique random verses for labeling, with duplicate filtering based on verse_id and batch/version tracking.
+- Data cleaning utilities for emotion label remapping, removal of ambiguous classes, and mapping to canonical emotion set.
+- Export and visualization tools for classification reports and confusion matrices after fine-tuning.
+- Metrics saving for each experiment (per fold and final training).
+- Early stopping in all Trainer workflows for more efficient training and less overfitting.
+
+### Changed
+- Emotion and theme mapping dictionaries (`EMOTION_MAP`, `THEME_MAP`) updated to reflect the actual output labels of models and data.
+- Refactored training and evaluation scripts: now support both cross-validation and standard train/test split from a single pipeline.
+- All oversampling/balance code is now optional and controlled by a single block, to be used only when needed.
+- Improved sampling and labeling scripts to avoid duplicated verses and track labeled batches by iteration.
+- Updated documentation and inline comments in all fine-tuning and evaluation scripts.
+
+### Fixed
+- Fixed bugs where duplicated verses could be re-sampled and sent for labeling in subsequent rounds.
+- Corrected emotion label mismatches caused by model/corpus discrepancies in emotion mapping.
+- Improved error handling and logging during data loading and label validation steps.
+
+
+---
+
 ## [0.5.1] - 2025-05-16
 
 ### Changed
