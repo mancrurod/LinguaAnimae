@@ -10,7 +10,7 @@ import pandas as pd
 import deepl
 import os
 from dotenv import load_dotenv
-from transformers import pipeline
+from transformers import AutoModelForSequenceClassification, AutoTokenizer, pipeline
 import requests
 
 import psutil
@@ -324,42 +324,41 @@ def translate_to_english(text: str) -> str:
 @st.cache_resource
 def load_emotion_model():
     """
-    Load the emotion classifier pipeline from HuggingFace (SamLowe GoEmotions).
-
-    Returns:
-        Pipeline: Text classification pipeline.
+    Load the locally fine-tuned emotion model.
     """
-    return pipeline(
-        "text-classification",
-        model="SamLowe/roberta-base-go_emotions",
-        top_k=None
-    )
+    model_path = "src/fine_tuning/finetuned-goemotions-bible-optuna"  # Ruta al modelo fine-tuneado
+    model = AutoModelForSequenceClassification.from_pretrained(model_path)
+    tokenizer = AutoTokenizer.from_pretrained(model_path)
+    
+    # Verifica el nombre del modelo para asegurarte de que es el correcto
+    print(f"Model loaded from: {model_path}")
+    
+    return model, tokenizer
 
-def classify_ekman_emotion(text, emotion_model):
+
+import torch
+
+def classify_ekman_emotion(text, model, tokenizer):
     """
-    Classify the Ekman emotion using the SamLowe GoEmotions model and the mapping.
-
-    Args:
-        text (str): Input text in English.
-        emotion_model (Pipeline): HuggingFace pipeline for GoEmotions.
-
-    Returns:
-        dict: Dict with 'ekman_label', 'go_label', and 'score'.
+    Classify the Ekman emotion using the fine-tuned GoEmotions model.
     """
-    preds = emotion_model(text)[0]
-    top_pred = max(preds, key=lambda x: x["score"])
-    go_label = top_pred["label"]
+    inputs = tokenizer(text, return_tensors="pt", truncation=True, padding=True)
+    with torch.no_grad():
+        outputs = model(**inputs)
+
+    logits = outputs.logits
+    probs = torch.softmax(logits, dim=-1)
+    label_id = torch.argmax(probs, dim=-1).item()
+
+    go_label = tokenizer.convert_ids_to_tokens(label_id)
     ekman_label = GO_EMOTIONS_TO_EKMAN.get(go_label, "neutral")
-    return {"ekman_label": ekman_label, "go_label": go_label, "score": top_pred["score"]}
+    
+    # Mostrar las probabilidades y la predicción
+    print(f"Predicted GoEmotions label: {go_label}, Ekman label: {ekman_label}, Probabilities: {probs}")
+    
+    return {"ekman_label": ekman_label, "go_label": go_label, "score": probs[0, label_id].item()}
 
 
-import os
-import requests
-import streamlit as st
-from dotenv import load_dotenv
-
-# Cargar variables de entorno desde .env
-load_dotenv()
 
 def load_theme_model():
     """
@@ -554,9 +553,9 @@ def analyze_user_input(text: str, lang: str) -> tuple[dict, dict, str, pd.DataFr
 
             # Emotion classification
             try:
-                emotion_model = load_emotion_model()
+                emotion_model, tokenizer = load_emotion_model()
                 log_memory_usage("After loading emotion model")
-                emotion_result = classify_ekman_emotion(translated, emotion_model)
+                emotion_result = classify_ekman_emotion(translated, emotion_model, tokenizer)
                 top_emotion = {
                     "label": emotion_result["ekman_label"],   # Esta es la emoción Ekman mapeada
                     "go_label": emotion_result["go_label"],   # (Opcional, por si quieres mostrar la etiqueta original)
@@ -704,8 +703,6 @@ def render_feedback_section_final(user_name: str, user_input: str, recommendatio
         """,
         unsafe_allow_html=True
     )
-
-
 
 def log_memory_usage(tag=""):
     process = psutil.Process(os.getpid())
