@@ -22,6 +22,7 @@ __pycache__/
 *.pyc
 
 # Secret files
+.streamlit/
 .streamlit/secrets.toml
 .env
 
