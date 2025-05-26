@@ -98,7 +98,7 @@ def recommend_verses(
     ]
 
     return (
-        df_filtered.sample(n=min(max_results, len(df_filtered)), random_state=42)
+        df_filtered.sample(n=min(max_results, len(df_filtered)))
         if not df_filtered.empty else pd.DataFrame()
     )
 
@@ -163,9 +163,9 @@ def recommend_verses_by_sections(
     ot = df_filtered[~df_filtered["book_norm"].isin(ALL_NT)]
 
     # Random selection per section
-    sample_gospels = gospels.sample(n=min(2, len(gospels)), random_state=42)
-    sample_nt_rest = nt_rest.sample(n=min(2, len(nt_rest)), random_state=42)
-    sample_ot = ot.sample(n=min(2, len(ot)), random_state=42)
+    sample_gospels = gospels.sample(n=min(2, len(gospels)))
+    sample_nt_rest = nt_rest.sample(n=min(2, len(nt_rest)))
+    sample_ot = ot.sample(n=min(2, len(ot)))
 
     # Concatenate and shuffle
     result = pd.concat([sample_gospels, sample_nt_rest, sample_ot], ignore_index=True)
