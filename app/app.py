@@ -404,15 +404,6 @@ def get_top_theme(text: str, lang: str) -> dict:
     logger.info(f"Theme classified: {label}")
     return {"label": label, "score": score}
 
-def log_memory_usage(tag=""):
-    """
-    Logs the current memory usage to Streamlit and to logger.
-    """
-    process = psutil.Process(os.getpid())
-    mem_mb = process.memory_info().rss / 1024 ** 2
-    logger.info(f"🔍 [{tag}] Memory usage: {mem_mb:.2f} MB")
-    st.write(f"🔍 [{tag}] Memory usage: {mem_mb:.2f} MB")
-
 # === RENDERING, INPUT, AND FEEDBACK ===
 
 def render_language_selector() -> tuple[str, dict]:
