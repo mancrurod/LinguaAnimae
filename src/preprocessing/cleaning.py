@@ -10,8 +10,10 @@ Each file undergoes the following steps:
 - Save the cleaned data under 'data/processed' in a mirrored folder structure.
 - Log changes made during the process in 'logs/cleaning_logs'.
 
-This module is intended to be executed as a standalone script.
+Usage:
+    python cleaning.py
 """
+
 
 # =====================
 # === IMPORTS =========
@@ -21,6 +23,8 @@ import pandas as pd
 from pathlib import Path
 import re
 from datetime import datetime
+import logging
+
 
 # ========================
 # === CONSTANTS ==========
@@ -30,6 +34,48 @@ from datetime import datetime
 RAW_DIR = Path("data/raw")
 PROCESSED_DIR = Path("data/processed")
 LOG_DIR = Path("logs/cleaning_logs")
+
+for folder in [RAW_DIR, LOG_DIR]:
+    if not folder.exists():
+        print(f"❌ Required directory does not exist: {folder}")
+
+def setup_logger(
+    log_path: Path,
+    level: int = logging.INFO,
+    console: bool = True,
+    log_name: str = "cleaning_logger"
+) -> logging.Logger:
+    """
+    Set up a logger that logs to both a file and optionally the console.
+
+    Args:
+        log_path (Path): Path to the log file.
+        level (int): Logging level (e.g., logging.INFO, logging.ERROR).
+        console (bool): Whether to log also to the console.
+        log_name (str): Name of the logger instance.
+
+    Returns:
+        logging.Logger: Configured logger instance.
+    """
+    logger = logging.getLogger(log_name)
+    logger.setLevel(level)
+    if not logger.handlers:
+        fh = logging.FileHandler(log_path, encoding="utf-8")
+        fh.setLevel(level)
+        file_formatter = logging.Formatter(
+            "%(asctime)s - %(levelname)s - %(message)s")
+        fh.setFormatter(file_formatter)
+        logger.addHandler(fh)
+
+        if console:
+            ch = logging.StreamHandler()
+            ch.setLevel(level)
+            console_formatter = logging.Formatter(
+                "%(levelname)s: %(message)s")
+            ch.setFormatter(console_formatter)
+            logger.addHandler(ch)
+    return logger
+
 
 # =============================
 # === CLEANING UTILITIES ======
@@ -47,7 +93,8 @@ def clean_text(text: str) -> str:
         str: Cleaned text with preserved line breaks.
     """
     if pd.isna(text):
-        return text
+        return ""
+    text = str(text)
 
     # Normalize each line individually
     lines = text.splitlines()
@@ -66,7 +113,8 @@ def normalize_unicode(text: str) -> str:
         str: Text with standardized punctuation.
     """
     if pd.isna(text):  # Check if the text is NaN
-        return text
+        return ""
+    text = str(text)
     return (
         text.replace("“", '"')  # Replace left double quotes with standard double quotes
             .replace("”", '"')  # Replace right double quotes with standard double quotes
@@ -76,23 +124,26 @@ def normalize_unicode(text: str) -> str:
             .replace("—", "-")  # Replace em dash with hyphen
     )
 
-
 def validate_row(row: pd.Series) -> bool:
     """
     Check whether a DataFrame row contains valid 'book', 'chapter', and 'verse' fields.
 
-    Args:
-        row (pd.Series): A row from the DataFrame.
-
-    Returns:
-        bool: True if the row passes all validation rules, False otherwise.
+    Returns True if:
+    - 'book' is a non-empty string
+    - 'chapter' and 'verse' can be converted to positive integers
     """
-    return (
-        isinstance(row.get("book"), str) and  # Ensure 'book' is a string
-        isinstance(row.get("chapter"), (int, float)) and row["chapter"] > 0 and  # Ensure 'chapter' is positive
-        isinstance(row.get("verse"), (int, float)) and row["verse"] > 0  # Ensure 'verse' is positive
-    )
+    book = row.get("book", "")
+    chapter = row.get("chapter", None)
+    verse = row.get("verse", None)
 
+    if not isinstance(book, str) or not book.strip():
+        return False
+    try:
+        chapter_num = int(float(chapter))
+        verse_num = int(float(verse))
+        return chapter_num > 0 and verse_num > 0
+    except (ValueError, TypeError):
+        return False
 
 def generate_id(row: pd.Series) -> str:
     """
@@ -102,119 +153,155 @@ def generate_id(row: pd.Series) -> str:
         row (pd.Series): A row from the DataFrame.
 
     Returns:
-        str: Unique ID string, e.g., "Genesis_1_1".
+        str: Unique ID string, e.g., "Genesis_1_1". If values are missing or invalid,
+             returns 'INVALID_ID'.
     """
-    return f"{row['book']}_{int(row['chapter'])}_{int(row['verse'])}"  # Combine fields into a unique identifier
+    try:
+        book = str(row.get('book', '')).strip().replace(' ', '_').title()
+        chapter = int(float(row.get('chapter', 0)))
+        verse = int(float(row.get('verse', 0)))
+        if not book or chapter <= 0 or verse <= 0:
+            return 'INVALID_ID'
+        return f"{book}_{chapter}_{verse}"
+    except Exception as e:
+        # Optional: log the error somewhere if running in a wider pipeline
+        return 'INVALID_ID'
+
 
 # ========================
 # === MAIN PROCESS =======
 # ========================
 
-def clean_and_prepare_csvs() -> None:
+def clean_and_prepare_csvs(logger: logging.Logger) -> None:
     """
     Process all CSV files under RAW_DIR, clean the data, and save outputs to PROCESSED_DIR.
-
-    Performs:
-    - Validation and sanitization of text.
-    - Row-level structural validation.
-    - Logging of all transformations per file.
-    - Export of cleaned CSVs and session log.
     """
-    # Get a list of all CSV files in the raw data directory
     csv_files = list(RAW_DIR.rglob("*.csv"))
-    LOG_DIR.mkdir(parents=True, exist_ok=True)  # Ensure the log directory exists
+    LOG_DIR.mkdir(parents=True, exist_ok=True)
 
-    if not csv_files:  # Check if no CSV files are found
-        print("❌ No CSV files found under 'data/raw/'.")
+    if not csv_files:
+        logger.error("No CSV files found under 'data/raw/'.")
         return
 
-    # Generate a timestamp for the log file
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     log_file = LOG_DIR / f"cleaning_log_{timestamp}.txt"
 
-    # Open the log file for writing
+    processed_count = 0
+    failed_count = 0
+
     with open(log_file, "w", encoding="utf-8") as log:
         log.write(f"Cleaning Session: {timestamp}\n")
         log.write(f"Total CSV files found: {len(csv_files)}\n\n")
 
-        print(f"📁 Found {len(csv_files)} CSV files to process.\n")
+        logger.info(f"Found {len(csv_files)} CSV files to process.")
 
-        # Process each CSV file
         for file_path in csv_files:
             try:
-                # Get the relative path of the file for logging
                 relative_file = file_path.relative_to(RAW_DIR)
-                print(f"🔍 Processing: {relative_file}")
+                logger.info(f"Processing: {relative_file}")
 
-                # Read the CSV file into a DataFrame
-                df = pd.read_csv(file_path)
-                log.write(f"=== File: {relative_file} ===\n")
-
-                # Check if required columns are present
-                required_cols = {"book", "chapter", "verse", "text"}
-                if not required_cols.issubset(df.columns):
-                    warning = f"⚠️ Skipped (missing required columns)\n\n"
-                    log.write(warning)
-                    print(warning)
+                try:
+                    df = pd.read_csv(file_path)
+                except Exception as e:
+                    warning = f"Error reading file {relative_file}: {e}\n"
+                    log.write(f"❌ {warning}")
+                    logger.error(warning)
+                    failed_count += 1
                     continue
 
-                original_rows = len(df)  # Record the original number of rows
+                log.write(f"=== File: {relative_file} ===\n")
 
-                # Clean and normalize the 'text' column
+                required_cols = {"book", "chapter", "verse", "text"}
+                if not required_cols.issubset(df.columns):
+                    missing = required_cols - set(df.columns)
+                    warning = f"Skipped (missing required columns: {missing})\n"
+                    log.write(f"⚠️ {warning}")
+                    logger.warning(warning)
+                    failed_count += 1
+                    continue
+
+                original_rows = len(df)
                 df["text"] = df["text"].apply(clean_text).apply(normalize_unicode)
-                # Filter rows based on validation rules
-                df = df[df.apply(validate_row, axis=1)]
-                valid_rows = len(df)  # Record the number of valid rows
 
-                # Add empty 'theme' and 'emotion' columns
+                for col in ["chapter", "verse"]:
+                    try:
+                        df[col] = pd.to_numeric(df[col], errors="coerce")
+                    except Exception as e:
+                        log.write(f"⚠️ Could not convert {col} to numeric: {e}\n")
+                        logger.warning(f"Could not convert {col} to numeric: {e}")
+
+                valid_mask = df.apply(validate_row, axis=1)
+                removed_rows = (~valid_mask).sum()
+                df = df[valid_mask]
+                valid_rows = len(df)
+
+                if valid_rows == 0:
+                    log.write("⚠️ No valid rows after cleaning. Skipped file.\n")
+                    logger.warning(f"No valid rows after cleaning for file {relative_file}. Skipped file.")
+                    failed_count += 1
+                    continue
+
                 df["theme"] = ""
                 df["emotion"] = ""
-                # Generate unique verse IDs
                 df["verse_id"] = df.apply(generate_id, axis=1)
-                # Add an 'id' column with sequential numbers
                 df.insert(0, "id", range(1, len(df) + 1))
 
-                # Reorder columns to place 'verse_id' after 'text'
                 text_idx = df.columns.get_loc("text")
                 cols = list(df.columns)
                 cols.remove("verse_id")
                 cols.insert(text_idx + 1, "verse_id")
                 df = df[cols]
 
-                # Determine the output path for the cleaned file
                 relative_path = file_path.relative_to(RAW_DIR)
                 new_name = relative_path.stem + "_cleaned.csv"
                 output_path = PROCESSED_DIR / relative_path.parent / new_name
-                output_path.parent.mkdir(parents=True, exist_ok=True)  # Ensure the output directory exists
+                output_path.parent.mkdir(parents=True, exist_ok=True)
 
-                # Save the cleaned DataFrame to a new CSV file
-                df.to_csv(
-                    output_path,
-                    index=False,
-                    encoding="utf-8",
-                    lineterminator="\n",
-                    quoting=1  # csv.QUOTE_ALL — forces quoting of all fields
-                )
+                try:
+                    df.to_csv(
+                        output_path,
+                        index=False,
+                        encoding="utf-8",
+                        lineterminator="\n",
+                        quoting=1
+                    )
+                except Exception as e:
+                    error_message = f"Error saving {output_path}: {e}"
+                    log.write(f"❌ {error_message}\n")
+                    logger.error(error_message)
+                    failed_count += 1
+                    continue
 
-                # Log the results of the cleaning process
                 log.write(f"Original rows: {original_rows}\n")
                 log.write(f"Rows after cleaning: {valid_rows}\n")
-                log.write(f"Rows removed: {original_rows - valid_rows}\n")
+                log.write(f"Rows removed: {removed_rows}\n")
                 log.write(f"Saved to: {output_path.relative_to(PROCESSED_DIR)}\n\n")
 
-                print(f"✅ Saved cleaned file: {output_path.relative_to(PROCESSED_DIR)}\n")
+                logger.info(f"Saved cleaned file: {output_path.relative_to(PROCESSED_DIR)}")
+                processed_count += 1
 
             except Exception as e:
-                # Log and print any errors encountered during processing
-                error_message = f"❌ Error processing {file_path}: {e}\n"
-                log.write(error_message)
-                print(error_message)
+                error_message = f"Error processing {file_path}: {e}"
+                log.write(f"❌ {error_message}\n")
+                logger.error(error_message)
+                failed_count += 1
 
-    print(f"📝 Cleaning log saved at: {log_file}")
+        log.write(f"=== Session Summary ===\n")
+        log.write(f"Successfully processed: {processed_count}\n")
+        log.write(f"Files with errors: {failed_count}\n")
+        logger.info(f"=== Cleaning summary: {processed_count} processed, {failed_count} with errors ===")
+
+    logger.info(f"Cleaning log saved at: {log_file}")
+
 
 # ========================
 # === ENTRY POINT ========
 # ========================
 
 if __name__ == "__main__":
-    clean_and_prepare_csvs()  # Execute the main cleaning process
+    LOG_DIR.mkdir(parents=True, exist_ok=True)
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    log_path = LOG_DIR / f"cleaning_{timestamp}.log"
+    logger = setup_logger(log_path, level=logging.INFO, console=True)
+    clean_and_prepare_csvs(logger)
+

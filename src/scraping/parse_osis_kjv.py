@@ -5,20 +5,45 @@ Each CSV will contain the following columns:
 book, chapter, verse, subtitle (empty), text, source_url
 
 Output path: data/raw/bible_kjv/
+
+Usage example:
+    python parse_osis_kjv.py --input data/raw/bible_kjv/eng-kjv.osis.xml --output data/raw/bible_kjv/
 """
+
 
 import xml.etree.ElementTree as ET  # For parsing XML files
 import pandas as pd  # For handling data and saving to CSV
 from pathlib import Path  # For handling file paths
 from typing import Dict, List, Optional  # For type annotations
 import argparse  # For command-line argument parsing
+import logging  # For logging errors and warnings
+
+def setup_logger(log_path: Path) -> logging.Logger:
+    """
+    Set up a logger to record errors and warnings.
+
+    Args:
+        log_path (Path): Path to the log file.
+
+    Returns:
+        logging.Logger: Configured logger instance.
+    """
+    logger = logging.getLogger("OSISParser")
+    logger.setLevel(logging.INFO)
+    if not logger.handlers:
+        handler = logging.FileHandler(log_path, encoding="utf-8")
+        formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
+        handler.setFormatter(formatter)
+        logger.addHandler(handler)
+    return logger
+
 
 # === CONFIG ===
 SOURCE_URL = "https://github.com/seven1m/open-bibles"  # Source URL for the data
-
-# === PATHS ===
 DEFAULT_OSIS_PATH = Path("data/raw/bible_kjv/eng-kjv.osis.xml")  # Default input OSIS XML file path
 DEFAULT_OUTPUT_DIR = Path("data/raw/bible_kjv")  # Default output directory for CSV files
+DEFAULT_LOG_PATH = Path("logs/parse_osis_kjv.log")  # Default log file path
+
 
 # Map OSIS codes to full book names in canonical order
 BOOK_ORDER = [
@@ -54,19 +79,48 @@ OSIS_TO_NAME = {
 
 # Clean and normalize text by removing extra whitespace
 def clean_text(text: Optional[str]) -> str:
+    """
+    Clean and normalize a string by removing extra whitespace.
+
+    Args:
+        text (Optional[str]): The text to clean.
+
+    Returns:
+        str: Cleaned text with normalized spaces.
+    """
     return " ".join((text or "").split())
 
-# Parse OSIS XML file and extract verses grouped by book
-def parse_osis_verses(osis_path: Path) -> Dict[str, List[Dict[str, str]]]:
-    print(f"📖 Parsing: {osis_path}")
-    tree = ET.parse(osis_path)  # Parse the XML file
-    root = tree.getroot()  # Get the root element of the XML
 
-    verses_by_book: Dict[str, List[Dict[str, str]]] = {}  # Dictionary to store verses by book
-    current_text, current_verse_id = "", None  # Initialize variables for verse text and ID
-    book = chapter = verse = ""  # Initialize book, chapter, and verse
-    capturing = False  # Flag to indicate if we are capturing verse text
-    unknown_books = set()  # Set to track unknown OSIS book codes
+# Parse OSIS XML file and extract verses grouped by book
+def parse_osis_verses(osis_path: Path, logger: logging.Logger) -> Dict[str, List[Dict[str, str]]]:
+    """
+    Parse an OSIS XML file and extract all verses grouped by book.
+
+    Args:
+        osis_path (Path): Path to the OSIS XML file.
+        logger (logging.Logger): Logger for error and warning reporting.
+
+    Returns:
+        Dict[str, List[Dict[str, str]]]: Dictionary mapping book names to lists of verses.
+    """
+    print(f"📖 Parsing: {osis_path}")
+    try:
+        tree = ET.parse(osis_path)  # May raise ParseError or FileNotFoundError
+        root = tree.getroot()
+    except FileNotFoundError:
+        logger.error(f"File not found: {osis_path}")
+        print(f"❌ File not found: {osis_path}")
+        return {}
+    except ET.ParseError as e:
+        logger.error(f"XML parsing error in {osis_path}: {e}")
+        print(f"❌ XML parsing error in {osis_path}: {e}")
+        return {}
+
+    verses_by_book: Dict[str, List[Dict[str, str]]] = {}
+    current_text, current_verse_id = "", None
+    book = chapter = verse = ""
+    capturing = False
+    unknown_books = set()
 
     # Iterate through all elements in the XML tree
     for elem in root.iter():
@@ -74,21 +128,23 @@ def parse_osis_verses(osis_path: Path) -> Dict[str, List[Dict[str, str]]]:
 
         # Start of a verse with osisID
         if tag == "verse" and "osisID" in elem.attrib:
-            current_verse_id = elem.attrib["osisID"]  # Get the osisID attribute
-            parts = current_verse_id.split(".")  # Split osisID into parts
-            if len(parts) != 3:  # Skip if the osisID format is invalid
+            current_verse_id = elem.attrib["osisID"]
+            parts = current_verse_id.split(".")
+            if len(parts) != 3:
+                logger.warning(f"Invalid osisID format: {current_verse_id}")
                 continue
-            osis_book, chapter, verse = parts  # Extract book, chapter, and verse
-            book = OSIS_TO_NAME.get(osis_book)  # Map OSIS book code to book name
-            if not book:  # Skip if the book is unknown
+            osis_book, chapter, verse = parts
+            book = OSIS_TO_NAME.get(osis_book)
+            if not book:
                 unknown_books.add(osis_book)
+                logger.warning(f"Unknown OSIS book code: {osis_book}")
                 continue
-            capturing = True  # Start capturing verse text
-            current_text = clean_text(elem.tail)  # Initialize verse text
+            capturing = True
+            current_text = clean_text(elem.tail)
 
         # End of a verse with eID
         elif tag == "verse" and "eID" in elem.attrib:
-            if capturing and book:  # If capturing and book is valid
+            if capturing and book:
                 row = {
                     "book": book,
                     "chapter": chapter,
@@ -97,51 +153,84 @@ def parse_osis_verses(osis_path: Path) -> Dict[str, List[Dict[str, str]]]:
                     "text": current_text.strip(),
                     "source_url": SOURCE_URL
                 }
-                verses_by_book.setdefault(book, []).append(row)  # Add verse to the book
-            capturing = False  # Stop capturing
-            current_text = ""  # Reset verse text
+                verses_by_book.setdefault(book, []).append(row)
+            capturing = False
+            current_text = ""
 
         # Capture text within a verse
         elif capturing:
-            current_text += " " + clean_text(elem.text)  # Add element text
-            current_text += " " + clean_text(elem.tail)  # Add element tail text
+            current_text += " " + clean_text(elem.text)
+            current_text += " " + clean_text(elem.tail)
 
     # Warn about unknown OSIS book codes
     if unknown_books:
+        logger.warning(f"Unknown OSIS book codes encountered: {', '.join(sorted(unknown_books))}")
         print(f"⚠️ Unknown OSIS book codes encountered: {', '.join(sorted(unknown_books))}")
 
     return verses_by_book
 
-# Save verses grouped by book to individual CSV files
-def save_verses_to_csvs(verses_by_book: Dict[str, List[Dict[str, str]]], output_dir: Path) -> None:
-    output_dir.mkdir(parents=True, exist_ok=True)  # Create output directory if it doesn't exist
+def save_verses_to_csvs(verses_by_book: Dict[str, List[Dict[str, str]]], output_dir: Path, logger: logging.Logger) -> None:
+    """
+    Save verses grouped by book to individual CSV files.
+
+    Args:
+        verses_by_book (Dict[str, List[Dict[str, str]]]): Verses grouped by book.
+        output_dir (Path): Directory to save the CSV files.
+        logger (logging.Logger): Logger for error and warning reporting.
+    """
+    output_dir.mkdir(parents=True, exist_ok=True)
     print(f"📁 Saving to: {output_dir}")
 
-    # Iterate through books in canonical order
+    missing_books = []
     for i, book in enumerate(BOOK_ORDER, start=1):
-        verses = verses_by_book.get(book)  # Get verses for the current book
-        if not verses:  # Skip if no verses for the book
+        verses = verses_by_book.get(book)
+        if not verses:
+            missing_books.append(book)
+            logger.warning(f"No verses found for book: {book}")
             continue
-        df = pd.DataFrame(verses)  # Convert verses to a DataFrame
-        filename = f"{i}_{book}.csv"  # Generate filename
-        df.to_csv(output_dir / filename, index=False)  # Save DataFrame to CSV
-        print(f"✅ {filename}: {len(df)} verses")  # Print success message
+        df = pd.DataFrame(verses)
+        filename = f"{i}_{book}.csv"
+        try:
+            df.to_csv(output_dir / filename, index=False)
+            print(f"✅ {filename}: {len(df)} verses")
+        except Exception as e:
+            logger.error(f"Failed to save {filename}: {e}")
+            print(f"❌ Failed to save {filename}: {e}")
+
+    if missing_books:
+        print(f"⚠️ The following books had no verses and were skipped: {', '.join(missing_books)}")
+
 
 # === MAIN ===
 
-# Main function to parse OSIS file and save verses to CSVs
-def main(osis_path: Path, output_dir: Path):
-    verses_by_book = parse_osis_verses(osis_path)  # Parse OSIS file
-    save_verses_to_csvs(verses_by_book, output_dir)  # Save verses to CSVs
-    print("🚀 Done.")  # Print completion message
+def main(osis_path: Path, output_dir: Path, log_path: Path):
+    """
+    Main function to parse OSIS file and save verses to CSVs.
+
+    Args:
+        osis_path (Path): Path to the OSIS XML file.
+        output_dir (Path): Directory to save CSVs.
+        log_path (Path): Path to the log file.
+    """
+    logger = setup_logger(log_path)
+    try:
+        verses_by_book = parse_osis_verses(osis_path, logger)
+        if not verses_by_book:
+            print("❌ No verses parsed. Check the log for details.")
+            return
+        save_verses_to_csvs(verses_by_book, output_dir, logger)
+        print("🚀 Done.")
+    except Exception as e:
+        logger.error(f"Unhandled exception in main: {e}")
+        print(f"❌ Unhandled error: {e}")
 
 # === CLI ===
 
-# Command-line interface for the script
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="📘 OSIS KJV Parser to CSV")  # CLI description
-    parser.add_argument("--input", type=Path, default=DEFAULT_OSIS_PATH, help="Path to OSIS XML file")  # Input file argument
-    parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT_DIR, help="Directory to save CSVs")  # Output directory argument
-    args = parser.parse_args()  # Parse command-line arguments
+    parser = argparse.ArgumentParser(description="📘 OSIS KJV Parser to CSV")
+    parser.add_argument("--input", type=Path, default=DEFAULT_OSIS_PATH, help="Path to OSIS XML file")
+    parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT_DIR, help="Directory to save CSVs")
+    parser.add_argument("--log", type=Path, default=DEFAULT_LOG_PATH, help="Path to save the log file")
+    args = parser.parse_args()
 
-    main(args.input, args.output)  # Run the main function with parsed arguments
+    main(args.input, args.output, args.log)
