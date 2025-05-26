@@ -31,13 +31,6 @@ load_dotenv()
 # Streamlit config
 st.set_page_config(page_title="Lingua Animae", page_icon="📖")
 
-def log_memory_usage(tag=""):
-    process = psutil.Process(os.getpid())
-    mem_mb = process.memory_info().rss / 1024 ** 2
-    st.write(f"🔍 [{tag}] Memory usage: {mem_mb:.2f} MB")
-    # Si no quieres que salga en la interfaz, usa logging:
-    # import logging; logging.info(f"Memory usage: {mem_mb:.2f} MB")
-
 # === LOGGER SETUP ===
 
 import logging
@@ -59,6 +52,19 @@ def setup_logger(log_path: Path, level: int = logging.INFO, log_name: str = "app
     return logger
 
 logger = setup_logger(LOG_FILE)
+
+def log_memory_usage(tag: str = "") -> None:
+    """
+    Log the current memory usage (in MB) with an optional tag for context.
+
+    Args:
+        tag (str, optional): Custom label for the log/context.
+    """
+    import psutil
+    import os
+    process = psutil.Process(os.getpid())
+    mem_mb = process.memory_info().rss / 1024 ** 2
+    logger.info(f"🔍 [{tag}] Memory usage: {mem_mb:.2f} MB")
 
 # === VISUAL AND UI UTILITIES ===
 
