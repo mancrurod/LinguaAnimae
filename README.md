@@ -4,11 +4,12 @@
   </a>
 </p>
 
+<!-- 
 <h1 align="center">
   <a style="text-decoration: none;">
     <span style="color: #4e342e; font-size: 2.8em; font-weight: bold;">📖 Lingua Animae</span>
   </a>
-</h1>
+</h1> -->
 
 <p align="center">
   <b>🤖 Classify, explore, and connect with sacred texts through emotion and theme. ❤️‍🩹</b><br>
@@ -21,7 +22,12 @@
     <a href="https://linguaanimae.streamlit.app/" style="text-decoration: none; font-size: 1.3em;">
         🟢 Try the Live Demo!
     </a>
+    &nbsp; | &nbsp;
+    <a href="#screenshots" style="text-decoration: none; font-size: 1.1em;">
+        👉 See screenshots below!
+    </a>
 </p>
+
 
 ---
 
@@ -154,6 +160,33 @@ The project now supports full training and evaluation workflows for emotion clas
 - Early stopping to prevent overfitting in all model workflows.
 
 See `notebooks/05_evaluation.ipynb` and `src/fine_tuning/` for code examples and experiment tracking.
+
+---
+
+## 📸 Screenshots
+
+The following screenshots illustrate the main functionalities of the Streamlit app at a glance:
+
+<p align="center">
+  <b>1. Home Screen: Input your message and select language</b><br>
+  <img src="docs/screenshot_home.png" alt="App Home" width="600"/>
+</p>
+
+<p align="center">
+  <b>2. Recommendation Screen, part 1: The app suggests a Bible verse with detected emotion and theme</b><br>
+  <img src="docs/screenshot_recommendation.png" alt="Recommendation Example" width="600"/>
+</p>
+
+<p align="center">
+  <b>3. Recommendation Screen, part 2</b><br>
+  <img src="docs/screenshot_recommendation_2.png" alt="Second Recommendation Example" width="600"/>
+</p>
+
+<p align="center">
+  <b>4. Feedback Confirmation: User feedback is logged for model improvement</b><br>
+  <img src="docs/screenshot_feedback.png" alt="Feedback Confirmation" width="600"/>
+</p>
+
 
 ---
 
