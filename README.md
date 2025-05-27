@@ -1,6 +1,31 @@
-# 📖 LinguaAnimae
+<p align="center">
+  <a>
+    <img src="docs/banner_readme.png" alt="Lingua Animae Banner" width="100%" />
+  </a>
+</p>
 
-**LinguaAnimae** is a multilingual NLP pipeline that classifies and explores sacred texts through the lens of **themes** and **emotions**, culminating in a **Streamlit-based chatbot** that retrieves Bible verses aligned with natural language prompts.
+<p align="center">
+  <a style="text-decoration: none;">
+    <span style="color: #4e342e; font-size: 2.8em; font-weight: bold;">📖 Lingua Animae</span>
+  </a>
+</p>
+
+<p align="center">
+  <hr width="30%" style="border: 1px solid #bdbdbd;">
+</p>
+
+<p align="center">
+  <b>🤖 Classify, explore, and connect with sacred texts through emotion and theme. ❤️‍🩹</b><br>
+  Multilingual NLP pipeline for emotion & theme annotation, with an interactive Streamlit chatbot for personalized Bible verse recommendations.
+</p>
+
+---
+
+<p align="center">
+    <a href="https://linguaanimae.streamlit.app/" style="text-decoration: none; font-size: 1.3em;">
+        🟢 Try the Live Demo!
+    </a>
+</p>
 
 ---
 
@@ -50,8 +75,6 @@ LinguaAnimae/
 │   └── raw/
 ├── logs/
 ├── notebooks/
-│   ├── finetuned-goemotions-bible/
-│   ├── results_finetuned_bible/
 │   ├── 01_scraping_exploration.ipynb
 │   ├── 02_cleaning.ipynb
 │   ├── 03_label_emotions_and_themes.ipynb
@@ -61,10 +84,9 @@ LinguaAnimae/
 │   └── viz_models.ipynb
 ├── src/
 │   ├── fine_tuning/
-│   │   ├── finetuned-goemotions-bible/
-│   │   ├── fine_tune_roberta_emotion.py
 │   │   ├── parse_gpt_output_to_labeled_csv.py
 │   │   └── select_verses_for_labeling.py
+│   │   └── prompt_gpt.txt
 │   ├── interface/
 │   │   └── recommender.py
 │   ├── modeling/
@@ -89,6 +111,20 @@ LinguaAnimae/
 ├── README.md
 ├── CHANGELOG.md
 ```
+
+---
+
+## 📦 Data Folders Overview
+
+| Folder                  | Description                                                                 |
+|-------------------------|-----------------------------------------------------------------------------|
+| `data/raw/`             | Raw, unprocessed texts as scraped from original sources (KJV/RV60 Bibles).  |
+| `data/processed/`       | Cleaned and normalized texts, with basic formatting corrections.             |
+| `data/labeled/`         | Verses annotated with emotion and theme labels.                             |
+| `data/evaluation/`      | Evaluation sets, results, and samples for manual review.                    |
+| `logs/`                 | Logs from annotation, training, and feedback collection.                    |
+| `notebooks/`            | Jupyter notebooks documenting each stage of the pipeline.                   |
+
 
 ---
 
@@ -125,47 +161,18 @@ See `notebooks/05_evaluation.ipynb` and `src/fine_tuning/` for code examples and
 
 ---
 
-## 🧪 Example: Cross-validation Training
-
-```python
-from sklearn.model_selection import StratifiedKFold
-from transformers import Trainer
-
-# Use the provided notebook or scripts to perform k-fold cross-validation
-# Reports macro F1 per fold and mean ± std for robust model evaluation
-````
-
----
-
-## 🆕 File & Script Changes
-
-* `src/fine_tuning/` — All fine-tuning and evaluation scripts/notebooks (cross-validation, standard train/test, report generation).
-* `src/utils/select_random_verses.py` — Script for random batch selection for annotation.
-* `src/utils/parse_and_merge_batches.py` — Script to merge new annotation batches and ensure no duplicate verse\_id.
-* All selection scripts now ensure that each new annotation batch contains only unique, unlabeled verses.
-
----
-
-## 📈 Model Versioning & Experiment Tracking
-
-* Each training/fine-tuning run is versioned by date and experiment.
-* All metrics, reports, and confusion matrices are saved for each run (see `/results_finetuned_bible/` and related directories).
-* Final models for deployment are saved under `/src/fine_tuning/` after evaluation on the full train/test split.
-
----
-
-## 🚀 Getting Started
+## Getting Started
 
 You can set up the environment using either `conda` (recommended) or `pip`.
 
-### 🧪 Option 1: Using Conda (recommended)
+### Option 1: Using Conda (recommended)
 
 ```bash
 conda env create -f environment_local.yml
 conda activate linguaanimae
 ```
 
-### 💡 Option 2: Using pip
+### Option 2: Using pip
 
 1. Clone the repository
 
@@ -257,7 +264,7 @@ Input:
 
 Returns:
 
-📖 *Génesis 40:7* — *"¿Por qué parecen hoy mal vuestros semblantes?"*
+> *Génesis 40:7* — *"¿Por qué parecen hoy mal vuestros semblantes?"*
 
 ---
 
@@ -276,16 +283,6 @@ This enables future model refinement and analytics.
 
 ---
 
-## ✨ UI Enhancements
-
-* Feedback buttons styled with semantic colors and **hover animation**
-* Subtitles, emotion/theme blocks, and translation notices are now **centered and consistently styled**
-* Merriweather font applied to all key UI blocks for elegance and readability
-* Book names in verse references are now normalized: numbers are preserved (e.g. `1 Pedro`, `2 Timoteo`) and accents are applied where appropriate (e.g. `Isaías`, `Jeremías`) for Spanish; English names are capitalized and spaced (`1 John`, `2 Timothy`)
-* Fully refactored `app.py` into reusable components
-
----
-
 ## 📊 Outputs
 
 Labeled files are saved to:
@@ -296,55 +293,56 @@ Labeled files are saved to:
 
 ---
 
-## 📈 Model Versioning & Experiment Tracking
+## 📌 Project Status (MVP Completed)
 
-* Each training/fine-tuning run is versioned by date and experiment.
-* All metrics, reports, and confusion matrices are saved for each run (see `/results_finetuned_bible/` and related directories).
-* Final models for deployment are saved under `/src/fine_tuning/` after evaluation on the full train/test split.
+### ✅ MVP Completed (Weeks 1–6)
+- [x] Full Bible scraping (KJV + RV60) and corpus organization
+- [x] Data cleaning and normalization
+- [x] Emotion and theme labeling using pretrained HuggingFace models
+- [x] Cross-lingual label transfer and Spanish label alignment
+- [x] Robust manual evaluation with accuracy, macro F1, and confusion matrix reporting
+- [x] Streamlit interface: emotion + theme detection, stylized results, and interactive recommendations
+- [x] Multilingual support: automatic input translation and dynamic corpus selection (EN/ES)
+- [x] Recommendation system matching user queries by emotion and theme
+- [x] Feedback system: like/dislike buttons with logging to Google Sheets
+- [x] Model fine-tuning workflow: train/test split, metrics, early stopping, and artifact saving
+- [x] Batch random sampling, annotation pipeline, and batch version tracking
+- [x] Cross-validation pipeline (StratifiedKFold + HuggingFace Trainer) for robust evaluation
+- [x] Automated report and confusion matrix export for each experiment
 
----
+### 🚀 Future Work (Optional/Post-MVP)
+- Export features (PDF), voice synthesis, or word cloud summaries
+- Support for additional text domains (poetry, music, etc.)
 
-## 📌 Roadmap
-
-### ✅ Completed (Weeks 1–4)
-- Full Bible scraping (KJV + RV60) and corpus organization
-- Data cleaning and normalization
-- Emotion and theme labeling using pretrained HuggingFace models
-- Cross-lingual label transfer and Spanish label alignment
-- Robust manual evaluation with accuracy, macro F1, and confusion matrix reporting
-- Streamlit interface: emotion + theme detection, stylized results, and interactive recommendations
-- Multilingual support: automatic input translation and dynamic corpus selection (EN/ES)
-- Recommendation system matching user queries by emotion and theme
-- Feedback system: like/dislike buttons with logging to Google Sheets
-- Model fine-tuning workflow: train/test split, metrics, early stopping, and artifact saving
-- Batch random sampling, annotation pipeline, and batch version tracking
-- Cross-validation pipeline (StratifiedKFold + HuggingFace Trainer) for robust evaluation
-- Automated report and confusion matrix export for each experiment
-
-### 🔄 Week 5: Iteration Based on Feedback
-- [ ] Refine model behavior and recommendation logic
-- [ ] Improve clarity of explanations and label rendering
-- [ ] Implement user-suggested improvements
-- [ ] Integrate feedback from user testing sessions
-
-### 🏁 Week 6: Final Demo and Documentation
-- [ ] Consolidate the MVP into a cohesive narrative
-- [ ] Write technical and functional report
-- [ ] Prepare public demo with real examples
-- [ ] (Optional) Add export features (PDF), voice synthesis, or word cloud summaries
 
 [See CHANGELOG.md](CHANGELOG.md) for complete history.
 
+---
+
+## ⚠️ Known Limitations
+
+While Lingua Animae demonstrates robust results as an MVP, the current version has several known limitations that future work may address:
+
+- **Domain scope:** The annotation and recommendation pipeline is currently limited to biblical texts (KJV and RV60). Application to other genres (e.g., poetry, music lyrics) is planned but not yet implemented or validated.
+- **Language support:** Only English and Spanish are fully supported at this time. Adding other languages would require further data preparation and model adaptation.
+- **Emotion & theme taxonomy:** The emotion (6-class) and theme (5-class) taxonomies, while grounded in literature, are simplified for tractability and may not capture all nuances present in complex texts.
+- **Annotation transfer:** The cross-lingual label transfer assumes strong verse alignment between English and Spanish Bibles; rare misalignments or translation differences may impact label accuracy.
+- **Model bias:** Pretrained models used for annotation (e.g., HuggingFace Transformers) may inherit cultural or linguistic biases from their original training data, which could affect the detection of emotions or themes.
+- **Evaluation set:** Manual evaluation is limited in scale and focuses on selected books/verses. Broader user validation or external benchmarks are desirable for production-level deployment.
+- **Deployment:** The Streamlit app is designed for demonstration and user feedback. For large-scale or production use, backend scalability, security, and multi-user management would require further engineering.
 
 ---
 
-## 🆕 Recent Highlights
+## 🤝 Contributing & Testing
 
-* Cross-validation for robust metric estimation
-* Automated verse sampling and annotation pipeline
-* Improved label consistency and data cleaning
-* Modular, reproducible scripts for all workflow stages
-* Full pipeline documented in notebooks and CHANGELOG
+Contributions, suggestions, or bug reports are welcome!  
+To run unit tests (NOT YET available), use:
+
+```bash
+pytest tests/
+```
+
+For feature requests, open an issue or pull request on GitHub.
 
 ---
 
