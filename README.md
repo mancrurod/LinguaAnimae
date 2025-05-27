@@ -28,24 +28,25 @@
 
 ## 📚 Table of Contents
 
-- [Project Goals](#-project-goals)
-- [Core Technologies](#-core-technologies)
-- [Project Structure](#-project-structure)
-- [Data Folders Overview](#-data-folders-overview)
-- [Data Selection, Annotation & Versioning](#-data-selection-annotation--versioning)
-- [Label Mapping and Cleaning](#-label-mapping-and-cleaning)
-- [Model Training & Evaluation](#-model-training--evaluation)
-- [Screenshots](#-screenshots)
-- [Getting Started](#getting-started)
-- [Usage](#usage)
-- [Streamlit Interface](#streamlit-interface)
-- [Feedback System](#feedback-system)
-- [Outputs](#outputs)
-- [Project Status (MVP Completed)](#-project-status-mvp-completed)
-- [Known Limitations](#-known-limitations)
-- [Contributing & Testing](#-contributing--testing)
-- [License](#-license)
-- [Acknowledgements](#-acknowledgements)
+- [🔍 Project Goals](#-project-goals)
+- [🧠 Core Technologies](#-core-technologies)
+- [📁 Project Structure](#-project-structure)
+- [📦 Data Folders Overview](#-data-folders-overview)
+- [🆕 Data Selection, Annotation & Versioning](#-data-selection-annotation--versioning)
+- [📝 Label Mapping and Cleaning](#-label-mapping-and-cleaning)
+- [🚦 Model Training & Evaluation](#-model-training--evaluation)
+- [📸 Screenshots](#-screenshots)
+- [🚀 Getting Started](#-getting-started)
+- [🧰 Usage](#-usage)
+- [💬 Streamlit Interface](#-streamlit-interface)
+- [📤 Feedback System](#-feedback-system)
+- [📊 Outputs](#-outputs)
+- [📌 Project Status (MVP Completed)](#-project-status-mvp-completed)
+- [⚠️ Known Limitations](#-known-limitations)
+- [🤝 Contributing & Testing](#-contributing--testing)
+- [📖 License](#-license)
+- [✨ Acknowledgements](#-acknowledgements)
+
 
 
 ---
@@ -209,7 +210,7 @@ The following screenshots illustrate the main functionalities of the Streamlit a
 
 ---
 
-## Getting Started
+## 🏁 Getting Started
 
 You can set up the environment using either `conda` (recommended) or `pip`.
 
