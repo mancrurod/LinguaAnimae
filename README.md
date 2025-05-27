@@ -22,12 +22,30 @@
     <a href="https://linguaanimae.streamlit.app/" style="text-decoration: none; font-size: 1.3em;">
         🟢 Try the Live Demo!
     </a>
-    &nbsp; | &nbsp;
-    <a href="#screenshots" style="text-decoration: none; font-size: 1.1em;">
-        👉 See screenshots below!
-    </a>
 </p>
 
+---
+
+## 📚 Table of Contents
+
+- [🔍 Project Goals](#project-goals)
+- [🧠 Core Technologies](#core-technologies)
+- [📁 Project Structure](#project-structure)
+- [📦 Data Folders Overview](#data-folders-overview)
+- [🆕 Data Selection, Annotation & Versioning](#data-selection-annotation--versioning)
+- [📝 Label Mapping and Cleaning](#label-mapping-and-cleaning)
+- [🚦 Model Training & Evaluation](#model-training--evaluation)
+- [📸 Screenshots](#screenshots)
+- [🧰 Getting Started](#getting-started)
+- [🧰 Usage](#usage)
+- [💬 Streamlit Interface](#streamlit-interface)
+- [📤 Feedback System](#feedback-system)
+- [📊 Outputs](#outputs)
+- [📌 Project Status (MVP Completed)](#project-status-mvp-completed)
+- [⚠️ Known Limitations](#known-limitations)
+- [🤝 Contributing & Testing](#contributing--testing)
+- [📖 License](#license)
+- [✨ Acknowledgements](#acknowledgements)
 
 ---
 
