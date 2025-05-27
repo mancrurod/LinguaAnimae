@@ -4,15 +4,11 @@
   </a>
 </p>
 
-<p align="center">
+<h1 align="center">
   <a style="text-decoration: none;">
     <span style="color: #4e342e; font-size: 2.8em; font-weight: bold;">📖 Lingua Animae</span>
   </a>
-</p>
-
-<p align="center">
-  <hr width="30%" style="border: 1px solid #bdbdbd;">
-</p>
+</h1>
 
 <p align="center">
   <b>🤖 Classify, explore, and connect with sacred texts through emotion and theme. ❤️‍🩹</b><br>
