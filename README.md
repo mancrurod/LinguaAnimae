@@ -4,13 +4,6 @@
   </a>
 </p>
 
-<!-- 
-<h1 align="center">
-  <a style="text-decoration: none;">
-    <span style="color: #4e342e; font-size: 2.8em; font-weight: bold;">📖 Lingua Animae</span>
-  </a>
-</h1> -->
-
 <p align="center">
   <b>🤖 Classify, explore, and connect with sacred texts through emotion and theme. ❤️‍🩹</b><br>
   Multilingual NLP pipeline for emotion & theme annotation, with an interactive Streamlit chatbot for personalized Bible verse recommendations.
@@ -26,8 +19,24 @@
 
 ---
 
-## 📚 Table of Contents
 
+<p align="center">
+  <a href="https://linguaanimae.streamlit.app/">
+    <img src="https://img.shields.io/badge/Streamlit-Demo-brightgreen?logo=streamlit" alt="Streamlit Demo">
+  </a>
+  <img src="https://img.shields.io/badge/python-3.10%2B-blue.svg" alt="Python Version">
+  <img src="https://img.shields.io/badge/license-Academic-informational" alt="License">
+  <img src="https://img.shields.io/badge/Open%20Source-Yes-brightgreen.svg" alt="Open Source">
+  <img src="https://img.shields.io/badge/HuggingFace-Transformers-yellow?logo=huggingface" alt="Hugging Face">
+  <img src="https://img.shields.io/badge/NLP-pipeline-blueviolet" alt="NLP Pipeline">
+</p>
+
+---
+
+<details>
+<summary>📚 <b>Table of Contents</b> <sub>(click to expand)</sub></summary>
+
+- [📔 Key Notebooks](#-key-notebooks)
 - [🔍 Project Goals](#-project-goals)
 - [🧠 Core Technologies](#-core-technologies)
 - [📁 Project Structure](#-project-structure)
@@ -47,9 +56,22 @@
 - [📖 License](#-license)
 - [✨ Acknowledgements](#-acknowledgements)
 
-
+</details>
 
 ---
+
+## 📔 Key Notebooks
+
+Explore the main stages of the pipeline directly in Jupyter notebooks:
+
+- [01_scraping_exploration.ipynb](notebooks/01_scraping_exploration.ipynb) — Data exploration & Bible scraping workflow.
+- [02_cleaning.ipynb](notebooks/02_cleaning.ipynb) — Data cleaning and normalization.
+- [03_label_emotions_and_themes.ipynb](notebooks/03_label_emotions_and_themes.ipynb) — Emotion & theme annotation pipeline.
+- [05_evaluation.ipynb](notebooks/05_evaluation.ipynb) — Model evaluation: metrics, confusion matrix, reporting.
+- [viz_models.ipynb](notebooks/viz_models.ipynb) — Model outputs and visualizations.
+
+---
+
 
 ## 🔍 Project Goals
 
@@ -362,7 +384,7 @@ Labeled files are saved to:
 ### 🚀 Future Work (Optional/Post-MVP)
 - Export features (PDF), voice synthesis, or word cloud summaries
 - Support for additional text domains (poetry, music, etc.)
-
+- Add fine-tuned model to pipeline. Use it to relabel Bible verses.
 
 [See CHANGELOG.md](CHANGELOG.md) for complete history.
 

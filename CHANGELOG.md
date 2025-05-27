@@ -6,6 +6,51 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ---
 
+## [0.7.0] - 2025-05-27
+
+### Added
+- **Table of Contents** now collapsible (`<details>`) for cleaner navigation and improved UX.
+- **Key Notebooks** section added after ToC, with direct links and descriptions for the main Jupyter notebooks (scraping, cleaning, annotation, evaluation, visualization).
+- **Badges** for Streamlit Demo, Python version, License, Open Source, Hugging Face Transformers, and NLP pipeline now shown below the banner for improved project visibility and recruiter appeal.
+- **Screenshots** of the Streamlit app, including home screen, recommendations, and feedback confirmation, added to the README.
+- Explicit **anchor links** in ToC updated to match section headers with leading dash for emoji compatibility (e.g. `#-project-goals`).
+- **Comprehensive unit tests** added for all core modules:
+    - `tests/test_bible_scraper.py`
+    - `tests/test_cleaning.py`
+    - `tests/test_emotion_theme_labeling.py`
+    - `tests/test_labeling_pipeline.py`
+    - `tests/test_merge.py`
+    - `tests/test_models.py`
+    - `tests/test_parse_gpt_output_to_labeled_csv.py`
+    - `tests/test_parse_osis_kjv.py`
+    - `tests/test_recommender.py`
+    - `tests/test_select_verses_for_labeling.py`
+    - `tests/test_theme_labeling.py`
+    - `tests/test_translate_and_apply_labels.py`
+
+### Changed
+- **Refactored core scripts** (`select_verses_for_labeling.py`, `parse_gpt_output_to_labeled_csv.py`, `bible_scraper.py`, `parse_osis_kjv.py`) to accept arguments for testability and modularity.
+- **Updated all data processing and parsing scripts** to use function arguments instead of hardcoded paths, improving reusability and testing.
+- **Improved logger usage and error handling** across all modules.
+- **Updated requirements files and environment configuration** to support the expanded test suite.
+- **README.md** fully restructured and visually enhanced for clarity and onboarding:
+    - Cleaned up section ordering, improved separation between installation, usage, and explanation.
+    - Updated section headers to include consistent emoji usage.
+    - Improved README opening with a professional claim, demo link, and badges.
+    - Moved screenshots and notebooks links near the top for recruiter and reviewer visibility.
+    - Enhanced documentation of the “Screenshots” section for context and visual clarity.
+- All internal links in the ToC reviewed for compatibility with GitHub anchor logic when emojis are present in headers.
+- Clarified the “Getting Started” section and improved formatting for readability.
+
+### Fixed
+- Fixed broken or inconsistent ToC anchor links caused by emoji headers.
+- Fixed formatting inconsistencies in README visual layout.
+- Fixed import issues and monkeypatching in tests.
+- Ensured all scripts can be tested independently, removing hidden dependencies and hardcoded paths.
+
+
+---
+
 ## [0.6.0] - 2025-05-23
 
 ### Added
