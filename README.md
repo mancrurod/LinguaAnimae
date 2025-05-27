@@ -332,7 +332,7 @@ While Lingua Animae demonstrates robust results as an MVP, the current version h
 ## 🤝 Contributing & Testing
 
 Contributions, suggestions, or bug reports are welcome!  
-To run unit tests (NOT YET available), use:
+To run unit tests, use:
 
 ```bash
 pytest tests/

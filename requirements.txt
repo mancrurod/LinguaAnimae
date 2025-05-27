@@ -36,3 +36,4 @@ python-dotenv
 hf_xet
 unidecode
 psutil
+pytest

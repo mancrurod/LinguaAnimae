@@ -59,8 +59,9 @@ def main(
     logger=logger
 ):
     logger.info("🔎 Searching for CSV files...")
-    all_csvs = list(INPUT_DIR.glob("*.csv"))
-    logger.info(f"Found {len(all_csvs)} files in {INPUT_DIR}")
+    all_csvs = list(input_dir.glob("*.csv"))
+    logger.info(f"Found {len(all_csvs)} files in {input_dir}")
+
 
     records = []
     for csv in all_csvs:
@@ -91,15 +92,16 @@ def main(
 
     # (Opcional) Exclude already labeled verses if file exists
     EXISTING_LABELS = BASE / "data" / "evaluation" / "emotion_verses_labeled_combined.csv"
-    if EXISTING_LABELS.exists():
+    if existing_labels_path and Path(existing_labels_path).exists():
         try:
-            df_labeled = pd.read_csv(EXISTING_LABELS)
+            df_labeled = pd.read_csv(existing_labels_path)
             labeled_ids = set(df_labeled['verse_id'])
             before_filter = len(df_all)
             df_all = df_all[~df_all['verse_id'].isin(labeled_ids)]
             logger.info(f"Filtered out {before_filter - len(df_all)} verses already labeled. {len(df_all)} left after filtering.")
         except Exception as e:
-            logger.error(f"Error reading existing labels file {EXISTING_LABELS.name}: {e}")
+            logger.error(f"Error reading existing labels file {existing_labels_path.name}: {e}")
+
     
     n = min(N_SAMPLES, len(df_all))
     if n == 0:
@@ -119,12 +121,12 @@ def main(
     df_sample = df_sample[['id', 'verse_id', 'verse']]
 
     # Ensure output directory exists
-    OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
+    output_file.parent.mkdir(parents=True, exist_ok=True)
     try:
-        df_sample.to_csv(OUTPUT_FILE, index=False)
-        logger.info(f"✅ Sample of {n} verses saved to {OUTPUT_FILE.absolute()}")
+        df_sample.to_csv(output_file, index=False)
+        logger.info(f"✅ Sample of {n} verses saved to {output_file.absolute()}")
     except Exception as e:
-        logger.error(f"❌ Error saving output file {OUTPUT_FILE}: {e}")
+        logger.error(f"❌ Error saving output file {output_file}: {e}")
 
 
 if __name__ == "__main__":

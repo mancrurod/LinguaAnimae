@@ -118,4 +118,5 @@ dependencies:
       - deepl
       - python-dotenv
       - unicode
+      - pytest
 prefix: C:\Users\manue\miniconda3\envs\LinguaAnimae

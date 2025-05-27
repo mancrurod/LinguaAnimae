@@ -26,10 +26,15 @@ LOG_DIR.mkdir(parents=True, exist_ok=True)
 LOG_FILE = LOG_DIR / "parse_gpt_output.log"
 logger = setup_logger(LOG_FILE)
 
-def main():
+def main(
+    samples_file=SAMPLES_FILE,
+    gpt_output_file=GPT_OUTPUT_FILE,
+    output_file=OUTPUT_FILE,
+    logger=logger
+):
     logger.info("🔗 Loading sample verses...")
     try:
-        df_samples = pd.read_csv(SAMPLES_FILE)
+        df_samples = pd.read_csv(samples_file)
         logger.info(f"Sample verses: {len(df_samples)}")
     except Exception as e:
         logger.error(f"Error loading sample verses file: {e}")
@@ -37,7 +42,7 @@ def main():
     
     logger.info("🧑‍💻 Loading GPT output as CSV...")
     try:
-        df_gpt = pd.read_csv(GPT_OUTPUT_FILE, names=["id", "verse_id", "label"])
+        df_gpt = pd.read_csv(gpt_output_file, names=["id", "verse_id", "label"])
         logger.info(f"GPT-labeled verses: {len(df_gpt)}")
     except Exception as e:
         logger.error(f"Error loading GPT output file: {e}")
@@ -58,12 +63,14 @@ def main():
 
     # Reorder and save
     df_final = df_final[['id', 'verse_id', 'verse', 'label']]
-    OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
+    output_file.parent.mkdir(parents=True, exist_ok=True)
     try:
-        df_final.to_csv(OUTPUT_FILE, index=False)
-        logger.info(f"✅ Final labeled dataset saved to {OUTPUT_FILE.absolute()}")
+        df_final.to_csv(output_file, index=False)
+        logger.info(f"✅ Final labeled dataset saved to {output_file.absolute()}")
     except Exception as e:
         logger.error(f"Error saving output file: {e}")
 
+
 if __name__ == "__main__":
     main()
+

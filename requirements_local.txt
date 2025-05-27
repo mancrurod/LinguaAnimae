@@ -61,6 +61,7 @@ gspread==6.2.0
 oauth2client==4.1.3
 deepl==1.22.0
 python-dotenv==1.0.1
+pytest==8.3.5
 
 # === Notes ===
 # - If you want maximum reproducibility, pin all package versions.
