@@ -786,7 +786,7 @@ def main():
             background-color: rgba(243, 229, 209, 0.85);
             color: #4e342e;
             text-align: center;
-            font-size: 0.65rem;
+            font-size: 1rem;
             padding: 0.6rem 1rem;
             font-family: 'Merriweather', serif;
             border-top: 1px solid #5d4037;
@@ -804,14 +804,14 @@ def main():
         }
                 
         .custom-footer a:hover {
-            transform: scale(1.5);
+            transform: scale(1.05);
             filter: drop-shadow(0 0 4px rgba(255,255,255,0.4)) brightness(1.2);
             text-shadow: 0 0 2px rgba(255, 255, 255, 0.2);
         }
         </style>
 
         <div class="custom-footer">
-            Hecho con ❤️ por Manuel Cruz Rodríguez · <a href="https://www.linkedin.com/in/mancrurod/" target="_blank">🌐</a>
+            Hecho con ❤️ por Manuel Cruz Rodríguez · <a href="https://www.linkedin.com/in/mancrurod/" target="_blank">🌐 LinkedIn</a>
         </div>
         """, unsafe_allow_html=True)
     logger.info("App session ended.")
